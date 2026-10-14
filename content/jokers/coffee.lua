@@ -3,6 +3,7 @@ SMODS.Joker {
     atlas = 'jokers',
     pos = { x = 3, y = 0},
     rarity = 1,
+    eternal_compat = false,
     config = {
         extra = {
             retriggers = 5
@@ -29,12 +30,12 @@ SMODS.Joker {
             end
         end
 
-        if context.after then
+        if context.after and not context.blueprint then
             card.ability.extra.retriggers = card.ability.extra.retriggers - 1
             if card.ability.extra.retriggers <= 0 then
                 SMODS.destroy_cards(card, {pinch_anim = true})
                 return {
-                    message = localize('k_mngy_drank_ex')
+                    message = localize('k_drank_ex')
                 }
             end
         end

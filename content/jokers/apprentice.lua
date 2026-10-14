@@ -3,6 +3,7 @@ SMODS.Joker {
     atlas = 'jokers',
     pos = { x = 1, y = 0 },
     rarity = 1,
+    blueprint_compat = false,
     config = {
         extra = {
             slots = 1

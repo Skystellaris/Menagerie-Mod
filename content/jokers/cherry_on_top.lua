@@ -3,6 +3,7 @@ SMODS.Joker {
     atlas = 'jokers',
     pos = { x = 4, y = 0},
     rarity = 1,
+    eternal_compat = false,
     config = {
         extra = {
             levels = 2
@@ -18,10 +19,12 @@ SMODS.Joker {
     
         if context.end_of_round and context.main_eval and context.beat_boss then
             SMODS.smart_level_up_hand(card, G.GAME.last_hand_played, nil, card.ability.extra.levels)
-            SMODS.destroy_cards(card, {pinch_anim = true})
-            return {
-                message = localize('k_eaten_ex')
-            }
+            if not context.blueprint then
+                SMODS.destroy_cards(card, {pinch_anim = true})
+                return {
+                    message = localize('k_eaten_ex')
+                }
+            end
         end
     end,
 }
