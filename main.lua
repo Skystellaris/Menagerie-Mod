@@ -31,6 +31,9 @@ local enabled_jokers = {
 	'rorschach',
 	'coffee',
 	'cherry_on_top',
+	'twin_pop',
+	'half_pop_l',
+	'half_pop_r',
 
 	-- Uncommons
 	'aerial_ace',

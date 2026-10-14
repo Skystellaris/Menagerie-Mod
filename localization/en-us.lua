@@ -71,6 +71,38 @@ return {
 				}
 			},
 
+			j_mngy_twin_pop = {
+				name = 'Twin Pop',
+				text = {{
+					'Levels up {C:attention}#1#{} by',
+					'{C:attention}#2#{} level when #1#',
+					'is played for',
+					'the next {C:attention}#3#{} round(s)',},
+					{'{C:red}Melts{} into {C:attention}two halves{}',
+					'when depleted'}
+				}
+			},
+
+			j_mngy_half_pop_l = {
+				name = 'Left Half Pop',
+				text = {
+					'Levels up {C:attention}#1#{} by',
+					'{C:attention}#2#{} level when #1#',
+					'is played for',
+					'the next {C:attention}#3#{} round(s)',
+				}
+			},
+
+			j_mngy_half_pop_r = {
+				name = 'Right Half Pop',
+				text = {
+					'Levels up {C:attention}#1#{} by',
+					'{C:attention}#2#{} level when #1#',
+					'is played for',
+					'the next {C:attention}#3#{} round(s)',
+				}
+			},
+
             j_mngy_blind_justice = {
                 name = 'Blind Justice',
                 text = {
@@ -91,9 +123,7 @@ return {
 		Other = {}
 	},
 	misc = {
-		dictionary = {
-			k_mngy_drank_ex = 'Drank!'
-		},
+		dictionary = {},
 		v_text = {}
 	}
 }
