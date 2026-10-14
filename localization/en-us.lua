@@ -36,6 +36,14 @@ return {
 				}
 			},
 
+			j_mngy_apprentice = {
+				name = 'Apprentice',
+				text = {
+					'{C:attention}+#1#{} Booster',
+					'in Shop'
+				}
+			},
+
 			j_mngy_rorschach = {
 				name = 'Rorschach Joker',
 				text = {

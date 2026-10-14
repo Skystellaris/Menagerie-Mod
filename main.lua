@@ -24,13 +24,30 @@ for _, v in pairs(NFS.getDirectoryItems(path)) do
     assert(SMODS.load_file('src/' .. v))()
 end
 
-path = SMODS.current_mod.path .. 'content/jokers/'
-for _, v in pairs(NFS.getDirectoryItems(path)) do
-    assert(SMODS.load_file('content/jokers/' .. v))()
+local enabled_jokers = {
+	-- Commons
+	'jollibee',
+	'apprentice',
+	'rorschach',
+
+	-- Uncommons
+	'aerial_ace',
+
+	-- Rares
+	'blind_justice',
+
+}
+
+for i = 1, #enabled_jokers do
+    assert(SMODS.load_file('content/jokers/' .. enabled_jokers[i] .. '.lua'))()
 end
 
-path = SMODS.current_mod.path .. 'content/decks/'
-for _, v in pairs(NFS.getDirectoryItems(path)) do
-    assert(SMODS.load_file('content/decks/' .. v))()
+local enabled_decks = {
+	'seeded',
+	'accretion',
+}
+
+for i = 1, #enabled_decks do
+    assert(SMODS.load_file('content/decks/' .. enabled_decks[i] .. '.lua'))()
 end
 --#endregion
