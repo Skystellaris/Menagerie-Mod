@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = 'aerial_ace',
     atlas = 'placeholders',
-    pos = { x = 0, y = 1 },
+    pos = { x = 2, y = 0 },
     rarity = 2,
     config = {
         extra = {
