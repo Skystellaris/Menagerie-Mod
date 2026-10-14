@@ -14,7 +14,7 @@ SMODS.Joker {
     end,
 
     add_to_deck = function(self, card, from_debuff)
-        G.GAME.modifiers.extra_boosters = G.GAME.modifiers.extra_boosters + card.ability.extra.slots
+        G.GAME.modifiers.extra_boosters = (G.GAME.modifiers.extra_boosters or 0) + card.ability.extra.slots
     end,
 
     remove_from_deck = function(self, card, from_debuff)
