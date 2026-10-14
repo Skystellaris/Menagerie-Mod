@@ -6,3 +6,28 @@ function SMODS.has_any_suit(card)
     end
     return ret
 end
+
+local emplace_ref = CardArea.emplace
+function CardArea:emplace(...)
+    emplace_ref(self, ...)
+    if G.GAME.selected_back_key and G.GAME.selected_back_key.key == 'b_mngy_seeded' and self == G.jokers then
+        G.hand:change_size(-1)
+    end
+end
+
+local remove_card_ref = CardArea.remove_card
+function CardArea:remove_card(...)
+    local ret = remove_card_ref(self, ...)
+    if G.GAME.selected_back_key and G.GAME.selected_back_key.key == 'b_mngy_seeded' and self == G.jokers then
+        G.hand:change_size(1) -- TODO: Figure out why this still draws cards when hand is full/overflowing
+    end
+    return ret
+end
+
+local change_size_ref = CardArea.change_size
+function CardArea:change_size(delta)
+    change_size_ref(delta)
+    if G.GAME.selected_back_key and G.GAME.selected_back_key.key == 'b_mngy_seeded' and self == G.jokers then
+        G.hand:change_size(delta)
+    end
+end

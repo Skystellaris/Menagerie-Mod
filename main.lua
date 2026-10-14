@@ -28,4 +28,9 @@ path = SMODS.current_mod.path .. 'content/jokers/'
 for _, v in pairs(NFS.getDirectoryItems(path)) do
     assert(SMODS.load_file('content/jokers/' .. v))()
 end
+
+path = SMODS.current_mod.path .. 'content/decks/'
+for _, v in pairs(NFS.getDirectoryItems(path)) do
+    assert(SMODS.load_file('content/decks/' .. v))()
+end
 --#endregion
