@@ -34,6 +34,7 @@ local enabled_jokers = {
 	'twin_pop',
 	'half_pop_l',
 	'half_pop_r',
+	'sowing_seeds',
 
 	-- Uncommons
 	'aerial_ace',

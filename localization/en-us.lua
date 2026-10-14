@@ -103,6 +103,16 @@ return {
 				}
 			},
 
+			j_mngy_sowing_seeds = {
+				name = 'Sowing Seeds',
+				text = {
+					'When {C:money}sold{}, create a',
+					'random {V:1}#1#{} Joker',
+					'Rarity {C:attention}increases{} after',
+					'every rank is {C:red}discarded{} once'
+				}
+			},
+
             j_mngy_blind_justice = {
                 name = 'Blind Justice',
                 text = {
@@ -123,7 +133,9 @@ return {
 		Other = {}
 	},
 	misc = {
-		dictionary = {},
+		dictionary = {
+			k_mngy_ranks_left = 'Ranks left: '
+		},
 		v_text = {}
 	}
 }
