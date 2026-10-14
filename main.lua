@@ -30,6 +30,7 @@ local enabled_jokers = {
 	'apprentice',
 	'rorschach',
 	'coffee',
+	'cherry_on_top',
 
 	-- Uncommons
 	'aerial_ace',

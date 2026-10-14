@@ -61,6 +61,16 @@ return {
 				}
 			},
 
+			j_mngy_cherry_on_top = {
+				name = 'Cherry On Top',
+				text = {
+					'When a {C:attention}Boss Blind{}',
+					'is defeated, {C:attention}level up{} the',
+					'last played hand by {C:attention}#1#{} levels',
+					'and {C:red}consume{} this Joker'
+				}
+			},
+
             j_mngy_blind_justice = {
                 name = 'Blind Justice',
                 text = {
