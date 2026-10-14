@@ -1,7 +1,8 @@
 SMODS.Joker {
     key = 'blind_justice',
     atlas = 'jokers',
-    pos = { x = 3, y = 0 },
+    pos = { x = 0, y = 3 },
+    rarity = 3,
     config = {
         extra = {
             xmult = 2

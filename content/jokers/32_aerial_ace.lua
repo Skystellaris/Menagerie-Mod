@@ -2,6 +2,7 @@ SMODS.Joker {
     key = 'aerial_ace',
     atlas = 'placeholders',
     pos = { x = 0, y = 1 },
+    rarity = 2,
     config = {
         extra = {
             repetitions = 1,

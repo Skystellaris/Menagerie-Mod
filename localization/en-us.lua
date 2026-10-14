@@ -29,6 +29,13 @@ return {
 		},
 
 		Joker = {
+			j_mngy_jollibee = {
+				name = 'Jollibee',
+				text = {
+					'{C:chips}+#1#{} Chips'
+				}
+			},
+
 			j_mngy_rorschach = {
 				name = 'Rorschach Joker',
 				text = {
