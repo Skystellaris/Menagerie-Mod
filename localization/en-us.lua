@@ -52,6 +52,15 @@ return {
 				}
 			},
 
+			j_mngy_coffee = {
+				name = 'Coffee',
+				text = {
+					'{C:attention}Retriggers{} the Joker',
+					'to the left {C:attention}1{} time',
+					'for the next {C:attention}#1#{} hand(s)'
+				}
+			},
+
             j_mngy_blind_justice = {
                 name = 'Blind Justice',
                 text = {
@@ -72,7 +81,9 @@ return {
 		Other = {}
 	},
 	misc = {
-		dictionary = {},
+		dictionary = {
+			k_mngy_drank_ex = 'Drank!'
+		},
 		v_text = {}
 	}
 }

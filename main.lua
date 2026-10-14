@@ -29,6 +29,7 @@ local enabled_jokers = {
 	'jollibee',
 	'apprentice',
 	'rorschach',
+	'coffee',
 
 	-- Uncommons
 	'aerial_ace',
