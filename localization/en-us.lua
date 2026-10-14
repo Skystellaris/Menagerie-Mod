@@ -8,14 +8,23 @@ end
 return {
 	descriptions = {
 		Back = {
-
 			b_mngy_seeded = {
 				name = 'Seeded Deck',
 				text = {
 					'{C:attention}+1{} hand size for',
 					'each empty {C:attention}Joker slot{}'
 				}
-			}
+			},
+
+			b_mngy_accretion = {
+				name = 'Accretion Deck',
+				text = {
+					'Level up {C:attention}every{} Poker Hand',
+					'when a {C:attention}Boss Blind{} is defeated',
+					'{C:planet}Planet{} cards and {C:attention}Celestial Packs{}',
+					'cannot appear in the Shop'
+				}
+			},
 
 		},
 

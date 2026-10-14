@@ -31,3 +31,17 @@ function CardArea:change_size(delta)
         G.hand:change_size(delta)
     end
 end
+
+local add_to_pool_ref = SMODS.add_to_pool
+function SMODS.add_to_pool(prototype_obj, args)
+    local ret = add_to_pool_ref(prototype_obj, args)
+    args = args or {}
+
+    if G.GAME.selected_back_key and G.GAME.selected_back_key.key == 'b_mngy_accretion' then
+        if (prototype_obj.set == 'Booster' and prototype_obj.kind == 'Celestial') or (prototype_obj.set == 'Planet' and args.source == 'sho') then
+            ret = false
+        end
+    end
+
+    return ret
+end
