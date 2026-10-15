@@ -36,6 +36,8 @@ local enabled_jokers = {
 	'half_pop_r',
 	'sowing_seeds',
 	'doppler',
+	'concord',
+	'lemnia',
 
 	-- Uncommons
 	'aerial_ace',

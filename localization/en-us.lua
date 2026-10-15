@@ -121,6 +121,30 @@ return {
 				}
 			},
 
+			j_mngy_concord = {
+				name = 'Concord',
+				text = {
+					'{C:chips}#1#{} Chips',
+					'{C:green}#2# in #3#{} chance this',
+					'card {C:red}goes extinct{} and',
+					'gives {C:attention}adjacent{} Jokers',
+					'a random {C:dark_edition}Edition{}',
+					'at end of round'
+				}
+			},
+
+			j_mngy_lemnia = {
+				name = 'Lemnia',
+				text = {
+					'When a hand is played,',
+					'give an {C:attention}adjacent{} Joker',
+					'a random {C:dark_edition}Edition{}',
+					'{C:green}#1# in #2#{} chance this',
+					'card is {C:red}destroyed{}',
+					'at end of round'
+				}
+			},
+
             j_mngy_blind_justice = {
                 name = 'Blind Justice',
                 text = {
