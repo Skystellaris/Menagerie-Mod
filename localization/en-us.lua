@@ -104,6 +104,16 @@ return {
 				}
 			},
 
+			b_mngy_clown_car = {
+				name = 'Clown Car Deck',
+				text = {
+					'{C:red}#1#{} Joker Slots',
+					'{C:attention}+1{} Joker Slot when',
+					'a unique {C:attention}Boss Blind{}',
+					'is defeated'
+				}
+			},
+
 		},
 
 		Joker = {
@@ -246,6 +256,7 @@ return {
 		dictionary = {
 			k_mngy_ranks_left = 'Ranks left: ',
 			k_mngy_banished_ex = 'Banished!',
+			k_mngy_plus_joker_slots = '+1 Joker Slot',
 		},
 		v_text = {}
 	}

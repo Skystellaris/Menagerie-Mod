@@ -6,6 +6,7 @@ SMODS.Back {
         joker_slot = -1,
         jokers = { 'j_invisible' }
     },
+
     loc_vars = function(self, info_queue, back)
         return {
             vars = {
