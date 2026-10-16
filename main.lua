@@ -52,6 +52,7 @@ for i = 1, #enabled_jokers do
 end
 
 local enabled_decks = {
+	'stacked',
 	'seeded',
 	'accretion',
 }

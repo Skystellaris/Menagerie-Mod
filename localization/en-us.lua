@@ -8,6 +8,16 @@ end
 return {
 	descriptions = {
 		Back = {
+			b_mngy_stacked = {
+				name = 'Stacked Deck',
+				text = {
+					'Cards held in hand at',
+					'the {C:attention}end of a round{} are',
+					'{C:attention}drawn first{} at the',
+					'beginning of {C:attention}the next round{}'
+				}
+			},
+			
 			b_mngy_seeded = {
 				name = 'Seeded Deck',
 				text = {
