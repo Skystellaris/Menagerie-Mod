@@ -66,7 +66,7 @@ local enabled_decks = {
 	-- 'battle',
 	'stranded',
 	'null',
-	-- 'cookie',
+	'cookie',
 	-- 'splatterpaint',
 	-- 'clown_car',
 	-- 'perfection'
