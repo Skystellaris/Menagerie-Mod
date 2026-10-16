@@ -42,6 +42,15 @@ return {
 					'{C:red}#2#{} Joker Slot',
 					'Start with {C:attention,T:j_invisible}#1#'
 				}
+			},
+
+			b_mngy_loaned = {
+				name = 'Loaned Deck',
+				text = {
+                    "Go up to {C:red}-$#1#{} in debt",
+                    "Set {C:money}money{} to {C:red}$0",
+                    "when selecting {C:attention}Boss Blind{}"
+				}
 			}
 
 		},

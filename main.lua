@@ -56,6 +56,7 @@ local enabled_decks = {
 	'seeded',
 	'accretion',
 	'echo',
+	'loaned',
 }
 
 for i = 1, #enabled_decks do
