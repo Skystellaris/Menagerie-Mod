@@ -36,6 +36,14 @@ return {
 				}
 			},
 
+			b_mngy_echo = {
+				name = 'Echo Deck',
+				text = {
+					'{C:red}#2#{} Joker Slot',
+					'Start with {C:attention,T:j_invisible}#1#'
+				}
+			}
+
 		},
 
 		Joker = {
