@@ -60,7 +60,16 @@ local enabled_decks = {
 	'echo',
 	'loaned',
 	'white',
-	--'cloudy'
+	-- 'hodgepodge',
+	-- 'padded',
+	--'cloudy',
+	-- 'battle',
+	-- 'stranded',
+	-- 'null',
+	-- 'cookie',
+	-- 'splatterpaint',
+	-- 'clown_car',
+	-- 'perfection'
 }
 
 for i = 1, #enabled_decks do
