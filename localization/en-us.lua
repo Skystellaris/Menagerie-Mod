@@ -17,6 +17,16 @@ return {
 					'beginning of {C:attention}the next round{}'
 				}
 			},
+
+			b_mngy_sightseeing = {
+				name = "Sightseeing Deck",
+				text = {
+					'{C:mngy_mod}Menagerie{} Jokers are {X:attention,C:white}3X{}',
+					'more likely to appear',
+					'{C:attention}+1{} hand size for each',
+					'{C:mngy_mod}Menagerie{} Joker held'
+				}
+			},
 			
 			b_mngy_seeded = {
 				name = 'Seeded Deck',

@@ -16,6 +16,7 @@ SMODS.Gradient({
 })
 
 SMODS.current_mod.badge_colour = SMODS.Gradients['mngy_text_rainbow']
+G.ARGS.LOC_COLOURS["mngy_mod"] = SMODS.Gradients['mngy_text_rainbow']
 Menagerie.mod = SMODS.current_mod
 
 --#region File Loading
@@ -53,6 +54,7 @@ end
 
 local enabled_decks = {
 	'stacked',
+	'sightseeing',
 	'seeded',
 	'accretion',
 	'echo',

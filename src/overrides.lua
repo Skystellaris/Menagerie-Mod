@@ -8,18 +8,29 @@ function SMODS.has_any_suit(card)
 end
 
 local emplace_ref = CardArea.emplace
-function CardArea:emplace(...)
-    emplace_ref(self, ...)
-    if G.GAME.selected_back_key and G.GAME.selected_back_key.key == 'b_mngy_seeded' and self == G.jokers then
-        G.hand:change_size(-1)
+function CardArea:emplace(card, location, stay_flipped)
+    emplace_ref(self, card, location, stay_flipped)
+    if G.GAME.selected_back_key then
+        if G.GAME.selected_back_key.key == 'b_mngy_seeded' and self == G.jokers then
+            G.hand:change_size(-1)
+        end
+        if G.GAME.selected_back_key.key == 'b_mngy_sightseeing' and self == G.jokers and card.config.center_key:find('j_mngy_') then
+            G.hand:change_size(1)
+        end
     end
 end
 
 local remove_card_ref = CardArea.remove_card
-function CardArea:remove_card(...)
-    local ret = remove_card_ref(self, ...)
-    if G.GAME.selected_back_key and G.GAME.selected_back_key.key == 'b_mngy_seeded' and self == G.jokers then
-        G.hand:change_size(1) -- TODO: Figure out why this still draws cards when hand is full/overflowing
+function CardArea:remove_card(card, discarded_only)
+    local ret = remove_card_ref(self, card, discarded_only)
+    if G.GAME.selected_back_key then
+        if  G.GAME.selected_back_key.key == 'b_mngy_seeded' and self == G.jokers then
+            G.hand:change_size(1) -- TODO: Figure out why this still draws cards when hand is full/overflowing
+        end
+        
+        if G.GAME.selected_back_key.key == 'b_mngy_sightseeing' and self == G.jokers and card.config.center_key:find('j_mngy_') then
+            G.hand:change_size(-1)
+        end
     end
     return ret
 end
@@ -27,8 +38,10 @@ end
 local change_size_ref = CardArea.change_size
 function CardArea:change_size(delta)
     change_size_ref(self, delta)
-    if G.GAME.selected_back_key and G.GAME.selected_back_key.key == 'b_mngy_seeded' and self == G.jokers then
-        G.hand:change_size(delta)
+    if G.GAME.selected_back_key then
+        if G.GAME.selected_back_key.key == 'b_mngy_seeded' and self == G.jokers then
+            G.hand:change_size(delta)
+        end
     end
 end
 
