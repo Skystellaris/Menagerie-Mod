@@ -51,6 +51,13 @@ return {
                     "Set {C:money}money{} to {C:red}$0",
                     "when selecting {C:attention}Boss Blind{}"
 				}
+			},
+
+			b_mngy_white = {
+				name = 'White Deck',
+				text = {
+					"{C:attention}+1{} card selection limit"
+				}
 			}
 
 		},
