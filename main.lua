@@ -64,7 +64,7 @@ local enabled_decks = {
 	-- 'padded',
 	--'cloudy',
 	-- 'battle',
-	-- 'stranded',
+	'stranded',
 	-- 'null',
 	-- 'cookie',
 	-- 'splatterpaint',

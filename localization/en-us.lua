@@ -72,7 +72,19 @@ return {
 
 			b_mngy_cloudy = {
 				name = 'Cloudy Deck'
-			}
+			},
+
+			b_mngy_stormy = {
+				name = 'Stormy Deck'
+			},
+
+			b_mngy_stranded = {
+				name = 'Stranded Deck',
+				text = {
+					'{C:red}Destroyed{} Jokers',
+					'can no longer appear'
+				}
+			},
 
 		},
 
@@ -214,7 +226,8 @@ return {
 	},
 	misc = {
 		dictionary = {
-			k_mngy_ranks_left = 'Ranks left: '
+			k_mngy_ranks_left = 'Ranks left: ',
+			k_mngy_banished_ex = 'Banished!',
 		},
 		v_text = {}
 	}
