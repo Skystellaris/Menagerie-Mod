@@ -4,6 +4,11 @@ function SMODS.has_any_suit(card)
     if next(SMODS.find_card('j_mngy_rorschach')) and card.base.suit == 'Spades' then
         ret = true
     end
+    if G.GAME.selected_back_key and G.GAME.selected_back_key.key == 'b_mngy_cloudy' then
+        if G.GAME.selected_back.config.extra.state == 'cloudy' and card.facing == 'back' then
+            ret = true
+        end
+    end
     return ret
 end
 

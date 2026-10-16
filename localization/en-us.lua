@@ -68,6 +68,10 @@ return {
 				text = {
 					"{C:attention}+1{} card selection limit"
 				}
+			},
+
+			b_mngy_cloudy = {
+				name = 'Cloudy Deck'
 			}
 
 		},

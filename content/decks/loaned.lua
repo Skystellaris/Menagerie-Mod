@@ -8,7 +8,7 @@ SMODS.Back {
         }
     },
 
-    loc_vars = function(self, info_queue, card)
+    loc_vars = function(self, info_queue, back)
         return { vars = { self.config.extra.debt } }
     end,
 
@@ -21,7 +21,7 @@ SMODS.Back {
         }))
     end,
 
-    calculate = function(self, card, context)
+    calculate = function(self, back, context)
         if context.setting_blind and G.GAME.blind.boss then
             ease_dollars(-G.GAME.dollars)
         end
