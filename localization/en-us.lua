@@ -86,6 +86,14 @@ return {
 				}
 			},
 
+			b_mngy_null = {
+				name = 'Null Deck',
+				text = {
+					'All {C:attention}listed {C:green,E:1,S:1.1}probabilities',
+					'are set to {C:attention}0{}'
+				}
+			},
+
 		},
 
 		Joker = {
