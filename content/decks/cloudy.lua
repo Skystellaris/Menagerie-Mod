@@ -14,7 +14,7 @@ SMODS.Back {
     loc_vars = function(self, info_queue, back)
         local num, den = SMODS.get_probability_vars(back, self.config.extra.prob, self.config.extra.odds)
 
-        if back.config.extra.state == 'stormy' then
+        if back.effect.config.extra.state == 'stormy' then
             info_queue[#info_queue+1] =  { key = 'b_mngy_cloudy', set = 'Back', specific_vars = {num, den} }
             return { key = 'b_mngy_stormy', vars = { num, den, self.config.xmult } }
         else
@@ -30,7 +30,7 @@ SMODS.Back {
             }
         end
 
-        if context.individual and back.config.extra.state == 'stormy' and context.other_card.facing == 'back' then
+        if context.individual and back.effect.config.extra.state == 'stormy' and context.other_card.facing == 'back' then
             
         end
 
