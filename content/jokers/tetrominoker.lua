@@ -40,7 +40,7 @@ SMODS.Joker {
                             if next(evaluate_poker_hand(sf_cards)[card.ability.extra.hand]) then
                                 G.E_MANAGER:add_event(Event({
                                     func = function()
-                                        SMODS.destroy_cards(sf_cards)
+                                        SMODS.destroy_cards(sf_cards, {immediate = true})
                                         card:juice_up(0.8, 0.8)
                                         return true;
                                     end

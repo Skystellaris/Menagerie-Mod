@@ -273,6 +273,17 @@ return {
                 }
             },
 
+			j_mngy_lovecraftian = {
+				name = 'Lovecraftian Joker',
+				text = {
+					'When {C:attention}Blind{} is selected,',
+					'{E:1,C:red}sacrifice{} a random held {C:attention}Consumable',
+					'Will {E:1,C:red}sacrifice{} a random held {C:attention}Joker',
+					'if no Consumables are held',
+					'Effect varies depending on {E:1,C:red}sacrifice{}'
+				}
+			}
+
 		},
 		Other = {}
 	},
