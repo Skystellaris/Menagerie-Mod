@@ -282,6 +282,15 @@ return {
 					'if no Consumables are held',
 					'Effect varies depending on {E:1,C:red}sacrifice{}'
 				}
+			},
+
+			j_mngy_moon_rabbit = {
+				name = 'Moon Rabbit',
+				text = {
+					'At end of round, create',
+					'a {C:dark_edition}Negative {C:attention}Food Joker',
+					'or a {C:dark_edition}Negative {C:tarot}The Moon'
+				}
 			}
 
 		},

@@ -47,7 +47,8 @@ local enabled_jokers = {
 	'blind_justice',
 	'black_cat',
 	'tetrominoker',
-	'lovecraftian'
+	'lovecraftian',
+	'moon_rabbit',
 }
 
 for i = 1, #enabled_jokers do
