@@ -136,7 +136,7 @@ return {
 				name = 'Rorschach Joker',
 				text = {
 					'{C:spades}Spade{} cards are',
-					'treated as {C:mngy_suits}Wild{}'
+					'treated as {C:mngy_suits}any suit{}'
 				}
 			},
 
@@ -290,6 +290,17 @@ return {
 					'At end of round, create',
 					'a {C:dark_edition}Negative {C:attention}Food Joker',
 					'or a {C:dark_edition}Negative {C:tarot}The Moon'
+				}
+			},
+
+			j_mngy_stained_glass = {
+				name = 'Stained Glass',
+				text = {
+					'{C:spades}Glass Cards{} are',
+					'treated as {C:mngy_suits}any suit{}',
+					'When a Glass Card {C:red}breaks{},',
+					'make an unenhanced card',
+					'held in hand {C:mngy_suits}Wild{}'
 				}
 			}
 

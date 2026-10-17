@@ -74,7 +74,7 @@ local enabled_jokers = {
 	'tetrominoker',
 	'lovecraftian',
 	'moon_rabbit',
-	-- 'stained_glass',
+	'stained_glass',
 	-- 'tic_tac_toe',
 	-- 'nuclear_option',
 	-- 'soul_food',
