@@ -46,6 +46,7 @@ local enabled_jokers = {
 	-- Rares
 	'blind_justice',
 	'black_cat',
+	'tetrominoker',
 }
 
 for i = 1, #enabled_jokers do

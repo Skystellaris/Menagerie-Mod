@@ -260,7 +260,18 @@ return {
 					'Fail {C:attention}3{}',
 					'probability checks'
 				}
-			}
+			},
+
+            j_mngy_tetrominoker = {
+                name = 'Tetrominoker',
+                text = {
+                    'Draw {C:attention}#1#{} extra cards',
+					'at start of round',
+                    'If a {C:attention}#2#{} is drawn',
+					'into first hand, {C:red}destroy{} all',
+					'cards in the {C:attention}#2#'
+                }
+            },
 
 		},
 		Other = {}
