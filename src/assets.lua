@@ -19,6 +19,20 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
+	key = 'jokers_rare',
+	path = 'jokers_rare.png',
+	px = 71,
+	py = 95
+}
+
+SMODS.Atlas {
+	key = 'pro_skater',
+	path = 'pro_skater.png',
+	px = 73,
+	py = 73
+}
+
+SMODS.Atlas {
 	key = 'placeholders',
 	path = 'placeholders.png',
 	px = 71,

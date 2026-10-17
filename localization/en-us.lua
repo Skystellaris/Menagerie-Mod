@@ -233,6 +233,15 @@ return {
 				}
 			},
 
+            j_mngy_aerial_ace = {
+                name = 'Aerial Ace',
+                text = {
+                    '{C:attention}Aces{} are retriggered, and give',
+                    '{C:money}$#1#{} when scored on the',
+                    '{C:attention}first hand{} of a round',
+                }
+            },
+
             j_mngy_blind_justice = {
                 name = 'Blind Justice',
                 text = {
@@ -241,14 +250,18 @@ return {
                 }
             },
 
-            j_mngy_aerial_ace = {
-                name = 'Aerial Ace',
-                text = {
-                    '{C:attention}Aces{} are retriggered, and give',
-                    '{C:money}$#1#{} when scored on the',
-                    '{C:attention}first hand{} of a round',
-                }
-            }
+			j_mngy_black_cat = {
+				name = 'Black Cat',
+				text = {
+					'Gives {C:money}$#1#{} when',
+					'a {C:green}probability {C:red}fails'
+				},
+				unlock = {
+					'Fail {C:attention}3{}',
+					'probability checks'
+				}
+			}
+
 		},
 		Other = {}
 	},

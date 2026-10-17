@@ -1,4 +1,5 @@
 Menagerie = {}
+Menagerie.mod = SMODS.current_mod
 
 SMODS.Gradient({
 	key = "text_rainbow",
@@ -15,12 +16,11 @@ SMODS.Gradient({
 	},
 })
 
-SMODS.current_mod.badge_colour = SMODS.Gradients['mngy_text_rainbow']
+Menagerie.mod.badge_colour = SMODS.Gradients['mngy_text_rainbow']
 G.ARGS.LOC_COLOURS["mngy_mod"] = SMODS.Gradients['mngy_text_rainbow']
-Menagerie.mod = SMODS.current_mod
 
 --#region File Loading
-local path = SMODS.current_mod.path .. 'src/'
+local path = Menagerie.mod.path .. 'src/'
 for _, v in pairs(NFS.getDirectoryItems(path)) do
     assert(SMODS.load_file('src/' .. v))()
 end
@@ -45,7 +45,7 @@ local enabled_jokers = {
 
 	-- Rares
 	'blind_justice',
-
+	'black_cat',
 }
 
 for i = 1, #enabled_jokers do
