@@ -5,6 +5,12 @@ SMODS.Back {
 
     apply = function(self, back)
         G.GAME.planet_rate = 0
+        G.E_MANAGER:add_event(Event({
+            func = function()
+                G.GAME.mngy_accretion = true
+                return true;
+            end
+        }))
     end,
 
     calculate = function(self, back, context)

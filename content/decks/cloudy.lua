@@ -23,6 +23,15 @@ SMODS.Back {
         end
     end,
 
+    apply = function(self, back)
+        G.E_MANAGER:add_event(Event({
+            func = function()
+                G.GAME.mngy_cloudy = true
+                return true;
+            end
+        }))
+    end,
+
     calculate = function(self, back, context)
         if context.stay_flipped and SMODS.pseudorandom_probability(back, 'cloudy', self.config.prob, self.config.odds) then
             return {

@@ -7,6 +7,7 @@ SMODS.Back {
         G.E_MANAGER:add_event(Event({
             func = function()
                 G.hand:change_size(G.jokers.config.card_limit)
+                G.GAME.mngy_seeded = true
                 return true;
             end
         }))
