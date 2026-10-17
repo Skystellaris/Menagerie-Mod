@@ -39,9 +39,34 @@ local enabled_jokers = {
 	'doppler',
 	'concord',
 	'lemnia',
+	-- 'bottled_water',
+	-- 'pineapple',
+	-- 'envious',
+	-- 'mad_hatter',
+	-- 'paint_by_numbers',
+	-- 'punch_card',
+	-- 'jokitty',
 
 	-- Uncommons
+	-- 'magician',
+	-- 'druid',
+	-- 'overdrive_aces',
+	-- 'earthrise',
+	-- 'wanted',
+	-- 'feature_film',
+	-- 'swiss_cheese',
+	-- 'missing',
+	-- 'duality',
+	-- 'hang_10',
+	-- 'lucky_clover',
+	-- 'magnetism',
+	-- 'beat_swap',
+	-- 'doppelganger',
 	'aerial_ace',
+	-- 'trapdoor',
+	-- 'coin_pusher',
+	-- 'desire_path',
+	-- '3d_glasses',
 
 	-- Rares
 	'blind_justice',
@@ -49,6 +74,12 @@ local enabled_jokers = {
 	'tetrominoker',
 	'lovecraftian',
 	'moon_rabbit',
+	-- 'stained_glass',
+	-- 'tic_tac_toe',
+	-- 'nuclear_option',
+	-- 'soul_food',
+	-- 'pro_skater',
+	-- 'spinning',
 }
 
 for i = 1, #enabled_jokers do
