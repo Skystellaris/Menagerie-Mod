@@ -78,7 +78,7 @@ local enabled_jokers = {
 	-- 'tic_tac_toe',
 	-- 'nuclear_option',
 	-- 'soul_food',
-	-- 'pro_skater',
+	'pro_skater',
 	-- 'spinning',
 }
 

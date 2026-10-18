@@ -302,6 +302,18 @@ return {
 					'make an unenhanced card',
 					'held in hand {C:mngy_suits}Wild{}'
 				}
+			},
+
+			j_mngy_pro_skater = {
+				name = 'Pro Skater',
+				text = {
+					'Selects {C:attention}3{} random poker hands',
+					'at the start of each round',
+					'Gains {X:mult,C:white}X#2#{} after playing',
+					'all 3 hands {C:attention}consecutively{}',
+					'{C:inactive}(Next hand: #3#)',
+					'{C:inactive}(Currently: {X:mult,C:white}X#1#{C:inactive})',
+				}
 			}
 
 		},
@@ -312,6 +324,8 @@ return {
 			k_mngy_ranks_left = 'Ranks left: ',
 			k_mngy_banished_ex = 'Banished!',
 			k_mngy_plus_joker_slots = '+1 Joker Slot',
+			k_mngy_hand_order = 'Hand order: ',
+			k_mngy_combo = 'Combo',
 		},
 		v_text = {}
 	}
