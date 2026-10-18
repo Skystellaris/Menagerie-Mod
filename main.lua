@@ -66,7 +66,7 @@ local enabled_jokers = {
 	-- 'trapdoor',
 	'coin_pusher',
 	'desired_path',
-	-- '3d_glasses',
+	'3d_glasses',
 
 	-- Rares
 	'blind_justice',
