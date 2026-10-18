@@ -284,6 +284,19 @@ return {
 				}
 			},
 
+			j_mngy_desired_path = {
+				name = 'Desired Path',
+				text = {
+					'The {C:attention}first{} hand of',
+					'a round is always treated',
+					'as a {C:attention}#1#',
+					'If first hand contains',
+					'a {C:attention}#2#{}, then',
+					'hand is treated as a',
+					'{C:attention}#3#{} instead'
+				}
+			},
+
             j_mngy_blind_justice = {
                 name = 'Blind Justice',
                 text = {
