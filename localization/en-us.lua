@@ -233,6 +233,18 @@ return {
 				}
 			},
 
+			j_mngy_hang_10 = {
+				name = 'Hang 10!',
+				text = {
+					'{C:green}#1# in #2#{} chance to',
+					'create a {C:tarot}#4#{}',
+					'when hand is played',
+					'Chance {C:attention}increases{} by {C:green}#3#{}',
+					'for each {C:attention}10{} played',
+					'{C:inactive,s:0.8}(Chance resets at end of round)'
+				}
+			},
+
             j_mngy_aerial_ace = {
                 name = 'Aerial Ace',
                 text = {
