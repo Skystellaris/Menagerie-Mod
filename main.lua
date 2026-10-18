@@ -64,7 +64,7 @@ local enabled_jokers = {
 	'doppelganger',
 	'aerial_ace',
 	-- 'trapdoor',
-	-- 'coin_pusher',
+	'coin_pusher',
 	-- 'desire_path',
 	-- '3d_glasses',
 

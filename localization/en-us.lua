@@ -272,6 +272,18 @@ return {
                 }
             },
 
+			j_mngy_coin_pusher = {
+				name = 'Coin Pusher',
+				text = {
+					'Discarded {C:attention}Gold Cards{}',
+					'each give {C:money}$#1#{}',
+					'After discarding {C:attention}#3# Gold Cards{},',
+					'convert the {C:attention}next{} discarded',
+					'hand into {C:attention}Gold Cards{}',
+					'{C:inactive}(Currently: {V:1}#2#{C:inactive}/#3#)'
+				}
+			},
+
             j_mngy_blind_justice = {
                 name = 'Blind Justice',
                 text = {
