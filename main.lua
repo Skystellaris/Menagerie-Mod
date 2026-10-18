@@ -80,6 +80,7 @@ local enabled_jokers = {
 	-- 'soul_food',
 	'pro_skater',
 	-- 'spinning',
+	-- 'secret',
 }
 
 for i = 1, #enabled_jokers do
