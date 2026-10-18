@@ -61,7 +61,7 @@ local enabled_jokers = {
 	-- 'lucky_clover',
 	'magnetism',
 	-- 'beat_swap',
-	-- 'doppelganger',
+	'doppelganger',
 	'aerial_ace',
 	-- 'trapdoor',
 	-- 'coin_pusher',

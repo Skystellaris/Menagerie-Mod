@@ -255,6 +255,14 @@ return {
 				}
 			},
 
+			j_mngy_doppelganger = {
+				name = 'Doppelganger',
+				text = {
+					'{C:attention}"When Blind is selected"{} effects',
+					'also trigger at {C:attention}end of round{}'
+				}
+			},
+
             j_mngy_aerial_ace = {
                 name = 'Aerial Ace',
                 text = {
@@ -349,7 +357,8 @@ return {
 			k_mngy_plus_joker_slots = '+1 Joker Slot',
 			k_mngy_hand_order = 'Hand order: ',
 			k_mngy_combo = 'Combo',
-			k_mngy_magnetized_ex = 'Magnetized!'
+			k_mngy_magnetized_ex = 'Magnetized!',
+			k_mngy_again_reversed = '!niaga'
 		},
 		v_text = {}
 	}
