@@ -245,6 +245,16 @@ return {
 				}
 			},
 
+			j_mngy_magnetism = {
+				name = 'Magnetism',
+				text = {
+					'When a {C:attention}#1#{}',
+					'is drawn, draw one {C:attention}extra',
+					'{C:attention}#1#{} from the deck',
+					'if one is available'
+				}
+			},
+
             j_mngy_aerial_ace = {
                 name = 'Aerial Ace',
                 text = {
@@ -339,6 +349,7 @@ return {
 			k_mngy_plus_joker_slots = '+1 Joker Slot',
 			k_mngy_hand_order = 'Hand order: ',
 			k_mngy_combo = 'Combo',
+			k_mngy_magnetized_ex = 'Magnetized!'
 		},
 		v_text = {}
 	}
