@@ -84,12 +84,18 @@ SMODS.Joker {
 
         if context.before and not context.blueprint and not card.ability.extra.stop then
             if card.ability.extra.hands[card.ability.extra.current] == context.scoring_name then
-                SMODS.calculate_effect({ message = localize('k_mngy_combo') .. ' ' .. card.ability.extra.current, colour = G.C.ATTENTION },card)
+                SMODS.calculate_effect({ message = localize('k_mngy_combo') .. ' ' .. card.ability.extra.current, colour = G.C.ATTENTION, sound = 'mngy_combo'..card.ability.extra.current, pitch = 1 },card)
                 if card.ability.extra.current >= #card.ability.extra.hands then
                     SMODS.scale_card(card, {
                         ref_table = card.ability.extra,
                         ref_value = 'xmult',
                         scalar_value = 'gain',
+                        scaling_message = {
+                            message = localize('k_upgrade_ex'),
+                            colour = G.C.ATTENTION,
+                            sound = 'mngy_combo_finish',
+                            pitch = 1
+                        }
                     })
                     card.ability.extra.stop = true
                 else
@@ -100,9 +106,8 @@ SMODS.Joker {
                 return {
                     message = localize('k_nope_ex'),
                     colour = G.C.SECONDARY_SET.Tarot,
-                    sound = 'tarot2',
-                    pitch = 0.76,
-                    volume = 0.4
+                    sound = 'mngy_combo_fail',
+                    pitch = 1
                 }
             end
         end

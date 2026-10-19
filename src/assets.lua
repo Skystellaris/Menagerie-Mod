@@ -11,6 +11,8 @@ SMODS.Gradient {
 
 G.ARGS.LOC_COLOURS["mngy_suits"] = SMODS.Gradients['mngy_suits']
 
+--#region Sprites
+
 SMODS.Atlas {
 	key = 'decks',
 	path = 'decks.png',
@@ -74,3 +76,25 @@ SMODS.Atlas {
 	px = 71,
 	py = 95
 }
+
+--#endregion
+
+--#region Sounds
+for i = 1, 3 do
+	SMODS.Sound {
+		key = 'combo'..i,
+		path = 'combo'..i..'.ogg'
+	}
+end
+
+SMODS.Sound {
+	key = 'combo_finish',
+	path = 'combo_finish.ogg'
+}
+
+SMODS.Sound {
+	key = 'combo_fail',
+	path = 'combo_fail.ogg'
+}
+
+--#endregion
