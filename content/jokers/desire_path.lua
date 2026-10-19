@@ -10,7 +10,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.evaluate_poker_hand and G.GAME.current_round.hands_played == 0 then
+        if context.evaluate_poker_hand and G.GAME.current_round.hands_left == 0 then
             local poker_hands = context.poker_hands
             if next(context.poker_hands['Flush']) then
                 poker_hands['Straight'] = {{ context.scoring_hand }}

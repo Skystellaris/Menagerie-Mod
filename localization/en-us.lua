@@ -288,10 +288,10 @@ return {
 			j_mngy_desire_path = {
 				name = 'Desire Path',
 				text = {
-					'The {C:attention}first{} hand of',
+					'The {C:attention}last{} hand of',
 					'a round is always treated',
 					'as a {C:attention}#1#.',
-					'If first hand contains',
+					'If last hand contains',
 					'a {C:attention}#2#{}, then',
 					'hand is treated as a',
 					'{C:attention}#3#{} instead'
