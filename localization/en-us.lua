@@ -99,8 +99,6 @@ return {
 				text = {
 					'All {C:attention}consumables{} give',
 					'{C:money}$#1#{} when used',
-					'All sell values are set',
-					'to {C:red}-$1{}'
 				}
 			},
 

@@ -18,9 +18,5 @@ SMODS.Back {
                 dollars = self.config.extra.dollars
             }
         end
-
-        if context.card_added then
-            context.card.sell_cost = -1
-        end
     end,
 }
