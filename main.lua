@@ -54,7 +54,7 @@ local enabled_jokers = {
 	-- 'earthrise',
 	-- 'wanted',
 	-- 'feature_film',
-	-- 'swiss_cheese',
+	'swiss_cheese',
 	-- 'missing',
 	-- 'duality',
 	'hang_10',

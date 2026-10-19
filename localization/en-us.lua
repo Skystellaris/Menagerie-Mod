@@ -259,6 +259,15 @@ return {
 				}
 			},
 
+			j_mngy_swiss_cheese = {
+				name = 'Swiss Cheese Joker',
+				text = {
+					'Each scoring {C:attention}2{}, {C:attention}3{}, and {C:attention}4',
+					'is returned to the',
+					'{C:attention}top{} of the {C:attention}Deck'
+				}
+			},
+
 			j_mngy_hang_10 = {
 				name = 'Hang 10!',
 				text = {
@@ -407,7 +416,16 @@ return {
 			}
 
 		},
-		Other = {}
+		Other = {
+			mngy_empty = {
+				name = 'Empty Slot',
+				text = {
+					'This card counts as an',
+					'Empty Slot for',
+					'Joker Stencil-like effects'
+				}
+			}
+		}
 	},
 	misc = {
 		dictionary = {
