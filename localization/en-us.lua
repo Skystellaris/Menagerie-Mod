@@ -268,6 +268,13 @@ return {
 				}
 			},
 
+			j_mngy_missing = {
+				name = 'Missing Joker?',
+				text = {
+					'{C:inactive}???'
+				}
+			},
+
 			j_mngy_hang_10 = {
 				name = 'Hang 10!',
 				text = {

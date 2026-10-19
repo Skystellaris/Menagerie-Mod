@@ -55,7 +55,7 @@ local enabled_jokers = {
 	-- 'wanted',
 	-- 'feature_film',
 	'swiss_cheese',
-	-- 'missing',
+	'missing',
 	-- 'duality',
 	'hang_10',
 	-- 'lucky_clover',
