@@ -1,7 +1,7 @@
 SMODS.Back {
     key = 'seeded',
-    atlas = 'placeholders',
-    pos = { x = 4, y = 2 },
+    atlas = 'decks',
+    pos = { x = 7, y = 1 },
 
     apply = function(self, back)
         G.E_MANAGER:add_event(Event({
