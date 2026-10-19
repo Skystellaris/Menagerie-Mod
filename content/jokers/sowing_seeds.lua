@@ -70,24 +70,27 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.discard then
-            card.ability.extra.ranks[context.other_card.base.value] = nil
-            if SMODS.table_size(card.ability.extra.ranks) <= 0 then
-                Menagerie.reset_seeds_ranks(card)
+            if card.ability.extra.ranks[context.other_card.base.value] then
+                SMODS.calculate_effect({ message = localize(card.ability.extra.ranks[context.other_card.base.value], 'ranks'), colour = G.C.ATTENTION, delay = 0.2 },card)
+                card.ability.extra.ranks[context.other_card.base.value] = nil
+                if SMODS.table_size(card.ability.extra.ranks) <= 0 then
+                    Menagerie.reset_seeds_ranks(card)
 
-                local current_rarity_weight = SMODS.Rarities[card.ability.extra.rarity].default_weight
-                local next_rarity_weight = -1
-                local next_rarity_key = card.ability.extra.rarity
-                for k, v in pairs(SMODS.Rarities) do
-                    if v.default_weight < current_rarity_weight and v.default_weight > next_rarity_weight then
-                        next_rarity_key = v.key
-                        next_rarity_weight = v.default_weight
+                    local current_rarity_weight = SMODS.Rarities[card.ability.extra.rarity].default_weight
+                    local next_rarity_weight = -1
+                    local next_rarity_key = card.ability.extra.rarity
+                    for k, v in pairs(SMODS.Rarities) do
+                        if v.default_weight < current_rarity_weight and v.default_weight > next_rarity_weight then
+                            next_rarity_key = v.key
+                            next_rarity_weight = v.default_weight
+                        end
                     end
-                end
-                if next_rarity_key ~= card.ability.extra.rarity then
-                    card.ability.extra.rarity = next_rarity_key
-                    return {
-                        message = localize('k_upgrade_ex')
-                    }
+                    if next_rarity_key ~= card.ability.extra.rarity then
+                        card.ability.extra.rarity = next_rarity_key
+                        return {
+                            message = localize('k_upgrade_ex')
+                        }
+                    end
                 end
             end
         end
