@@ -23,7 +23,7 @@ return {
 				text = {
 					'{C:mngy_mod}Menagerie{} Jokers are {X:attention,C:white}3X{}',
 					'more likely to appear',
-					'{C:attention}+1{} hand size for each',
+					'{C:attention}+2{} hand size if a',
 					'{C:mngy_mod}Menagerie{} Joker held'
 				}
 			},

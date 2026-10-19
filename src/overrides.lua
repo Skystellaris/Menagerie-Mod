@@ -26,7 +26,10 @@ function CardArea:emplace(card, location, stay_flipped)
     end
 
     if G.GAME.mngy_sightseeing and self == G.jokers and card.config.center_key:find('j_mngy_') then
-        G.hand:change_size(1)
+        G.GAME.mngy_jokers = (G.GAME.mngy_jokers or 0) + 1
+        if G.GAME.mngy_jokers == 1 then
+            G.hand:change_size(2)
+        end
     end
 end
 
@@ -39,7 +42,10 @@ function CardArea:remove_card(card, discarded_only)
     end
         
     if G.GAME.mngy_sightseeing and self == G.jokers and card.config.center_key:find('j_mngy_') then
-        G.hand:change_size(-1)
+        G.GAME.mngy_jokers = (G.GAME.mngy_jokers or 0) - 1
+        if G.GAME.mngy_jokers == 0 then
+            G.hand:change_size(-2)
+        end
     end
 
     return ret
