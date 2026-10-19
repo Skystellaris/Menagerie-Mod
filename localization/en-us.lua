@@ -226,8 +226,8 @@ return {
 				name = 'Lemnia',
 				text = {
 					'When a hand is played,',
-					'give an {C:attention}adjacent{} Joker',
-					'a random {C:dark_edition}Edition{}',
+					'set an {C:attention}adjacent{} Joker',
+					'to a random {C:dark_edition}Edition{}',
 					'{C:green}#1# in #2#{} chance this',
 					'card is {C:red}destroyed{}',
 					'at end of round'

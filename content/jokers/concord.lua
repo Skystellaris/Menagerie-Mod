@@ -6,7 +6,7 @@ SMODS.Joker {
     eternal_compat = false,
     config = {
         extra = {
-            chips = -60,
+            chips = -30,
             prob = 1,
             odds = 3
         }
