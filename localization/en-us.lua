@@ -361,12 +361,12 @@ return {
 			},
 
 			j_mngy_stained_glass = {
-				name = 'Stained Glass',
+				name = 'Stained Glass Joker',
 				text = {
-					'{C:spades}Glass Cards{} are',
-					'treated as {C:mngy_suits}any suit{}',
+					'{C:mngy_suits}Wild Cards{} are',
+					'treated as {C:attention}Glass Cards{}.',
 					'When a Glass Card {C:red}breaks{},',
-					'make an unenhanced card',
+					'make a random card',
 					'held in hand {C:mngy_suits}Wild{}'
 				}
 			},

@@ -6,10 +6,6 @@ function SMODS.has_any_suit(card)
         ret = true
     end
 
-    if next(SMODS.find_card('j_mngy_stained_glass')) and SMODS.has_enhancement(card, 'm_glass') then
-        ret = true
-    end
-
     if G.GAME.mngy_cloudy and card.facing == 'back' then
         ret = true
     end

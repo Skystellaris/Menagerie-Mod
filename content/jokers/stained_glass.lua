@@ -11,6 +11,12 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
+        if context.check_enhancement and context.other_card.config.center_key == "m_wild" then
+            return {
+                m_glass = true
+            }
+        end
+
         if context.after and not context.blueprint then
             local glasses_shattered = 0
             for k, v in pairs(context.scoring_hand) do
@@ -25,14 +31,16 @@ SMODS.Joker {
                     local valid_cards = {}
 
                     for _, v in pairs(G.hand.cards) do
-                        if v.ability ~= 'Enhanced' and not v.mngy_will_wild then
+                        if not v.mngy_will_wild then
                             valid_cards[#valid_cards + 1] = v
                         end
                     end
-
-                    local card_to_wild = pseudorandom_element(valid_cards, 'mngy_stained_glass')
-                    card_to_wild.mngy_will_wild = true
-                    wilds[#wilds + 1] = card_to_wild
+                    
+                    if next(valid_cards) then
+                        local card_to_wild = pseudorandom_element(valid_cards, 'mngy_stained_glass')
+                        card_to_wild.mngy_will_wild = true
+                        wilds[#wilds + 1] = card_to_wild
+                    end
                 end
 
 
@@ -52,7 +60,8 @@ SMODS.Joker {
                         trigger = 'after',
                         delay = 0.15,
                         func = function()
-                            wilds[i]:flip(); play_sound('card1', percent)
+                            wilds[i]:flip()
+                            play_sound('card1', percent)
                             wilds[i]:juice_up(0.3,0.3)
                             return true
                         end
