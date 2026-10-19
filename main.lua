@@ -65,7 +65,7 @@ local enabled_jokers = {
 	'aerial_ace',
 	-- 'trapdoor',
 	'coin_pusher',
-	'desired_path',
+	'desire_path',
 	'3d_glasses',
 
 	-- Rares
