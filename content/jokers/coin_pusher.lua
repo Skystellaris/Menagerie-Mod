@@ -14,6 +14,7 @@ SMODS.Joker {
 
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue+1] = G.P_CENTERS.m_gold
+        info_queue[#info_queue+1] = G.P_SEALS.Gold
 
         return { vars = { card.ability.extra.dollars, card.ability.extra.discarded, card.ability.extra.goal, colours = { card.ability.extra.active and G.C.GREEN or G.C.RED } } }
     end,
@@ -23,12 +24,12 @@ SMODS.Joker {
             card.ability.extra.active = false
             card.ability.extra.discarded = 0
             for _, v in pairs(context.full_hand) do
-                v.mngy_pusher_gold = true
-                v:set_ability(G.P_CENTERS.m_gold, nil, true)
                 G.E_MANAGER:add_event(Event({
+                    delay = 0.25,
+                    trigger = 'after',
                     func = function()
+                        v:set_seal('Gold', nil, true)
                         v:juice_up()
-                        v.mngy_pusher_gold = nil
                         return true
                     end
                 }))
@@ -40,7 +41,7 @@ SMODS.Joker {
         end
 
         if context.discard then
-            if SMODS.has_enhancement(context.other_card, 'm_gold') and not context.other_card.mngy_pusher_gold then
+            if SMODS.has_enhancement(context.other_card, 'm_gold') then
                 card.ability.extra.discarded = card.ability.extra.discarded + 1
                 return {
                     dollars = card.ability.extra.dollars,

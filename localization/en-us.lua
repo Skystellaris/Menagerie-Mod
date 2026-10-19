@@ -279,8 +279,8 @@ return {
 					'Discarded {C:attention}Gold Cards{}',
 					'each give {C:money}$#1#{}',
 					'After discarding {C:attention}#3# Gold Cards{},',
-					'convert the {C:attention}next{} discarded',
-					'hand into {C:attention}Gold Cards{}',
+					'give the {C:attention}next{} discarded',
+					'hand {C:attention}Gold Seals{}',
 					'{C:inactive}(Currently: {V:1}#2#{C:inactive}/#3#)'
 				}
 			},
