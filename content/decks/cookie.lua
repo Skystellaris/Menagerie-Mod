@@ -1,7 +1,7 @@
 SMODS.Back {
     key = 'cookie',
-    atlas = 'placeholders',
-    pos = { x = 4, y = 2 },
+    atlas = 'decks',
+    pos = { x = 3, y = 1 },
     config = {
         extra = {
             dollars = 1

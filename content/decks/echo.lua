@@ -1,7 +1,7 @@
 SMODS.Back {
     key = 'echo',
-    atlas = 'placeholders',
-    pos = { x = 4, y = 2 },
+    atlas = 'decks',
+    pos = { x = 7, y = 0 },
     config = {
         joker_slot = -1,
         jokers = { 'j_invisible' }

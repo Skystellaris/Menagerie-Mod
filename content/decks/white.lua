@@ -1,7 +1,7 @@
 SMODS.Back {
     key = 'stacked',
-    atlas = 'placeholders',
-    pos = { x = 4, y = 2 },
+    atlas = 'decks',
+    pos = { x = 5, y = 0 },
 
     apply = function(self, back)
         --Change limits

@@ -1,7 +1,7 @@
 SMODS.Back {
     key = 'loaned',
-    atlas = 'placeholders',
-    pos = { x = 4, y = 2 },
+    atlas = 'decks',
+    pos = { x = 2, y = 0 },
     config = {
         extra = {
             debt = 15

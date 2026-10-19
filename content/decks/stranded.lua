@@ -1,7 +1,7 @@
 SMODS.Back {
     key = 'stranded',
-    atlas = 'placeholders',
-    pos = { x = 4, y = 2 },
+    atlas = 'decks',
+    pos = { x = 1, y = 1 },
 
     calculate = function(self, back, context)
         if context.joker_type_destroyed then

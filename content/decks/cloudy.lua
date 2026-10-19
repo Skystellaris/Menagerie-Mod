@@ -1,7 +1,7 @@
 SMODS.Back {
     key = 'cloudy',
-    atlas = 'placeholders',
-    pos = { x = 4, y = 2 },
+    atlas = 'decks',
+    pos = { x = 8, y = 0 },
     config = {
         extra = {
             prob = 1,

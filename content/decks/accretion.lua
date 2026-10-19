@@ -1,7 +1,7 @@
 SMODS.Back {
     key = 'accretion',
-    atlas = 'placeholders',
-    pos = { x = 4, y = 2 },
+    atlas = 'decks',
+    pos = { x = 6, y = 0 },
 
     apply = function(self, back)
         G.GAME.planet_rate = 0

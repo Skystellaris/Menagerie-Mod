@@ -1,7 +1,7 @@
 SMODS.Back {
     key = 'clown_car',
-    atlas = 'placeholders',
-    pos = { x = 4, y = 2 },
+    atlas = 'decks',
+    pos = { x = 5, y = 1 },
     config = {
         joker_slot = -4,
         extra = {

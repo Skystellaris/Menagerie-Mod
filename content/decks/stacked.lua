@@ -1,7 +1,7 @@
 SMODS.Back {
     key = 'stacked',
-    atlas = 'placeholders',
-    pos = { x = 4, y = 2 },
+    atlas = 'decks',
+    pos = { x = 1, y = 0 },
 
     calculate = function(self, back, context)
         if context.drawing_cards and not G.GAME.current_round.any_hand_drawn and G.GAME.facing_blind then
