@@ -240,6 +240,15 @@ return {
 				}
 			},
 
+			j_mngy_druid = {
+				name = 'Druid',
+				text = {
+					'{C:money}+$#1#{} dollars per {C:blue}Hand',
+					'at end of round',
+					'{C:red}-#2#{} interest cap'
+				}
+			},
+
 			j_mngy_hang_10 = {
 				name = 'Hang 10!',
 				text = {
