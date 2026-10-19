@@ -466,6 +466,13 @@ return {
 					'{C:inactive}(Next hand: #3#)',
 					'{C:inactive}(Currently: {X:mult,C:white}X#1#{C:inactive})',
 				}
+			},
+
+			j_mngy_secret = {
+				name = 'The Secret',
+				text = {
+					'{C:dark_edition}???',
+				}
 			}
 
 		},
