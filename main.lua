@@ -48,7 +48,7 @@ local enabled_jokers = {
 	-- 'jokitty',
 
 	-- Uncommons
-	-- 'magician',
+	'magician',
 	-- 'druid',
 	-- 'overdrive_aces',
 	-- 'earthrise',

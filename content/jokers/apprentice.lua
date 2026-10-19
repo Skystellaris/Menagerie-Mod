@@ -16,25 +16,29 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.starting_shop then
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    card:juice_up()
-                    SMODS.add_booster_to_shop()
-                    return true;
-                end
-            }))
+            for i = 1, card.ability.extra.packs do
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        card:juice_up()
+                        SMODS.add_booster_to_shop()
+                        return true;
+                    end
+                }))
+            end
         end
     end,
 
     add_to_deck = function(self, card, from_debuff)
         if G.STATE == G.STATES.SHOP then
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    card:juice_up()
-                    SMODS.add_booster_to_shop()
-                    return true;
-                end
-            }))
+            for i = 1, card.ability.extra.packs do
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        card:juice_up()
+                        SMODS.add_booster_to_shop()
+                        return true;
+                    end
+                }))
+            end
         end
     end,
 }

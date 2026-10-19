@@ -232,6 +232,14 @@ return {
 				}
 			},
 
+			j_mngy_magician = {
+				name = 'Magician',
+				text = {
+					'{C:attention}+#1#{} Voucher',
+					'in Shop'
+				}
+			},
+
 			j_mngy_hang_10 = {
 				name = 'Hang 10!',
 				text = {
