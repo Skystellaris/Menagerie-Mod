@@ -1,6 +1,6 @@
 SMODS.Joker {
     key = 'concord',
-    atlas = 'jokers',
+    atlas = 'jokers_common',
     pos = { x = 0, y = 1 },
     rarity = 1,
     eternal_compat = false,

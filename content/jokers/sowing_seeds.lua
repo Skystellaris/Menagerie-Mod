@@ -1,6 +1,6 @@
 SMODS.Joker {
     key = 'sowing_seeds',
-    atlas = 'jokers',
+    atlas = 'jokers_common',
     pos = { x = 8, y = 0 },
     rarity = 1,
     blueprint_compat = false,

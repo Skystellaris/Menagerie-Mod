@@ -19,10 +19,17 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
-	key = 'jokers',
-	path = 'jokers.png',
+	key = 'jokers_common',
+	path = 'jokers_common.png',
 	px = 71,
 	py = 95
+}
+
+SMODS.Atlas {
+	key = 'punch_card',
+	path = 'punch_card.png',
+	px = 93,
+	py = 69
 }
 
 SMODS.Atlas {

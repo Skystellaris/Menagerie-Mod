@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = 'hang_10',
     atlas = 'jokers_uncommon',
-    pos = { x = 9, y = 0 },
+    pos = { x = 8, y = 0 },
     rarity = 2,
     config = {
         extra = {

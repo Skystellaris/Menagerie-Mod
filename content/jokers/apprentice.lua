@@ -1,6 +1,6 @@
 SMODS.Joker {
     key = 'apprentice',
-    atlas = 'jokers',
+    atlas = 'jokers_common',
     pos = { x = 1, y = 0 },
     rarity = 1,
     blueprint_compat = false,

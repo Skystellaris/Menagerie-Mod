@@ -1,6 +1,6 @@
 SMODS.Joker {
     key = 'doppler',
-    atlas = 'jokers',
+    atlas = 'jokers_common',
     pos = { x = 9, y = 0 },
     rarity = 1,
     config = {
