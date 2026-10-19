@@ -287,6 +287,20 @@ return {
 				}
 			},
 
+			j_mngy_lucky_clover = {
+				name = 'Lucky Clover',
+				text = {
+					'{C:attention}Lucky Cards{} have an',
+					'additional {C:green}#1# in #2#{} chance to',
+					'give {X:mult,C:white}X#3#{} Mult',
+					'and a {C:green}#4# in #5#{} chance to',
+					'give this Joker {C:green}+#6#{} to',
+					'all {C:attention}listed{} {C:green,E:1,S:1.1}probabilities',
+					'{C:inactive}(Max of {C:green}+#7#{C:inactive},',
+					'{C:inactive}Currently: {C:green}+#8#{C:inactive})'
+				}
+			},
+
 			j_mngy_magnetism = {
 				name = 'Magnetism',
 				text = {

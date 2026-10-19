@@ -77,3 +77,17 @@ function SMODS.wrap_around_straight()
     end
     return ret
 end
+
+local chip_xmult_ref = Card.get_chip_x_mult
+function Card:get_chip_x_mult(context)
+    local ret = chip_xmult_ref(self, context)
+    if next(SMODS.find_card('j_mngy_lucky_clover')) and self.ability.effect == "Lucky Card" then
+        for _, v in pairs(SMODS.find_card('j_mngy_lucky_clover')) do
+            if SMODS.pseudorandom_probability(self, 'mngy_clover_xmult', v.ability.extra.xmult_prob, v.ability.extra.xmult_odds) then
+                self.lucky_trigger = true
+                ret = ret + 1.4
+            end
+        end
+    end
+    return ret
+end

@@ -58,7 +58,7 @@ local enabled_jokers = {
 	'missing',
 	-- 'duality',
 	'hang_10',
-	-- 'lucky_clover',
+	'lucky_clover',
 	'magnetism',
 	-- 'beat_swap',
 	'doppelganger',
