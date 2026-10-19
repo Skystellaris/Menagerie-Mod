@@ -33,6 +33,14 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
+	key = 'beat_swap',
+	path = 'jokers_uncommon.png',
+	px = 71,
+	py = 95,
+	atlas_table = 'STATE_ATLAS'
+}
+
+SMODS.Atlas {
 	key = 'trapdoor',
 	path = 'trapdoor.png',
 	px = 68,

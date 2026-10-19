@@ -311,6 +311,26 @@ return {
 				}
 			},
 
+			j_mngy_beat_swap_even = {
+				name = 'Beat Swap-Metro',
+				text = {
+					'Retrigger {V:1}Even{}',
+					'cards {C:attention}#1#{} time.',
+					'{C:attention}Switches{} to {V:2}Odd{} after',
+					'a hand is played'
+				}
+			},
+
+			j_mngy_beat_swap_odd = {
+				name = 'Beat Swap-Metro',
+				text = {
+					'Retrigger {V:1}Odd{}',
+					'cards {C:attention}#1#{} time.',
+					'{C:attention}Switches{} to {V:2}Even{} after',
+					'a hand is played'
+				}
+			},
+
 			j_mngy_doppelganger = {
 				name = 'Doppelganger',
 				text = {
@@ -456,7 +476,7 @@ return {
 			k_mngy_hand_order = 'Hand order: ',
 			k_mngy_combo = 'Combo',
 			k_mngy_magnetized_ex = 'Magnetized!',
-			k_mngy_again_reversed = '!niaga'
+			k_mngy_again_reversed = '!niaga',
 		},
 		v_text = {}
 	}
