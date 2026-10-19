@@ -44,7 +44,7 @@ local enabled_jokers = {
 	-- 'envious',
 	-- 'mad_hatter',
 	-- 'paint_by_numbers',
-	-- 'punch_card',
+	'punch_card',
 	-- 'jokitty',
 
 	-- Uncommons

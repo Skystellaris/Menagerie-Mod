@@ -232,6 +232,18 @@ return {
 				}
 			},
 
+			j_mngy_punch_card = {
+				name = 'Punch Card',
+				text = {
+					'When {C:attention}Blind{} is selected,',
+					'{C:green}#1# in #2#{} chance to create',
+					'a {C:attention}#3#.',
+					'Chance increases by {C:green}+#4#{}',
+					'if chance {C:attention}fails{}, resets',
+					'to {C:red}0{} when {C:attention}succeeding{}'
+				}
+			},
+
 			j_mngy_magician = {
 				name = 'Magician',
 				text = {
@@ -477,6 +489,7 @@ return {
 			k_mngy_combo = 'Combo',
 			k_mngy_magnetized_ex = 'Magnetized!',
 			k_mngy_again_reversed = '!niaga',
+			k_mngy_punched_ex = 'Punched!',
 		},
 		v_text = {}
 	}
