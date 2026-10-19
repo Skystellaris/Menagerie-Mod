@@ -50,7 +50,7 @@ local enabled_jokers = {
 	-- Uncommons
 	'magician',
 	'druid',
-	-- 'overdrive_aces',
+	'overdrive_aces',
 	-- 'earthrise',
 	-- 'wanted',
 	-- 'feature_film',

@@ -249,6 +249,16 @@ return {
 				}
 			},
 
+			j_mngy_overdrive_aces = {
+				name = 'Overdrive Aces',
+				text = {
+					'{C:attention}Aces{}  can fill the gaps',
+					'in {C:attention}straights{} and connect',
+					'{C:attention}Kings{} to {C:attention}2s{}',
+					'{C:inactive,s:0.8}(Ex: 2, A, K, Q, J) '
+				}
+			},
+
 			j_mngy_hang_10 = {
 				name = 'Hang 10!',
 				text = {

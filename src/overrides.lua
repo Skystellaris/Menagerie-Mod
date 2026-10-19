@@ -68,3 +68,12 @@ function SMODS.add_to_pool(prototype_obj, args)
 
     return ret
 end
+
+local smods_wrap_ref = SMODS.wrap_around_straight
+function SMODS.wrap_around_straight()
+    local ret = smods_wrap_ref()
+    if next(SMODS.find_card('j_mngy_overdrive_aces')) then
+        ret = true
+    end
+    return ret
+end
