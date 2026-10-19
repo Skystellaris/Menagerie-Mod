@@ -172,7 +172,7 @@ return {
 			},
 
 			j_mngy_half_pop_l = {
-				name = 'Left Half Pop',
+				name = 'Left-Pop',
 				text = {
 					'Levels up {C:attention}#1#{} by',
 					'{C:attention}#2#{} level when #1#',
@@ -182,7 +182,7 @@ return {
 			},
 
 			j_mngy_half_pop_r = {
-				name = 'Right Half Pop',
+				name = 'Right-Pop',
 				text = {
 					'Levels up {C:attention}#1#{} by',
 					'{C:attention}#2#{} level when #1#',
