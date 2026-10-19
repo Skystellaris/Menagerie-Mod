@@ -301,11 +301,8 @@ return {
 			j_mngy_3d_glasses = {
 				name = 'Joker with 3D Glasses',
 				text = {
-					'{C:green}#1# in #2#{} chance to',
-					'{C:attention}retrigger{} scored {C:dark_edition}Holographic',
-					'or {C:blue}Bonus{} cards {C:attention}#3#{} time',
-					'Cards with {C:attention}both{} are always',
-					'retriggered {C:attention}#4#{} times instead'
+					'{C:attention}Retrigger{} cards with {C:dark_edition}Foil',
+					'or {C:dark_edition}Holographic{} {C:attention}#1#{} time',
 				}
 			},
 
