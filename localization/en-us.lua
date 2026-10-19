@@ -127,7 +127,7 @@ return {
 			j_mngy_apprentice = {
 				name = 'Apprentice',
 				text = {
-					'{C:attention}+#1#{} Booster',
+					'{C:attention}+#1#{} Booster Pack',
 					'in Shop'
 				}
 			},

@@ -6,19 +6,35 @@ SMODS.Joker {
     blueprint_compat = false,
     config = {
         extra = {
-            slots = 1
+            packs = 1
         }
     },
 
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.slots } }
+        return { vars = { card.ability.extra.packs } }
+    end,
+
+    calculate = function(self, card, context)
+        if context.starting_shop then
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    card:juice_up()
+                    SMODS.add_booster_to_shop()
+                    return true;
+                end
+            }))
+        end
     end,
 
     add_to_deck = function(self, card, from_debuff)
-        G.GAME.modifiers.extra_boosters = (G.GAME.modifiers.extra_boosters or 0) + card.ability.extra.slots
-    end,
-
-    remove_from_deck = function(self, card, from_debuff)
-        G.GAME.modifiers.extra_boosters = G.GAME.modifiers.extra_boosters - card.ability.extra.slots
+        if G.STATE == G.STATES.SHOP then
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    card:juice_up()
+                    SMODS.add_booster_to_shop()
+                    return true;
+                end
+            }))
+        end
     end,
 }
