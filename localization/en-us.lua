@@ -204,8 +204,9 @@ return {
 			j_mngy_doppler = {
 				name = 'Doppler Effect',
 				text = {
-					'{X:mult,C:white}X#1#{}, when score {C:attention}catches fire{},',
-					'scoring changes to {X:mult,C:white}X#2#{}'
+					'{X:mult,C:white,s:1.4}X#1#{}',
+					'When score {C:attention}catches fire{},',
+					'swap to {X:mult,C:white}X#2#{}'
 				}
 			},
 
