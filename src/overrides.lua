@@ -112,3 +112,13 @@ function Game:main_menu(change_context)
 
     return ret
 end
+
+local round_score_ref = SMODS.calculate_round_score
+SMODS.calculate_round_score = function(flames)
+    local ret = round_score_ref(flames)
+    if Menagerie.mod.config.disable_negative_score and ret < 0 then
+        ret = 0
+    end
+    return ret
+end
+
