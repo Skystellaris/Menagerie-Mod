@@ -91,3 +91,24 @@ function Card:get_chip_x_mult(context)
     end
     return ret
 end
+
+local oldfunc = Game.main_menu
+function Game:main_menu(change_context)
+    local ret = oldfunc(self, change_context)
+
+    if Menagerie.mod.config.menu then
+
+        -- make the title screen use different background colors
+        G.SPLASH_BACK:define_draw_steps({ {
+            shader = 'splash',
+            send = {
+                { name = 'time',       ref_table = G.TIMERS,  ref_value = 'REAL_SHADER' },
+                { name = 'vort_speed', val = 0.4 },
+                { name = 'colour_1',   ref_table = Menagerie.C, ref_value = 'MNGY_PRIMARY' },
+                { name = 'colour_2',   ref_table = Menagerie.C, ref_value = 'MNGY_SECONDARY' },
+            }
+        } })
+    end
+
+    return ret
+end

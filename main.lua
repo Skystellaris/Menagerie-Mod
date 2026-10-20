@@ -1,24 +1,6 @@
 Menagerie = {}
 Menagerie.mod = SMODS.current_mod
 
-SMODS.Gradient({
-	key = "text_rainbow",
-	cycle = 10,
-	colours = {
-		HEX("FFB0B2"),
-		HEX("FFD7B0"),
-		HEX("FFFAB0"),
-		HEX("BFFFB0"),
-		HEX("B0FFED"),
-		HEX("B0E7FF"),
-		HEX("B0B0FF"),
-		HEX("E0B0FF"),
-	},
-})
-
-Menagerie.mod.badge_colour = SMODS.Gradients['mngy_text_rainbow']
-G.ARGS.LOC_COLOURS["mngy_mod"] = SMODS.Gradients['mngy_text_rainbow']
-
 --#region File Loading
 local path = Menagerie.mod.path .. 'src/'
 for _, v in pairs(NFS.getDirectoryItems(path)) do

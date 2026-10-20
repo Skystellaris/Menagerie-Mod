@@ -497,6 +497,10 @@ return {
 			k_mngy_magnetized_ex = 'Magnetized!',
 			k_mngy_again_reversed = '!niaga',
 			k_mngy_punched_ex = 'Punched!',
+
+			-- Config labels
+			b_mngy_custom_menu = 'Toggle Custom Menu',
+			b_mngy_disable_negative_score = 'Disable Negative Scoring'
 		},
 		v_text = {}
 	}

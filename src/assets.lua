@@ -1,3 +1,9 @@
+--#region Colors and Gradients
+Menagerie.C = {
+	MNGY_PRIMARY = HEX('FF6F91'),
+	MNGY_SECONDARY = HEX('FFD54F')
+}
+
 SMODS.Gradient {
 	key = "suits",
 	colours = {
@@ -10,6 +16,26 @@ SMODS.Gradient {
 }
 
 G.ARGS.LOC_COLOURS["mngy_suits"] = SMODS.Gradients['mngy_suits']
+
+SMODS.Gradient({
+	key = "text_rainbow",
+	cycle = 10,
+	colours = {
+		HEX("FFB0B2"),
+		HEX("FFD7B0"),
+		HEX("FFFAB0"),
+		HEX("BFFFB0"),
+		HEX("B0FFED"),
+		HEX("B0E7FF"),
+		HEX("B0B0FF"),
+		HEX("E0B0FF"),
+	},
+})
+
+Menagerie.mod.badge_colour = SMODS.Gradients['mngy_text_rainbow']
+G.ARGS.LOC_COLOURS["mngy_mod"] = SMODS.Gradients['mngy_text_rainbow']
+
+--#endregion
 
 --#region Sprites
 
