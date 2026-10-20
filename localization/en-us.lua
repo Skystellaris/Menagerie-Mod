@@ -204,8 +204,8 @@ return {
 					'{C:chips}#1#{} Chips',
 					'{C:green}#2# in #3#{} chance this',
 					'card {C:red}goes extinct{} and',
-					'gives an {C:attention}adjacent{} Joker',
-					'a random {C:dark_edition}Edition{}',
+					'set an {C:attention}adjacent{} Joker',
+					'to a random {C:dark_edition}Edition{}',
 					'at end of round'
 				}
 			},
