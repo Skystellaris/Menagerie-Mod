@@ -19,18 +19,16 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.before then
-            if SMODS.pseudorandom_probability(card, 'mngy_hang_10', card.ability.extra.prob, card.ability.extra.odds) and #G.jokers.cards + G.GAME.joker_buffer < G.jokers.config.card_limit then
-                G.GAME.joker_buffer = G.GAME.joker_buffer + 1
-                G.E_MANAGER:add_event(Event({
-                    func = function()
-                        G.GAME.joker_buffer = 0
-                        SMODS.add_card({ key = 'c_hanged_man' });
-                        (context.blueprint_card or card):juice_up()
-                        return true;
-                    end
-                }))
-            end
+        if context.after and SMODS.pseudorandom_probability(card, 'mngy_hang_10', card.ability.extra.prob, card.ability.extra.odds) and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+            G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    G.GAME.consumeable_buffer = 0
+                    SMODS.add_card({ key = 'c_hanged_man' });
+                    (context.blueprint_card or card):juice_up()
+                    return true;
+                end
+            }))
         end
 
         if context.individual and context.cardarea == G.play and context.other_card:get_id() == 10 and not context.blueprint then

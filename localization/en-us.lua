@@ -292,7 +292,7 @@ return {
 				text = {
 					'{C:green}#1# in #2#{} chance to',
 					'create a {C:tarot}#4#{}',
-					'when hand is played',
+					'after hand is scored',
 					'Chance {C:attention}increases{} by {C:green}#3#{}',
 					'for each {C:attention}10{} scored',
 					'{C:inactive,s:0.8}(Chance resets at end of round)'
