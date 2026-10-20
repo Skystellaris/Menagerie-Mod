@@ -37,6 +37,14 @@ G.ARGS.LOC_COLOURS["mngy_mod"] = SMODS.Gradients['mngy_text_rainbow']
 
 --#endregion
 
+--#region Shaders
+SMODS.Shader({ 
+	key = 'confetti_menu_bg',
+	path = 'confetti_menu_bg.fs',
+	original_key = 'confetti_menu_bg'
+})
+--#endregion
+
 --#region Sprites
 
 SMODS.Atlas {

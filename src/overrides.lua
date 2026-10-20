@@ -97,7 +97,6 @@ function Game:main_menu(change_context)
     local ret = oldfunc(self, change_context)
 
     if Menagerie.mod.config.menu then
-
         -- make the title screen use different background colors
         G.SPLASH_BACK:define_draw_steps({ {
             shader = 'splash',
@@ -111,6 +110,21 @@ function Game:main_menu(change_context)
     end
 
     return ret
+end
+
+local _orig_define_draw_steps = Sprite.define_draw_steps
+Sprite.define_draw_steps = function(self, steps)
+    _orig_define_draw_steps(self, steps)
+    if steps and steps[1] and steps[1].shader == 'splash' and Menagerie.mod.config.menu and G.STATE ~= G.STATES.SPLASH then
+        self.draw_steps[#self.draw_steps + 1] = {
+            shader = 'mngy_confetti_menu_bg',
+            send = {
+                { name = 'bg_time',  ref_table = G.TIMERS, ref_value = 'REAL_SHADER' },
+                { name = 'screen_w', func = love.graphics.getWidth },
+                { name = 'screen_h', func = love.graphics.getHeight },
+            }
+        }
+    end
 end
 
 local round_score_ref = SMODS.calculate_round_score
