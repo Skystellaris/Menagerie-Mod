@@ -34,7 +34,7 @@ local enabled_jokers = {
 	'overdrive_aces',
 	'sowing_seeds',
 	-- 'earthrise',
-	-- 'wanted',
+	'wanted',
 	-- 'feature_film',
 	'swiss_cheese',
 	'missing',

@@ -20,7 +20,7 @@ pattern = "if not hide_desc and card and card.ability and (card.ability.extra_sl
 position = "before"
 match_indent = true
 payload = '''
-    if not hide_desc and card and card.config.center.mngy_empty then
+    if not hide_desc and card and card.config and card.config.center and card.config.center.mngy_empty then
         info_queue[#info_queue + 1] = {set = 'Other', key = 'mngy_empty'}
     end
 '''

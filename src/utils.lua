@@ -11,6 +11,13 @@ function Menagerie.reset_seeds_ranks(card)
     end
 end
 
+function Menagerie.wanted_choose_card(card)
+    local chosen_card = pseudorandom_element(G.playing_cards, pseudoseed('wanted' .. G.GAME.round_resets.ante))
+    card.ability.extra.id = chosen_card:get_id()
+    card.ability.extra.rank = SMODS.Ranks[chosen_card.base.value].key
+    card.ability.extra.suit = chosen_card.base.suit
+end
+
 Menagerie.mod.calculate = function(self, context)
     if context.pseudorandom_result and not context.result then
         G.GAME.mngy_failed_prob_checks = (G.GAME.mngy_failed_prob_checks or 0) + 1
