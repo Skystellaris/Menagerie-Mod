@@ -189,16 +189,6 @@ return {
 				}
 			},
 
-			j_mngy_sowing_seeds = {
-				name = 'Sowing Seeds',
-				text = {
-					'When {C:money}sold{}, create a',
-					'random {V:1}#1#{} Joker',
-					'Rarity {C:attention}increases{} after',
-					'every rank is {C:red}discarded{} once'
-				}
-			},
-
 			j_mngy_doppler = {
 				name = 'Doppler Effect',
 				text = {
@@ -268,6 +258,16 @@ return {
 					'in {C:attention}straights{} and connect',
 					'{C:attention}Kings{} to {C:attention}2s{}',
 					'{C:inactive,s:0.8}(Ex: 2, A, K, Q, J) '
+				}
+			},
+
+			j_mngy_sowing_seeds = {
+				name = 'Sowing Seeds',
+				text = {
+					'When {C:money}sold{}, create a',
+					'random {V:1}#1#{} Joker',
+					'Rarity {C:attention}increases{} after',
+					'every rank is {C:red}discarded{} once'
 				}
 			},
 
