@@ -214,7 +214,7 @@ return {
 					'{C:chips}#1#{} Chips',
 					'{C:green}#2# in #3#{} chance this',
 					'card {C:red}goes extinct{} and',
-					'gives {C:attention}adjacent{} Jokers',
+					'gives an {C:attention}adjacent{} Joker',
 					'a random {C:dark_edition}Edition{}',
 					'at end of round'
 				}
@@ -294,7 +294,7 @@ return {
 					'create a {C:tarot}#4#{}',
 					'when hand is played',
 					'Chance {C:attention}increases{} by {C:green}#3#{}',
-					'for each {C:attention}10{} played',
+					'for each {C:attention}10{} scored',
 					'{C:inactive,s:0.8}(Chance resets at end of round)'
 				}
 			},
@@ -388,7 +388,7 @@ return {
 			j_mngy_3d_glasses = {
 				name = 'Joker with 3D Glasses',
 				text = {
-					'{C:attention}Retrigger{} cards with {C:dark_edition}Foil',
+					'{C:attention}Retrigger{} all cards with {C:dark_edition}Foil',
 					'or {C:dark_edition}Holographic{} {C:attention}#1#{} time',
 				}
 			},

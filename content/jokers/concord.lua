@@ -28,22 +28,28 @@ SMODS.Joker {
 
         if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
             if SMODS.pseudorandom_probability(card, 'mngy_concord', card.ability.extra.prob, card.ability.extra.odds) then
+                local adjacent_jokers = {}
                 for i, v in ipairs(G.jokers.cards) do
                     if v == card then
-                        if G.jokers.cards[i - 1] and not G.jokers.cards[i - 1].edition then
-                            G.jokers.cards[i - 1]:set_edition(SMODS.poll_edition({ key = 'mngy_concord_edi', guaranteed = true }))
+                        if G.jokers.cards[i - 1] then
+                            table.insert(adjacent_jokers, G.jokers.cards[i - 1])
                         end
-                        if G.jokers.cards[i + 1] and not G.jokers.cards[i + 1].edition then
-                            G.jokers.cards[i + 1]:set_edition(SMODS.poll_edition({ key = 'mngy_concord_edi', guaranteed = true }))
+                        if G.jokers.cards[i + 1] then
+                            table.insert(adjacent_jokers, G.jokers.cards[i + 1])
                         end
                         break
                     end
                 end
-                SMODS.destroy_cards(card, {pinch_anim = true})
-                G.GAME.pool_flags.mngy_concord_extinct = true
-                return {
-                    message = localize('k_extinct_ex')
-                }
+                if next(adjacent_jokers) then
+                    local joker_to_affect = pseudorandom_element(adjacent_jokers)
+                    joker_to_affect:set_edition(SMODS.poll_edition({ key = 'mngy_concord_edi', guaranteed = true }))
+                    
+                    SMODS.destroy_cards(card, {pinch_anim = true})
+                    G.GAME.pool_flags.mngy_concord_extinct = true
+                    return {
+                        message = localize('k_extinct_ex')
+                    }
+                end
             else
                 return {
                     message = localize('k_safe_ex')

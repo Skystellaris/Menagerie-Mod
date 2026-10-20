@@ -1,9 +1,9 @@
 SMODS.Joker {
     key = 'punch_card',
     atlas = 'punch_card',
-    display_size = { w = 93, h = 69 },
-    pixel_size = { w = 93, h = 69 },
-    rarity = 3,
+    display_size = { w = 69, h = 93 },
+    pixel_size = { w = 69, h = 93 },
+    rarity = 1,
     config = {
         extra = {
             prob = 1,

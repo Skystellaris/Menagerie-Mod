@@ -12,7 +12,7 @@ SMODS.Joker {
     },
 
     loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue+1] = G.P_CENTERS.c_hanged_man
+        info_queue[#info_queue + 1] = G.P_CENTERS.c_hanged_man
         local num, den = SMODS.get_probability_vars(card, card.ability.extra.prob, card.ability.extra.odds)
 
         return { vars = { num, den, card.ability.extra.gain, localize { set = 'Tarot', type = 'name_text', key = 'c_hanged_man' } } }
@@ -20,24 +20,6 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.before then
-            if not context.blueprint then
-                for _, v in pairs(context.scoring_hand) do
-                    if v:get_id() == 10 then
-                        G.E_MANAGER:add_event(Event({
-                            func = function()
-                                v:juice_up()
-                                return true;
-                            end
-                        }))
-                        SMODS.scale_card(card, {
-                            ref_table = card.ability.extra,
-                            ref_value = 'prob',
-                            scalar_value = 'gain',
-                        })
-                    end
-                end
-            end
-
             if SMODS.pseudorandom_probability(card, 'mngy_hang_10', card.ability.extra.prob, card.ability.extra.odds) and #G.jokers.cards + G.GAME.joker_buffer < G.jokers.config.card_limit then
                 G.GAME.joker_buffer = G.GAME.joker_buffer + 1
                 G.E_MANAGER:add_event(Event({
@@ -49,6 +31,21 @@ SMODS.Joker {
                     end
                 }))
             end
+        end
+
+        if context.individual and context.cardarea == G.play and context.other_card:get_id() == 10 and not context.blueprint then
+            local _c = context.other_card
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    _c:juice_up()
+                    return true;
+                end
+            }))
+            SMODS.scale_card(card, {
+                ref_table = card.ability.extra,
+                ref_value = 'prob',
+                scalar_value = 'gain',
+            })
         end
 
         if context.end_of_round and context.main_eval and not context.blueprint then

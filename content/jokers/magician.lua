@@ -20,7 +20,7 @@ SMODS.Joker {
                 G.E_MANAGER:add_event(Event({
                     func = function()
                         card:juice_up()
-                        SMODS.add_voucher_to_shop()
+                        SMODS.add_voucher_to_shop(nil, true)
                         return true;
                     end
                 }))
@@ -34,7 +34,7 @@ SMODS.Joker {
                 G.E_MANAGER:add_event(Event({
                     func = function()
                         card:juice_up()
-                        SMODS.add_voucher_to_shop()
+                        SMODS.add_voucher_to_shop(nil, true)
                         return true;
                     end
                 }))

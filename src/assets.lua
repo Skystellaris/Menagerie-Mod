@@ -56,8 +56,8 @@ SMODS.Atlas {
 SMODS.Atlas {
 	key = 'punch_card',
 	path = 'punch_card.png',
-	px = 93,
-	py = 69
+	px = 69,
+	py = 93
 }
 
 SMODS.Atlas {

@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = "desired_path",
+    key = "desire_path",
     atlas = 'jokers_uncommon',
     pos = { x = 7, y = 1 },
     rarity = 2,
