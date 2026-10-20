@@ -4,6 +4,7 @@ SMODS.Joker {
     display_size = { w = 69, h = 93 },
     pixel_size = { w = 69, h = 93 },
     rarity = 1,
+    mngy_empty = true,
     config = {
         extra = {
             prob = 1,
@@ -14,8 +15,6 @@ SMODS.Joker {
     },
 
     loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue+1] = { set = 'Tag', key = card.ability.extra.tag }
-        info_queue[#info_queue+1] = { set = 'Other', key = 'mngy_empty' }
         local num, den = SMODS.get_probability_vars(card, card.ability.extra.prob, card.ability.extra.odds)
         return { vars = { num, den, localize{ set = 'Tag', type = 'name_text', key = card.ability.extra.tag }, card.ability.extra.gain } }
     end,

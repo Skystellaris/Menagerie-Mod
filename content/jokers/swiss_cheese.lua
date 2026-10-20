@@ -4,10 +4,7 @@ SMODS.Joker {
     pos = { x = 5, y = 0 },
     rarity = 2,
     blueprint_compat = false,
-
-    loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue+1] = { set = 'Other', key = 'mngy_empty' }
-    end,
+    mngy_empty = true,
 
     calculate = function(self, card, context)
         if context.drawing_cards then

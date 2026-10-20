@@ -10,7 +10,17 @@ pattern = "if G.jokers.cards[i].ability.name == 'Joker Stencil' then self.abilit
 position = "after"
 match_indent = true
 payload = '''
-    if G.jokers.cards[i].config.center_key == 'j_mngy_swiss_cheese' then self.ability.x_mult = self.ability.x_mult + 1 end
-    if G.jokers.cards[i].config.center_key == 'j_mngy_missing' then self.ability.x_mult = self.ability.x_mult + 1 end
-    if G.jokers.cards[i].config.center_key == 'j_mngy_punch_card' then self.ability.x_mult = self.ability.x_mult + 1 end
+    if G.jokers.cards[i].config.center.center.mngy_empty then self.ability.x_mult = self.ability.x_mult + 1 end
+'''
+
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = "if not hide_desc and card and card.ability and (card.ability.extra_slots_used or 0) ~= 0 then"
+position = "before"
+match_indent = true
+payload = '''
+    if not hide_desc and card and card.config.center.mngy_empty then
+        info_queue[#info_queue + 1] = {set = 'Other', key = 'mngy_empty'}
+    end
 '''
