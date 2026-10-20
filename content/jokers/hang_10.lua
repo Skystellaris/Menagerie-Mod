@@ -29,6 +29,7 @@ SMODS.Joker {
                     return true;
                 end
             }))
+            return nil, true
         end
 
         if context.individual and context.cardarea == G.play and context.other_card:get_id() == 10 and not context.blueprint then
