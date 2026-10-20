@@ -2,7 +2,7 @@ SMODS.Joker {
     key = '3d_glasses',
     atlas = 'jokers_uncommon',
     pos = { x = 8, y = 1 },
-    rarity = 2,
+    rarity = 3,
     config = {
         extra = {
             repetitions = 1,

@@ -48,7 +48,6 @@ local enabled_jokers = {
 	-- 'trapdoor',
 	'coin_pusher',
 	'desire_path',
-	'3d_glasses',
 
 	-- Rares
 	'blind_justice',
@@ -57,6 +56,7 @@ local enabled_jokers = {
 	'lovecraftian',
 	'moon_rabbit',
 	'stained_glass',
+	'3d_glasses',
 	-- 'tic_tac_toe',
 	-- 'nuclear_option',
 	-- 'soul_food',
