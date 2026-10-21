@@ -10,7 +10,7 @@ pattern = "if G.jokers.cards[i].ability.name == 'Joker Stencil' then self.abilit
 position = "after"
 match_indent = true
 payload = '''
-    if G.jokers.cards[i].config.center.center.mngy_empty then self.ability.x_mult = self.ability.x_mult + 1 end
+    if G.jokers.cards[i].config and G.jokers.cards[i].config.center and G.jokers.cards[i].config.center.mngy_empty then self.ability.x_mult = self.ability.x_mult + 1 end
 '''
 
 [[patches]]

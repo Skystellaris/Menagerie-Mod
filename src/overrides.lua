@@ -97,14 +97,23 @@ function Game:main_menu(change_context)
     local ret = oldfunc(self, change_context)
 
     if Menagerie.mod.config.menu then
-        -- make the title screen use different background colors
+        -- make the title screen use different background colors, plus a third
+        -- blend colour that sits between them (see assets/shaders/menu_bg.fs)
         G.SPLASH_BACK:define_draw_steps({ {
-            shader = 'splash',
+            shader = 'mngy_menu_bg',
             send = {
-                { name = 'time',       ref_table = G.TIMERS,  ref_value = 'REAL_SHADER' },
-                { name = 'vort_speed', val = 0.4 },
-                { name = 'colour_1',   ref_table = Menagerie.C, ref_value = 'MNGY_PRIMARY' },
-                { name = 'colour_2',   ref_table = Menagerie.C, ref_value = 'MNGY_SECONDARY' },
+                { name = 'time',         ref_table = G.TIMERS,  ref_value = 'REAL_SHADER' },
+                { name = 'vort_speed',   val = 0.4 },
+                -- one shader colour per band of the swirl
+                { name = 'colour_inside',  ref_table = Menagerie.C, ref_value = 'MNGY_INSIDE' },
+                { name = 'colour_middle',  ref_table = Menagerie.C, ref_value = 'MNGY_MIDDLE' },
+                { name = 'colour_outside', ref_table = Menagerie.C, ref_value = 'MNGY_OUTSIDE' },
+                -- blend: 0 = vanilla flat black gap, 1 = full third colour
+                -- tertiary_dim: 0.4 keeps vanilla depth, 1.0 is flat and bright
+                { name = 'blend',        val = 1 },
+                { name = 'tertiary_dim', val = 1.0 },
+                { name = 'mid_flash',    val = 0 },
+                { name = 'vort_offset',  val = 0 },
             }
         } })
     end
@@ -115,7 +124,7 @@ end
 local _orig_define_draw_steps = Sprite.define_draw_steps
 Sprite.define_draw_steps = function(self, steps)
     _orig_define_draw_steps(self, steps)
-    if steps and steps[1] and steps[1].shader == 'splash' and Menagerie.mod.config.menu and G.STATE ~= G.STATES.SPLASH then
+    if steps and steps[1] and (steps[1].shader == 'splash' or steps[1].shader == 'mngy_menu_bg') and Menagerie.mod.config.menu and G.STATE ~= G.STATES.SPLASH then
         self.draw_steps[#self.draw_steps + 1] = {
             shader = 'mngy_confetti_menu_bg',
             send = {

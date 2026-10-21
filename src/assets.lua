@@ -1,7 +1,8 @@
 --#region Colors and Gradients
 Menagerie.C = {
-	MNGY_PRIMARY = HEX('FF6F91'),
-	MNGY_SECONDARY = HEX('FFD54F')
+	MNGY_INSIDE  = HEX('E83505'), -- inner swirl
+	MNGY_MIDDLE  = HEX('E8558B'), -- band blended between the other two
+	MNGY_OUTSIDE = HEX('E855FF')  -- outer swirl
 }
 
 SMODS.Gradient {
@@ -38,10 +39,16 @@ G.ARGS.LOC_COLOURS["mngy_mod"] = SMODS.Gradients['mngy_text_rainbow']
 --#endregion
 
 --#region Shaders
-SMODS.Shader({ 
+SMODS.Shader({
 	key = 'confetti_menu_bg',
 	path = 'confetti_menu_bg.fs',
 	original_key = 'confetti_menu_bg'
+})
+
+-- Vanilla 'splash' shader with three positional bands (inside/middle/outside)
+SMODS.Shader({
+	key = 'menu_bg',
+	path = 'menu_bg.fs'
 })
 --#endregion
 
