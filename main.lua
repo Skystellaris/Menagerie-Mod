@@ -20,7 +20,7 @@ local enabled_jokers = {
 	'doppler',
 	'concord',
 	'lemnia',
-	-- 'bottled_water',
+	'bottled_water',
 	-- 'pineapple',
 	-- 'envious',
 	-- 'mad_hatter',

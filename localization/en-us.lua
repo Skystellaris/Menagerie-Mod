@@ -222,6 +222,15 @@ return {
 				}
 			},
 
+			j_mngy_bottled_water = {
+				name = 'Bottled Water',
+				text = {
+					'{C:money}Sell{} this Joker during',
+					'a round to gain',
+					'{C:blue}+#1#{} Hands for the round'
+				}
+			},
+
 			j_mngy_punch_card = {
 				name = 'Punch Card',
 				text = {
