@@ -136,3 +136,52 @@ SMODS.calculate_round_score = function(flames)
     return ret
 end
 
+local discard_ref = G.FUNCS.discard_cards_from_highlighted
+G.FUNCS.discard_cards_from_highlighted = function(e, hook)
+    local earthrise = next(SMODS.find_card('j_mngy_earthrise'))
+    if earthrise then
+        G.GAME.current_round.mngy_earthrise_discards = G.GAME.current_round.discards_used
+        G.GAME.current_round.discards_used = 0
+    end
+
+    discard_ref(e, hook)
+
+    if earthrise then
+        G.GAME.current_round.discards_used = G.GAME.current_round.mngy_earthrise_discards + 1
+        G.GAME.current_round.mngy_earthrise_discards = nil
+    end
+end
+
+local play_ref = G.FUNCS.play_cards_from_highlighted
+G.FUNCS.play_cards_from_highlighted = function(e)
+    local earthrise = next(SMODS.find_card('j_mngy_earthrise'))
+
+    if earthrise then
+        G.E_MANAGER:add_event(Event({
+            func = function()
+                    G.GAME.current_round.mngy_earthrise_hands = G.GAME.current_round.hands_played
+                    G.GAME.current_round.hands_played = 0
+                return true;
+            end
+        }))
+    end
+
+    play_ref(e)
+
+    if earthrise then
+        G.E_MANAGER:add_event(Event({
+            func = function()
+                G.E_MANAGER:add_event(Event({
+                    trigger = "after",
+                    delay = 0.1,
+                    func = function()
+                            G.GAME.current_round.hands_played = G.GAME.current_round.mngy_earthrise_hands + 1
+                            G.GAME.current_round.mngy_earthrise_hands = nil
+                        return true;
+                    end
+                }))
+                return true;
+            end
+        }))
+    end
+end

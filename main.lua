@@ -33,7 +33,7 @@ local enabled_jokers = {
 	'druid',
 	'overdrive_aces',
 	'sowing_seeds',
-	-- 'earthrise',
+	'earthrise',
 	'wanted',
 	-- 'feature_film',
 	'swiss_cheese',

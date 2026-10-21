@@ -290,6 +290,16 @@ return {
 				}
 			},
 
+			j_mngy_earthrise = {
+				name = 'Earthrise',
+				text = {
+					'Every {C:blue}Hand{} is considered',
+					'the {C:attention}first{} hand of the round.',
+					'Every {C:red}Discard{} is considered',
+					'the {C:attention}first{} discard of the round'
+				}
+			},
+
 			j_mngy_wanted_target = {
 				name = 'WANTED Joker',
 				text = {
