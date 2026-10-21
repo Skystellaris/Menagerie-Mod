@@ -10,11 +10,13 @@ SMODS.Joker {
             hands = 3,
         }
     },
+
     loc_vars = function(self, info_queue, card)
         return {
             vars = { card.ability.extra.hands }
         }
     end,
+    
     calculate = function(self, card, context)
         if context.selling_self and G.GAME.facing_blind then
             G.E_MANAGER:add_event(Event({

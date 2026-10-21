@@ -231,6 +231,16 @@ return {
 				}
 			},
 
+			j_mngy_pineapple = {
+				name = 'Pineapple',
+				text = {
+					'Earn {C:money}$#1#{} at end of round',
+					'if only {C:attention}#2#{} was played.',
+					'{C:green}#3# in #4#{} chance to be',
+					'{C:red}destroyed{} at end of round'
+				}
+			},
+
 			j_mngy_punch_card = {
 				name = 'Punch Card',
 				text = {

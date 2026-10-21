@@ -21,7 +21,7 @@ local enabled_jokers = {
 	'concord',
 	'lemnia',
 	'bottled_water',
-	-- 'pineapple',
+	'pineapple',
 	-- 'envious',
 	-- 'mad_hatter',
 	-- 'paint_by_numbers',
