@@ -32,12 +32,15 @@ SMODS.Joker {
             }
         end
 
-        if context.end_of_round and context.main_eval then
+        if context.round_eval then
             if SMODS.pseudorandom_probability(card, 'mngy_pineapple', card.ability.extra.prob, card.ability.extra.odds) then
-                SMODS.destroy_cards(card, {pinch_anim = true})
-                return {
-                    message = localize('k_eaten_ex')
-                }
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        SMODS.destroy_cards(card, {pinch_anim = true, immediate = true})
+                        SMODS.calculate_effect({ message = localize('k_eaten_ex'), instant = true },card)
+                        return true;
+                    end
+                }))
             else
                 return {
                     message = localize('k_safe_ex')
