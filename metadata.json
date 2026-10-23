@@ -13,5 +13,6 @@
 		"Steamodded (>=26.1002.0)",
 		"Lovely (>=0.9.0)"
 	],
-	"allow_redistribution": true
+	"allow_redistribution": true,
+	"icon_path": "modicon.png"
 }
