@@ -23,15 +23,16 @@ SMODS.Joker {
             local adjacent_jokers = {}
             for i, v in ipairs(G.jokers.cards) do
                 if v == card then
-                    if G.jokers.cards[i - 1] then
+                    if G.jokers.cards[i - 1] and not card.edition then
                         table.insert(adjacent_jokers, G.jokers.cards[i - 1])
                     end
-                    if G.jokers.cards[i + 1] then
+                    if G.jokers.cards[i + 1] and not card.edition then
                         table.insert(adjacent_jokers, G.jokers.cards[i + 1])
                     end
                     break
                 end
             end
+            
             if next(adjacent_jokers) then
                 local joker_to_affect = pseudorandom_element(adjacent_jokers)
 

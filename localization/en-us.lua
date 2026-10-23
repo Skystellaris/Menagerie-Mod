@@ -204,8 +204,8 @@ return {
 					'{C:chips}#1#{} Chips',
 					'{C:green}#2# in #3#{} chance this',
 					'card {C:red}goes extinct{} and',
-					'set an {C:attention}adjacent{} Joker',
-					'to a random {C:dark_edition}Edition{}',
+					'gives an {C:attention}adjacent{} Joker',
+					'a random {C:dark_edition}Edition{}',
 					'at end of round'
 				}
 			},
@@ -214,8 +214,8 @@ return {
 				name = 'Lemnia',
 				text = {
 					'When a hand is played,',
-					'set an {C:attention}adjacent{} Joker',
-					'to a random {C:dark_edition}Edition{}',
+					'gives an {C:attention}adjacent{} Joker',
+					'a random {C:dark_edition}Edition{}',
 					'{C:green}#1# in #2#{} chance this',
 					'card is {C:red}destroyed{}',
 					'at end of round'
