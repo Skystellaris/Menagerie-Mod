@@ -26,7 +26,7 @@ SMODS.Joker {
     },
 
     loc_vars = function(self, info_queue, card)
-        return { 
+        return {
             key = self.key .. '_' .. card.ability.extra.state,
             vars = {
                 card.ability.extra.repetitions,
