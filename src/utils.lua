@@ -23,6 +23,10 @@ Menagerie.mod.calculate = function(self, context)
         G.GAME.mngy_failed_prob_checks = (G.GAME.mngy_failed_prob_checks or 0) + 1
         check_for_unlock({type = 'mngy_run_failed_prob', amt = G.GAME.mngy_failed_prob_checks})
     end
+
+    if context.individual and context.cardarea == G.play and context.other_card.lucky_trigger and not G.GAME.pool_flags.mngy_lucky_hit_flag then
+        G.GAME.pool_flags.mngy_lucky_hit_flag = true
+    end
 end
 
 Menagerie.mod.menu_cards = function()

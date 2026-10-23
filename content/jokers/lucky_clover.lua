@@ -2,7 +2,7 @@ SMODS.Joker {
     key = 'lucky_clover',
     atlas = 'jokers_uncommon',
     pos = { x = 0, y = 1 },
-    rarity = 2,
+    rarity = 3,
     config = {
         extra = {
             xmult_prob = 1,
@@ -50,4 +50,8 @@ SMODS.Joker {
             }
         end
     end,
+
+    in_pool = function(self, args)
+        return G.GAME.pool_flags.mngy_lucky_hit_flag
+    end
 }
