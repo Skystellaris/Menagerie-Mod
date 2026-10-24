@@ -35,7 +35,7 @@ SMODS.Joker {
     end,
 
     add_to_deck = function(self, card, from_debuff)
-        if G.STATE == G.STATES.SHOP then
+        if G.shop_vouchers then
             card.ability.extra.primed = nil
             for i = 1, card.ability.extra.vouchers do
                 G.E_MANAGER:add_event(Event({
