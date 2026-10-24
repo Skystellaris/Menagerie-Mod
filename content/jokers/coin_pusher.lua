@@ -3,6 +3,7 @@ SMODS.Joker {
     atlas = 'jokers_uncommon',
     pos = { x = 6, y = 1 },
     rarity = 2,
+    unlocked = false,
     config = {
         extra = {
             dollars = 2,
@@ -56,4 +57,19 @@ SMODS.Joker {
             end
         end
     end,
+
+    check_for_unlock = function(self, args)
+        if args and args.type == 'discard_custom' then
+            local gold_tally = 0
+            for i = 1, #args.cards do
+                if SMODS.has_enhancement(args.cards[i], 'm_gold') then
+                    gold_tally = gold_tally + 1
+                end
+            end
+            if gold_tally >= 5 then
+                return true
+            end
+        end
+        return false
+    end
 }

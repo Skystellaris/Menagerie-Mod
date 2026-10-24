@@ -426,6 +426,10 @@ return {
 					'give the {C:attention}next{} discarded',
 					'hand {C:attention}Gold Seals{}',
 					'{C:inactive}(Currently: {V:1}#2#{C:inactive}/#3#)'
+				},
+				unlock = {
+					'Discard {C:attention}5 {C:money}Gold Cards{}',
+					'at once'
 				}
 			},
 
