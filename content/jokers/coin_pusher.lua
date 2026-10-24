@@ -4,6 +4,7 @@ SMODS.Joker {
     pos = { x = 6, y = 1 },
     rarity = 2,
     unlocked = false,
+    enhancement_gate = 'm_gold',
     config = {
         extra = {
             dollars = 2,
