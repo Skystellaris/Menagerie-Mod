@@ -21,8 +21,8 @@ SMODS.Joker {
 
         if context.before then
             local adjacent_jokers = {}
-            for i, v in ipairs(G.jokers.cards) do
-                if v == card then
+            for i = 1, #G.jokers.cards do
+                if G.jokers.cards[i] == card then
                     if G.jokers.cards[i - 1] and not card.edition then
                         table.insert(adjacent_jokers, G.jokers.cards[i - 1])
                     end
