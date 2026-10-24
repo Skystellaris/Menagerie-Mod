@@ -29,18 +29,7 @@ SMODS.Joker {
         if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
             if SMODS.pseudorandom_probability(card, 'mngy_concord', card.ability.extra.prob, card.ability.extra.odds) then
                 
-                local adjacent_jokers = {}
-                for i = 1, #G.jokers.cards do
-                    if G.jokers.cards[i] == card then
-                        if G.jokers.cards[i - 1] and not card.edition then
-                            table.insert(adjacent_jokers, G.jokers.cards[i - 1])
-                        end
-                        if G.jokers.cards[i + 1] and not card.edition then
-                            table.insert(adjacent_jokers, G.jokers.cards[i + 1])
-                        end
-                        break
-                    end
-                end
+                local adjacent_jokers = Menagerie.grapes_get_adjacent(card)
 
                 if next(adjacent_jokers) then
                     local joker_to_affect = pseudorandom_element(adjacent_jokers)

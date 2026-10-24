@@ -18,10 +18,26 @@ function Menagerie.wanted_choose_card(card)
     card.ability.extra.suit = chosen_card.base.suit
 end
 
+function Menagerie.grapes_get_adjacent(card)
+    local adjacent = {}
+    for i = 1, #G.jokers.cards do
+        if G.jokers.cards[i] == card then
+            if G.jokers.cards[i - 1] and not G.jokers.cards[i - 1].edition then
+                table.insert(adjacent, G.jokers.cards[i - 1])
+            end
+            if G.jokers.cards[i + 1] and not G.jokers.cards[i + 1].edition then
+                table.insert(adjacent, G.jokers.cards[i + 1])
+            end
+            break
+        end
+    end
+    return adjacent
+end
+
 Menagerie.mod.calculate = function(self, context)
     if context.pseudorandom_result and not context.result then
         G.GAME.mngy_failed_prob_checks = (G.GAME.mngy_failed_prob_checks or 0) + 1
-        check_for_unlock({type = 'mngy_run_failed_prob', amt = G.GAME.mngy_failed_prob_checks})
+        check_for_unlock({ type = 'mngy_run_failed_prob', amt = G.GAME.mngy_failed_prob_checks })
     end
 
     if context.individual and context.cardarea == G.play and context.other_card.lucky_trigger and not G.GAME.pool_flags.mngy_lucky_hit_flag then
@@ -42,7 +58,7 @@ Menagerie.mod.config_tab = function()
         n = G.UIT.ROOT,
         config = { align = "m", r = 0.1, padding = 0.1, colour = G.C.BLACK, minw = 8, minh = 6 },
         nodes = {
-            { n = G.UIT.R, config = { align = "cl", padding = 0, minh = 0.1 },      nodes = {} },
+            { n = G.UIT.R, config = { align = "cl", padding = 0, minh = 0.1 }, nodes = {} },
 
             -- Custom Menu Toggle
             {
