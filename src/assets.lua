@@ -1,8 +1,8 @@
 --#region Colors and Gradients
 Menagerie.C = {
-	MNGY_INSIDE  = HEX('E83505'), -- inner swirl
-	MNGY_MIDDLE  = HEX('E8558B'), -- band blended between the other two
-	MNGY_OUTSIDE = HEX('E855FF')  -- outer swirl
+	MNGY_INSIDE  = HEX('F9E79F'), -- inner swirl
+	MNGY_MIDDLE  = HEX('FFABAB'), -- band blended between the other two
+	MNGY_OUTSIDE = HEX('FF6F91')  -- outer swirl
 }
 
 SMODS.Gradient {
