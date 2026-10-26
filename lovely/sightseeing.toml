@@ -10,10 +10,8 @@ pattern = "if add and not G.GAME.banned_keys[v.key] then "
 position = "after"
 match_indent = true
 payload = '''
-    local is_sightseeing = (G.GAME.selected_back_key or {}).key == 'b_mngy_sightseeing'
-
-    if is_sightseeing and v.key:find('j_mngy_') then
-      for i = 1, 2 do
+    if G.GAME.mngy_sightseeing and v.key:find('j_mngy_') then
+      for i = 1, G.GAME.mngy_sightseeing do
         _pool[#_pool + 1] = v.key
         _pool_size = _pool_size + 1
       end

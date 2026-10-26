@@ -21,7 +21,7 @@ return {
 			b_mngy_sightseeing = {
 				name = "Sightseeing Deck",
 				text = {
-					'{C:mngy_mod}Menagerie{} Jokers are {X:attention,C:white}3X{}',
+					'{C:mngy_mod}Menagerie{} Jokers are {X:attention,C:white}#1#X{}',
 					'more likely to appear',
 					'{C:attention}+2{} hand size if a',
 					'{C:mngy_mod}Menagerie{} Joker held'
