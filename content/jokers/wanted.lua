@@ -34,9 +34,7 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.destroying_card and context.cardarea == G.play and context.destroying_card:get_id() == card.ability.extra.id and context.destroying_card:is_suit(card.ability.extra.suit) and not context.destroying_card.getting_sliced then
-            if not context.blueprint then
-                Menagerie.wanted_choose_card(card)
-            end
+
             SMODS.calculate_effect({ message = localize('k_mngy_bounty_redeemed_ex'), colour = G.C.ATTENTION }, card)
             return {
                 dollars = card.ability.extra.dollars
@@ -44,9 +42,7 @@ SMODS.Joker {
         end
 
         if context.discard and context.other_card:get_id() == card.ability.extra.id and context.other_card:is_suit(card.ability.extra.suit) then
-            if not context.blueprint then
-                Menagerie.wanted_choose_card(card)
-            end
+
             return {
                 message = localize('k_mngy_bang_ex'),
                 colour = G.C.RED,
@@ -54,9 +50,12 @@ SMODS.Joker {
                 remove = true
             }
         end
-    end,
 
-    add_to_deck = function(self, card, from_debuff)
-        Menagerie.wanted_choose_card(card)
-    end
+        if context.setting_blind and not context.blueprint then
+            Menagerie.wanted_choose_card(card)
+            return {
+                message = localize('k_reset')
+            }
+        end
+    end,
 }

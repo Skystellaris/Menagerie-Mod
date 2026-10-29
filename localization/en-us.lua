@@ -314,13 +314,12 @@ return {
 			j_mngy_wanted_target = {
 				name = 'WANTED Joker',
 				text = {
-					'Selects a card from',
-					'the {C:attention}Deck{} at {C:green}random{}.',
-					'{C:red}Discard{} the selected card to',
-					'{C:red}destroy{} it, or {C:blue}play{}',
-					'the selected card to give {C:money}$#1#{}.',
-					'Selects another {C:green}random{} card',
-					'when triggered',
+					'When {C:attention}Blind{} is set,',
+					'selects a {C:green}random{} card',
+					'from the {C:attention}Deck{}.',
+					'{C:red}Discard{} the selected card',
+					'to {C:red}destroy{} it, or {C:blue}play{} the',
+					'selected card to give {C:money}$#1#{}',
 					'{C:inactive}Target:{} #2# of {V:1}#3#{}'
 				}
 			},
@@ -328,13 +327,12 @@ return {
 			j_mngy_wanted = {
 				name = 'WANTED Joker',
 				text = {
-					'Selects a card from',
-					'the {C:attention}Deck{} at {C:green}random{}.',
-					'{C:red}Discard{} the selected card to',
-					'{C:red}destroy{} it, or {C:blue}play{}',
-					'the selected card to give {C:money}$#1#{}.',
-					'Selects another {C:green}random{} card',
-					'when triggered',
+					'When {C:attention}Blind{} is set,',
+					'selects a {C:green}random{} card',
+					'from the {C:attention}Deck{}.',
+					'{C:red}Discard{} the selected card',
+					'to {C:red}destroy{} it, or {C:blue}play{} the',
+					'selected card to give {C:money}$#1#{}',
 					'{C:inactive}Target: None{}'
 				}
 			},
