@@ -76,6 +76,13 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
+	key = 'yield',
+	path = 'yield.png',
+	px = 99,
+	py = 98
+}
+
+SMODS.Atlas {
 	key = 'jokers_uncommon',
 	path = 'jokers_uncommon.png',
 	px = 71,

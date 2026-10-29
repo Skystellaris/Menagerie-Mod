@@ -49,9 +49,16 @@ end
 
 local change_size_ref = CardArea.change_size
 function CardArea:change_size(delta)
-    change_size_ref(self, delta)
-    if G.GAME.mngy_seeded and self == G.jokers then
-        G.hand:change_size(delta)
+    local yields = SMODS.find_card('j_mngy_yield')
+    if not next(yields) or not G.GAME.mngy_yield_bypass or delta > 0 then
+        change_size_ref(self, delta)
+        if G.GAME.mngy_seeded and self == G.jokers then
+            G.hand:change_size(delta)
+        end
+    else
+        for _, v in pairs(yields) do
+            SMODS.calculate_effect({ message = localize('k_mngy_caution_ex'), colour = G.C.ATTENTION }, v)
+        end
     end
 end
 
@@ -192,5 +199,29 @@ G.FUNCS.play_cards_from_highlighted = function(e)
                 return true;
             end
         }))
+    end
+end
+
+local ease_hands_ref = ease_hands_played
+function ease_hands_played(mod, instant)
+    local yields = SMODS.find_card('j_mngy_yield')
+    if not next(yields) or G.GAME.mngy_yield_bypass or mod > 0 then
+        ease_hands_ref(mod, instant)
+    else
+        for _, v in pairs(yields) do
+            SMODS.calculate_effect({ message = localize('k_mngy_caution_ex'), colour = G.C.ATTENTION }, v)
+        end
+    end
+end
+
+local ease_discard_ref = ease_discard
+function ease_discard(mod, instant, silent)
+    local yields = SMODS.find_card('j_mngy_yield')
+    if not next(yields) or G.GAME.mngy_yield_bypass or mod > 0 then
+        ease_discard_ref(mod, instant, silent)
+    else
+        for _, v in pairs(yields) do
+            SMODS.calculate_effect({ message = localize('k_mngy_caution_ex'), colour = G.C.ATTENTION }, v)
+        end
     end
 end

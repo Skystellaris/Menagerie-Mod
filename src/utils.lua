@@ -43,6 +43,14 @@ Menagerie.mod.calculate = function(self, context)
     if context.individual and context.cardarea == G.play and context.other_card.lucky_trigger and not G.GAME.pool_flags.mngy_lucky_hit_flag then
         G.GAME.pool_flags.mngy_lucky_hit_flag = true
     end
+
+    if context.setting_blind and next(SMODS.find_card('j_mngy_yield')) then
+        G.GAME.mngy_yield_this_round = true
+    end
+
+    if context.round_eval and G.GAME.mngy_yield_this_round then
+        G.GAME.mngy_yield_this_round = nil
+    end
 end
 
 Menagerie.mod.menu_cards = function()

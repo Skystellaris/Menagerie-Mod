@@ -1,0 +1,77 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# Manacle
+[[patches]]
+[patches.pattern]
+target = "blind.lua"
+pattern = "G.hand:change_size(1)"
+position = "at"
+match_indent = true
+payload = '''
+if not G.GAME.mngy_yield_this_round then G.hand:change_size(1) end
+'''
+
+# Needle
+[[patches]]
+[patches.pattern]
+target = "blind.lua"
+pattern = "self.hands_sub = G.GAME.round_resets.hands - 1"
+position = "after"
+match_indent = true
+payload = '''
+if G.GAME.mngy_yield_this_round then self.hands_sub = 0 end
+'''
+
+# Water
+[[patches]]
+[patches.pattern]
+target = "blind.lua"
+pattern = "self.discards_sub = G.GAME.current_round.discards_left"
+position = "after"
+match_indent = true
+payload = '''
+if G.GAME.mngy_yield_this_round then self.discards_sub = 0 end
+'''
+
+# Actually playing hand
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "ease_hands_played(-1)"
+position = "before"
+match_indent = true
+payload = '''
+G.GAME.mngy_yield_bypass = true
+'''
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "ease_hands_played(-1)"
+position = "after"
+match_indent = true
+payload = '''
+G.GAME.mngy_yield_bypass = nil
+'''
+
+# Actually discarding hand
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "ease_discards(-1)"
+position = "before"
+match_indent = true
+payload = '''
+G.GAME.mngy_yield_bypass = true
+'''
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "ease_discards(-1)"
+position = "after"
+match_indent = true
+payload = '''
+G.GAME.mngy_yield_bypass = nil
+'''

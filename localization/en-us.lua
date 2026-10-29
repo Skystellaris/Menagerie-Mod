@@ -255,6 +255,15 @@ return {
 				}
 			},
 
+			j_mngy_yield = {
+				name = 'Yield Sign',
+				text = {
+					'{C:blue}Hands{}, {C:red}discards{}, and',
+					'{C:attention}hand size{} cannot be {C:attention}reduced',
+					'by Jokers or Blinds'
+				}
+			},
+
 			j_mngy_magician = {
 				name = 'Magician',
 				text = {
@@ -562,6 +571,7 @@ return {
 			k_mngy_punched_ex = 'Punched!',
 			k_mngy_bang_ex = 'Bang!',
 			k_mngy_bounty_redeemed_ex = 'Bounty Redeemed!',
+			k_mngy_caution_ex = 'Caution!',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',

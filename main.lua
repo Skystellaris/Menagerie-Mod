@@ -27,6 +27,7 @@ local enabled_jokers = {
 	-- 'paint_by_numbers',
 	'punch_card',
 	-- 'jokitty',
+	'yield',
 
 	-- Uncommons
 	'magician',
