@@ -21,7 +21,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.before and context.scoring_name ~= card.ability.extra.hand and card.ability.extra.consistent_hand then
+        if context.before and not next(context.poker_hands[card.ability.extra.hand]) and card.ability.extra.consistent_hand then
             card.ability.extra.consistent_hand = false
             return {
                 message = localize('k_nope_ex'),
