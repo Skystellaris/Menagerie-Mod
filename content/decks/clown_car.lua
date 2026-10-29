@@ -32,7 +32,7 @@ SMODS.Back {
             }
         end
 
-        if context.setting_blind and context.blind.boss and not back.effect.config.extra.bosses[context.blind.key] then
+        if context.setting_blind and context.blind.boss and not back.effect.config.extra.bosses[context.blind.key] and G.GAME.round_resets.ante <= G.GAME.win_ante then
             back.effect.config.extra.primed = context.blind.key
         end
     end,

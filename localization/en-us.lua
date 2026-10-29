@@ -108,7 +108,8 @@ return {
 					'{C:red}#1#{} Joker Slots',
 					'{C:attention}+1{} Joker Slot when',
 					'a unique {C:attention}Boss Blind{}',
-					'is defeated'
+					'is defeated {C:attention}before{}',
+					'winning the run'
 				}
 			},
 
