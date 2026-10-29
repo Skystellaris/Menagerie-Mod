@@ -307,9 +307,9 @@ return {
 				text = {
 					'Selects a card from',
 					'the {C:attention}Deck{} at {C:green}random{}.',
-					'When the selected card is scored,',
-					'{C:green}50/50{} chance to {C:red}destroy',
-					'the selected card or give {C:money}$#1#{}.',
+					'{C:red}Discard{} the selected card to',
+					'{C:red}destroy{} it, or {C:blue}play{}',
+					'the selected card to give {C:money}$#1#{}.',
 					'Selects another {C:green}random{} card',
 					'when triggered',
 					'{C:inactive}Target:{} #2# of {V:1}#3#{}'
@@ -321,9 +321,9 @@ return {
 				text = {
 					'Selects a card from',
 					'the {C:attention}Deck{} at {C:green}random{}.',
-					'When the selected card is scored,',
-					'{C:green}50/50{} chance to {C:red}destroy',
-					'the selected card or give {C:money}$#1#{}.',
+					'{C:red}Discard{} the selected card to',
+					'{C:red}destroy{} it, or {C:blue}play{}',
+					'the selected card to give {C:money}$#1#{}.',
 					'Selects another {C:green}random{} card',
 					'when triggered',
 					'{C:inactive}Target: None{}'

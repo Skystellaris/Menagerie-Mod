@@ -34,22 +34,25 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.destroying_card and context.cardarea == G.play and context.destroying_card:get_id() == card.ability.extra.id and context.destroying_card:is_suit(card.ability.extra.suit) and not context.destroying_card.getting_sliced then
-
             if not context.blueprint then
                 Menagerie.wanted_choose_card(card)
             end
+            SMODS.calculate_effect({ message = localize('k_mngy_bounty_redeemed_ex'), colour = G.C.ATTENTION }, card)
+            return {
+                dollars = card.ability.extra.dollars
+            }
+        end
 
-            if SMODS.pseudorandom_probability(card, 'mngy_wanted', 1, 2, nil, true) then
-                SMODS.calculate_effect({ message = localize('k_mngy_bang_ex'), colour = G.C.RED }, card)
-                return {
-                    remove = true
-                }
-            else
-                SMODS.calculate_effect({ message = localize('k_mngy_bounty_redeemed_ex'), colour = G.C.ATTENTION }, card)
-                return {
-                    dollars = card.ability.extra.dollars
-                }
+        if context.discard and context.other_card:get_id() == card.ability.extra.id and context.other_card:is_suit(card.ability.extra.suit) then
+            if not context.blueprint then
+                Menagerie.wanted_choose_card(card)
             end
+            return {
+                message = localize('k_mngy_bang_ex'),
+                colour = G.C.RED,
+                delay = 0.45,
+                remove = true
+            }
         end
     end,
 
