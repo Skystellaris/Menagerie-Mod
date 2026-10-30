@@ -543,6 +543,17 @@ return {
 				text = {
 					'{C:dark_edition}???',
 				}
+			},
+
+			j_mngy_jackolantern = {
+				name = 'Jack-O-Lantern',
+				text = {
+					'Gains {X:mult,C:white}X#1#{} Mult for',
+					'each scoring {C:attention}Jack{}.',
+					'After scoring, {C:green}#3# in #4#{} chance',
+					'to {C:red}destroy{} all scoring {C:attention}Jacks{}',
+					'{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive})',
+				}
 			}
 
 		},

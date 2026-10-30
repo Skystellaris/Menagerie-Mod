@@ -64,6 +64,7 @@ local enabled_jokers = {
 	'pro_skater',
 	-- 'spinning',
 	'secret',
+	'jackolantern',
 }
 
 for i = 1, #enabled_jokers do
