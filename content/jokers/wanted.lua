@@ -59,3 +59,25 @@ SMODS.Joker {
         end
     end,
 }
+
+SMODS.DrawStep {
+    key = 'wanted',
+    order = 41,
+    func = function(self, layer)
+        local wanteds = SMODS.find_card('j_mngy_wanted')
+        if next(wanteds) and SMODS.is_playing_card(self) then
+            if not Menagerie.targeted_sprite then
+                Menagerie.targeted_sprite = Sprite(0, 0, G.CARD_W, G.CARD_H, G.ASSET_ATLAS['mngy_jokers_uncommon'], { x = 9, y = 0 })
+            end
+
+            for _, v in pairs(wanteds) do
+                if self:get_id() == v.ability.extra.id and self:is_suit(v.ability.extra.suit) then
+                    Menagerie.targeted_sprite.role.draw_major = self
+                    Menagerie.targeted_sprite:draw_shader('dissolve', nil, nil, nil, self.children.center)
+                    Menagerie.targeted_sprite:draw_shader('voucher', nil, self.ARGS.send_to_shader, nil, self.children.center)
+                end
+            end
+        end
+    end,
+    conditions = { vortex = false, facing = 'front' },
+}
