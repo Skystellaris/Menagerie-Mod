@@ -548,10 +548,10 @@ return {
 			j_mngy_jackolantern = {
 				name = 'Jack-O-Lantern',
 				text = {
-					'Gains {X:mult,C:white}X#1#{} Mult for',
-					'each scoring {C:attention}Jack{}.',
-					'After scoring, {C:green}#3# in #4#{} chance',
-					'to {C:red}destroy{} all scoring {C:attention}Jacks{}',
+					'{C:green}#3# in #4#{} chance for each',
+					'scoring {C:attention}Jack{} to be {C:red}destroyed{},',
+					'gains {X:mult,C:white}X#1#{} Mult for',
+					'each destroyed {C:attention}Jack{}',
 					'{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive})',
 				}
 			}

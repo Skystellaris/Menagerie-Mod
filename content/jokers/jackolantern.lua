@@ -11,36 +11,22 @@ SMODS.Joker {
             odds = 6
         }
     },
-    
+
     loc_vars = function(self, info_queue, card)
         local num, den = SMODS.get_probability_vars(card, card.ability.extra.prob, card.ability.extra.odds)
         return { vars = { card.ability.extra.gain, card.ability.extra.xmult, num, den } }
     end,
 
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play and context.other_card:get_id() == 11 then
+        if context.destroying_card and context.cardarea == G.play and context.destroying_card:get_id() == 11 and SMODS.pseudorandom_probability(card, 'jackolantern', card.ability.extra.prob, card.ability.extra.odds) then
             SMODS.scale_card(card, {
                 ref_table = card.ability.extra,
                 ref_value = 'xmult',
                 scalar_value = 'gain',
             })
-            return nil, true
-        end
-
-        if context.after and SMODS.pseudorandom_probability(card, 'jackolantern', card.ability.extra.prob, card.ability.extra.odds) then
-            local jacks_to_destroy = {}
-            for _, v in pairs(context.scoring_hand) do
-                if v:get_id() == 11 then
-                    table.insert(jacks_to_destroy, v)
-                end
-            end
-            SMODS.destroy_cards(jacks_to_destroy)
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    card:juice_up(0.8, 0.8)
-                    return true;
-                end
-            }))
+            return {
+                remove = true
+            }
         end
 
         if context.joker_main then
