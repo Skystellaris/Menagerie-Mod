@@ -106,8 +106,8 @@ return {
 				name = 'Clown Car Deck',
 				text = {
 					'{C:red}#1#{} Joker Slots',
-					'{C:attention}+1{} Joker Slot when',
-					'a unique {C:attention}Boss Blind{}',
+					'{C:attention}+1{} permanent Joker Slot',
+					'when a unique {C:attention}Boss Blind{}',
 					'is defeated {C:attention}before{}',
 					'winning the run'
 				}
