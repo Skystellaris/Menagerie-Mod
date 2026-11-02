@@ -60,7 +60,7 @@ G.GAME.mngy_yield_bypass = nil
 [[patches]]
 [patches.pattern]
 target = "functions/state_events.lua"
-pattern = "ease_discards(-1)"
+pattern = "ease_discard(-1)"
 position = "before"
 match_indent = true
 payload = '''
@@ -69,7 +69,7 @@ G.GAME.mngy_yield_bypass = true
 [[patches]]
 [patches.pattern]
 target = "functions/state_events.lua"
-pattern = "ease_discards(-1)"
+pattern = "ease_discard(-1)"
 position = "after"
 match_indent = true
 payload = '''
