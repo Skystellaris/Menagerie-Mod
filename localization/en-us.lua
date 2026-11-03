@@ -260,7 +260,7 @@ return {
 				text = {
 					'{C:blue}Hands{}, {C:red}discards{}, and',
 					'{C:attention}hand size{} cannot be {C:attention}reduced',
-					'by Jokers or Blinds when held'
+					'by {C:attention}active{} Jokers or Blinds when held'
 				}
 			},
 
