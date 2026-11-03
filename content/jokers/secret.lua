@@ -9,7 +9,7 @@ SMODS.Joker {
             hands = {}
         }
     },
-    
+
     calculate = function(self, card, context)
         if context.before and context.scoring_name and not SMODS.PokerHands[context.scoring_name].visible and not card.ability.extra.hands[context.scoring_name] then
             card.ability.extra.hands[context.scoring_name] = true
@@ -24,4 +24,8 @@ SMODS.Joker {
             }
         end
     end,
+
+    in_pool = function(self, args)
+        return G.GAME.pool_flags.mngy_secret_hand_played
+    end
 }

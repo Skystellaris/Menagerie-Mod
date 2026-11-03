@@ -51,6 +51,10 @@ Menagerie.mod.calculate = function(self, context)
     if context.round_eval and G.GAME.mngy_yield_this_round then
         G.GAME.mngy_yield_this_round = nil
     end
+
+    if context.before and not SMODS.PokerHands[context.scoring_name].visible then
+        G.GAME.pool_flags.mngy_secret_hand_played = true
+    end
 end
 
 Menagerie.mod.menu_cards = function()
