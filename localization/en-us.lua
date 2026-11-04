@@ -71,11 +71,31 @@ return {
 			},
 
 			b_mngy_cloudy = {
-				name = 'Cloudy Deck'
+				name = 'Cloudy Deck',
+				text = {
+					{
+						'{C:green}#1# in #2#{} chance cards',
+						'are drawn {C:attention}face-down'
+					},
+					{
+						'Face-down cards count as',
+						'{C:attention}any rank{} when played'
+					}
+				}
 			},
 
 			b_mngy_stormy = {
-				name = 'Stormy Deck'
+				name = 'Stormy Deck',
+				text = {
+					{
+						'{C:green}#1# in #2#{} chance cards',
+						'are drawn {C:attention}face-down'
+					},
+					{
+						'Face-down cards give {X:mult,C:white}X2{} Mult',
+						'and are {C:red}destroyed{} after scoring'
+					}
+				}
 			},
 
 			b_mngy_stranded = {

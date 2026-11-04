@@ -66,7 +66,7 @@ SMODS.Atlas {
 	path = 'cloudy-stormy.png',
 	px = 71,
 	py = 95,
-	--atlas_table = 'STATE_ATLAS'
+	atlas_table = 'STATE_ATLAS'
 }
 
 SMODS.Atlas {

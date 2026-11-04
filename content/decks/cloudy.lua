@@ -2,7 +2,7 @@ SMODS.Back {
     key = 'cloudy',
     atlas = 'cloudy-stormy',
     pos = { x = 0, y = 0 },
---[[     sprite_args = {
+    sprite_args = {
         default_state = 'cloudy',
         states = {
             cloudy = {
@@ -15,8 +15,11 @@ SMODS.Back {
                 fps = 1,
                 frame_duration = 1
             },
-        }
-    }, ]]
+        },
+        update_func = function(self, dt)
+            self:set_state(G.GAME.mngy_cloudy == false and 'stormy' or 'cloudy')
+        end
+    },
     config = {
         extra = {
             prob = 1,
@@ -29,10 +32,10 @@ SMODS.Back {
         local num, den = SMODS.get_probability_vars(back, self.config.extra.prob, self.config.extra.odds)
 
         if G.GAME.mngy_cloudy == false then
-            info_queue[#info_queue+1] =  { key = 'b_mngy_cloudy', set = 'Back', specific_vars = {num, den} }
+            info_queue[#info_queue+1] =  { key = 'b_mngy_cloudy', set = 'Back', vars = {num, den} }
             return { key = 'b_mngy_stormy', vars = { num, den, self.config.xmult } }
         else
-            info_queue[#info_queue+1] =  { key = 'b_mngy_stormy', set = 'Back', specific_vars = {num, den, self.config.extra.xmult} }
+            info_queue[#info_queue+1] =  { key = 'b_mngy_stormy', set = 'Back', vars = {num, den, self.config.extra.xmult} }
             return { vars = { num, den } }
         end
     end,
@@ -73,14 +76,19 @@ SMODS.Back {
             }
         end
 
+        if context.has_rank and G.GAME.mngy_cloudy and context.card.facing == 'back' then
+            return {
+                any_rank = true
+            }
+        end
+
         if context.end_of_round and context.main_eval and context.beat_boss then
-            G.GAME.mngy_cloudy = not G.GAME.mngy_cloudy
---[[             G.E_MANAGER:add_event(Event({
+            G.E_MANAGER:add_event(Event({
                 func = function()
-                    back:set_sprite_state(G.GAME.mngy_cloudy and 'cloudy' or 'stormy')
+                    G.GAME.mngy_cloudy = not G.GAME.mngy_cloudy
                     return true;
                 end
-            })) ]]
+            }))
             return {
                 message = localize('k_swapped_ex')
             }
