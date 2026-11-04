@@ -1,0 +1,18 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = 'functions/misc_functions.lua'
+pattern = '''
+  table.insert(curr, hand[j])
+'''
+position = 'after'
+payload = '''
+elseif G.GAME.mngy_cloudy and hand[j].facing == 'back' and i ~= j then
+    table.insert(curr, hand[j])
+'''
+match_indent = true
+times = 1

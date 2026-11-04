@@ -6,7 +6,14 @@ function SMODS.has_any_suit(card)
         ret = true
     end
 
-    if G.GAME.mngy_cloudy and card.facing == 'back' then
+    return ret
+end
+
+local always_scores_ref = SMODS.always_scores
+function SMODS.always_scores(card)
+    local ret = always_scores_ref(card)
+
+    if G.GAME.mngy_cloudy == false and card.facing == 'back' then
         ret = true
     end
 

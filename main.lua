@@ -81,7 +81,7 @@ local enabled_decks = {
 	'white',
 	-- 'hodgepodge',
 	-- 'padded',
-	--'cloudy',
+	'cloudy',
 	-- 'battle',
 	'stranded',
 	'null',
