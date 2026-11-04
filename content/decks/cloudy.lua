@@ -1,20 +1,34 @@
 SMODS.Back {
     key = 'cloudy',
-    atlas = 'decks',
-    pos = { x = 8, y = 0 },
+    atlas = 'cloudy-stormy',
+    pos = { x = 0, y = 0 },
+--[[     sprite_args = {
+        default_state = 'cloudy',
+        states = {
+            cloudy = {
+                start_pos = { x = 0, y = 0 },
+                fps = 1,
+                frame_duration = 1
+            },
+            stormy = {
+                start_pos = { x = 1, y = 0 },
+                fps = 1,
+                frame_duration = 1
+            },
+        }
+    }, ]]
     config = {
         extra = {
             prob = 1,
             odds = 4,
             xmult = 2,
-            state = 'cloudy'
         }
     },
 
     loc_vars = function(self, info_queue, back)
         local num, den = SMODS.get_probability_vars(back, self.config.extra.prob, self.config.extra.odds)
 
-        if back.effect.config.extra.state == 'stormy' then
+        if G.GAME.mngy_cloudy == false then
             info_queue[#info_queue+1] =  { key = 'b_mngy_cloudy', set = 'Back', specific_vars = {num, den} }
             return { key = 'b_mngy_stormy', vars = { num, den, self.config.xmult } }
         else
@@ -34,7 +48,7 @@ SMODS.Back {
 
     calculate = function(self, back, context)
         if context.stay_flipped then
-            if context.to_area == G.hand and SMODS.pseudorandom_probability(back, 'cloudy', self.config.prob, self.config.odds) then
+            if context.to_area == G.hand and SMODS.pseudorandom_probability(back, 'cloudy', self.config.extra.prob, self.config.extra.odds) then
                 return {
                     stay_flipped = true
                 }
@@ -47,15 +61,28 @@ SMODS.Back {
             end
         end
 
-        if context.individual and back.effect.config.extra.state == 'stormy' and context.other_card.facing == 'back' then
+        if context.individual and G.GAME.mngy_cloudy == false and context.other_card.facing == 'back' then
             return {
                 xmult = self.config.xmult
             }
         end
 
-        if context.destroying_card and back.effect.config.extra.state == 'stormy' and context.destroying_card.facing == 'back' then
+        if context.destroying_card and G.GAME.mngy_cloudy == false and context.destroying_card.facing == 'back' then
             return {
                 remove = true
+            }
+        end
+
+        if context.end_of_round and context.main_eval and context.beat_boss then
+            G.GAME.mngy_cloudy = not G.GAME.mngy_cloudy
+--[[             G.E_MANAGER:add_event(Event({
+                func = function()
+                    back:set_sprite_state(G.GAME.mngy_cloudy and 'cloudy' or 'stormy')
+                    return true;
+                end
+            })) ]]
+            return {
+                message = localize('k_swapped_ex')
             }
         end
     end,

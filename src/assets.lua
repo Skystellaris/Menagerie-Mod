@@ -62,6 +62,14 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
+	key = 'cloudy-stormy',
+	path = 'cloudy-stormy.png',
+	px = 71,
+	py = 95,
+	--atlas_table = 'STATE_ATLAS'
+}
+
+SMODS.Atlas {
 	key = 'jokers_common',
 	path = 'jokers_common.png',
 	px = 71,
