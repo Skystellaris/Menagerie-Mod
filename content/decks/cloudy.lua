@@ -33,15 +33,30 @@ SMODS.Back {
     end,
 
     calculate = function(self, back, context)
-        if context.stay_flipped and SMODS.pseudorandom_probability(back, 'cloudy', self.config.prob, self.config.odds) then
-            return {
-                stay_flipped = true
-            }
+        if context.stay_flipped then
+            if context.to_area == G.hand and SMODS.pseudorandom_probability(back, 'cloudy', self.config.prob, self.config.odds) then
+                return {
+                    stay_flipped = true
+                }
+            end
+
+            if context.to_area == G.play then
+                return {
+                    stay_flipped = context.other_card.facing == 'back'
+                }
+            end
         end
 
         if context.individual and back.effect.config.extra.state == 'stormy' and context.other_card.facing == 'back' then
-            
+            return {
+                xmult = self.config.xmult
+            }
         end
 
+        if context.destroying_card and back.effect.config.extra.state == 'stormy' and context.destroying_card.facing == 'back' then
+            return {
+                remove = true
+            }
+        end
     end,
 }
