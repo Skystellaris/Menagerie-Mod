@@ -1,5 +1,5 @@
 SMODS.Back {
-    key = 'stacked',
+    key = 'white',
     atlas = 'decks',
     pos = { x = 5, y = 0 },
 
