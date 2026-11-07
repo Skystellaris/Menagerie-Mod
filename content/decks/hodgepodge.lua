@@ -8,7 +8,7 @@ SMODS.Back {
             func = function()
                 G.GAME.mngy_hodgepodge = true
                 G.GAME.mngy_first_hodge = true
-                local _c = SMODS.create_card({set = 'Joker', rarity = 'Common'})
+                local _c = SMODS.add_card({set = 'Joker', rarity = 'Common'})
                 _c:start_materialize()
                 return true;
             end
