@@ -97,6 +97,27 @@ Menagerie.mod.calculate = function(self, context)
     if context.change_suit and context.new_suit == 'mngy_Shields' and not G.GAME.mngy_spawn_shields then
         G.GAME.mngy_spawn_shields = true
     end
+
+    if context.pseudorandom_result and context.identifier == 'wheel_of_fortune' and context.numerator == 0 then
+        check_for_unlock({type = 'mngy_nope'})
+    end
+
+    if context.remove_playing_cards then
+        local jack_tally = 0
+        for _, v in pairs(context.removed) do
+            if v:get_id() == 11 then
+                jack_tally = jack_tally + 1
+            end
+            if jack_tally >= 4 then
+                check_for_unlock({type = 'mngy_jacks'})
+                break
+            end
+        end
+    end
+
+    if context.individual and context.other_card.repetition_trigger and context.other_card.repetition_trigger >= 3 then
+        check_for_unlock({type = 'mngy_class'})
+    end
 end
 
 Menagerie.mod.menu_cards = function()

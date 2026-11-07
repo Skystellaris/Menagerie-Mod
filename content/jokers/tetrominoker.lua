@@ -24,30 +24,27 @@ SMODS.Joker {
         if context.hand_drawn and context.first_hand_drawn then
             local poker_hands = evaluate_poker_hand(G.hand.cards)
             if next(poker_hands[card.ability.extra.hand]) then -- Check if hand initially contains a straight flush
-
-                local sf_cards = {}
-                -- Check for common cards in each straight and flush
-                for _, straights in pairs(poker_hands['Straight']) do
-                    for _, v in pairs(straights) do
-                        for _, flushes in pairs(poker_hands['Flush']) do
-                            for _, vv in pairs(flushes) do
-                                if v == vv then
-                                    table.insert(sf_cards, v)
-                                    break
-                                end
-                            end
-                            -- Check if common Straight and Flush part cards still make a Straight Flush
-                            if next(evaluate_poker_hand(sf_cards)[card.ability.extra.hand]) then
+                -- Check hand for each suit
+                for _, v in pairs(SMODS.Suits) do
+                    local this_suit_cards = {}
+                    for _, pcard in pairs(G.hand.cards) do
+                        if pcard.base.suit == v.key then
+                            table.insert(this_suit_cards, pcard)
+                        end
+                        -- If quantity of cards from this suit can make a straight or a flush, check further
+                        if #this_suit_cards >= SMODS.four_fingers() then
+                            local this_suit_hands = evaluate_poker_hand(this_suit_cards)
+                            -- If card of only this suit creates a straight flush, then destroy
+                            if next(this_suit_hands[card.ability.extra.hand]) then
                                 G.E_MANAGER:add_event(Event({
                                     func = function()
-                                        SMODS.destroy_cards(sf_cards, {immediate = true})
+                                        SMODS.destroy_cards(this_suit_hands[card.ability.extra.hand][1], {immediate = true})
                                         card:juice_up(0.8, 0.8)
+                                        check_for_unlock({type = 'mngy_combo'})
                                         return true;
                                     end
                                 }))
                                 return
-                            else
-                                sf_cards = {}
                             end
                         end
                     end

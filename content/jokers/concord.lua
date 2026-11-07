@@ -31,9 +31,20 @@ SMODS.Joker {
                 
                 local adjacent_jokers = Menagerie.grapes_get_adjacent(card)
 
+                local new_edition
                 if next(adjacent_jokers) then
                     local joker_to_affect = pseudorandom_element(adjacent_jokers)
-                    joker_to_affect:set_edition(SMODS.poll_edition({ key = 'mngy_concord_edi', guaranteed = true }))
+                    new_edition = SMODS.poll_edition({ key = 'mngy_concord_edi', guaranteed = true })
+                    joker_to_affect:set_edition(new_edition)
+                    G.E_MANAGER:add_event(Event({
+                        func = function()
+                            if new_edition == 'e_negative' then
+                                check_for_unlock({type = 'mngy_fruit'})
+                            end
+                            card:juice_up()
+                            return true;
+                        end
+                    }))
                 end
 
                 SMODS.destroy_cards(card, {pinch_anim = true})

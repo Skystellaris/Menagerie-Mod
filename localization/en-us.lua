@@ -659,6 +659,20 @@ return {
 		},
 		suits_plural = {
 			mngy_Shields = 'Shields'
+		},
+		achievement_names = {
+			ach_mngy_nope = 'Nope!',
+			ach_mngy_class = 'Top of the Class',
+			ach_mngy_jacks = 'Jack O\' Panic',
+			ach_mngy_combo = 'C-C-Combo!',
+			ach_mngy_fruit = 'Forbidden Fruit',
+		},
+		achievement_descriptions = {
+			ach_mngy_nope = 'Use a Wheel of Fortune with a 0 in 4 chance to hit',
+			ach_mngy_class = 'Retrigger a single Ace three times',
+			ach_mngy_jacks = 'Destroy 4 Jacks at the once',
+			ach_mngy_combo = 'Destroy a Straight Flush with Tetrominoker',
+			ach_mngy_fruit = 'Have Lemnia or Concord give a Negative Edition',
 		}
 	}
 }

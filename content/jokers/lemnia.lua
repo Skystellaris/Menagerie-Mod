@@ -25,6 +25,7 @@ SMODS.Joker {
             if next(adjacent_jokers) then
                 local joker_to_affect = pseudorandom_element(adjacent_jokers)
 
+                local new_edition
                 if joker_to_affect.edition then
                     local unordered_options = get_current_pool("Edition", nil, nil, 'mngy_lemnia_edi')
                     local _options = {}
@@ -37,12 +38,16 @@ SMODS.Joker {
                             table.insert(_options, edition)
                         end
                     end
-                    joker_to_affect:set_edition(SMODS.poll_edition({ key = 'mngy_lemnia_edi', guaranteed = true, options = _options }))
+                    new_edition = SMODS.poll_edition({ key = 'mngy_lemnia_edi', guaranteed = true, options = _options })
                 else
-                    joker_to_affect:set_edition(SMODS.poll_edition({ key = 'mngy_lemnia_edi', guaranteed = true }))
+                    new_edition = SMODS.poll_edition({ key = 'mngy_lemnia_edi', guaranteed = true })
                 end
+                joker_to_affect:set_edition(new_edition)
                 G.E_MANAGER:add_event(Event({
                     func = function()
+                        if new_edition == 'e_negative' then
+                            check_for_unlock({type = 'mngy_fruit'})
+                        end
                         card:juice_up()
                         return true;
                     end

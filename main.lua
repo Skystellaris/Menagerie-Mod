@@ -103,4 +103,6 @@ local enabled_suits = {
 for i = 1, #enabled_suits do
     assert(SMODS.load_file('content/suits/' .. enabled_suits[i] .. '.lua'))()
 end
+
+assert(SMODS.load_file('content/achievements.lua'))()
 --#endregion
