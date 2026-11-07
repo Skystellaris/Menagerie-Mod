@@ -22,6 +22,15 @@ SMODS.Back {
 
         local chosen_suit = pseudorandom_element(available_suits)
 
+        if chosen_suit == 'mngy_Shields' then
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    G.GAME.mngy_spawn_shields = true
+                    return true;
+                end
+            }))
+        end
+
         G.GAME.selected_back_key.initial_deck = {
             suits = { chosen_suit }
         }

@@ -37,7 +37,7 @@ end
 function Menagerie.deck_has_shields()
     if G.playing_cards then
         for _, v in pairs(G.playing_cards) do
-            if v.base.suit == 'Shields' then
+            if v.base.suit == 'mngy_Shields' then
                 return true
             end
         end
@@ -65,6 +65,19 @@ Menagerie.mod.calculate = function(self, context)
 
     if context.before and not SMODS.PokerHands[context.scoring_name].visible then
         G.GAME.pool_flags.mngy_secret_hand_played = true
+    end
+
+    if context.playing_card_added and not G.GAME.mngy_spawn_shields then
+        for _, v in pairs(context.cards) do
+            if v.base.suit == 'mngy_Shields' then
+                G.GAME.mngy_spawn_shields = true
+                break
+            end
+        end
+    end
+
+    if context.change_suit and context.new_suit == 'mngy_Shields' and not G.GAME.mngy_spawn_shields then
+        G.GAME.mngy_spawn_shields = true
     end
 end
 
