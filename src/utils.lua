@@ -45,6 +45,24 @@ function Menagerie.deck_has_shields()
     return false
 end
 
+function Menagerie.hodgepodge_get_guaranteed_sticker(card)
+    local valid_stickers = {}
+    local center = card.config.center
+    for k, v in pairs(SMODS.Stickers) do
+        if v.key ~= 'pinned' and
+            (center[v.key..'_compat'] or -- explicit marker
+            (
+                center[v.key..'_compat'] == nil and
+                ((v.default_compat and not v.compat_exceptions[center.key]) or -- default yes with no exception
+                (not v.default_compat and v.compat_exceptions[center.key]))
+            )) -- default no with exception
+        then
+            table.insert(valid_stickers, v.key)
+        end
+    end
+    return pseudorandom_element(valid_stickers)
+end
+
 Menagerie.mod.calculate = function(self, context)
     if context.pseudorandom_result and not context.result then
         G.GAME.mngy_failed_prob_checks = (G.GAME.mngy_failed_prob_checks or 0) + 1

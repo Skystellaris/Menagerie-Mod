@@ -225,3 +225,49 @@ function ease_discard(mod, instant, silent)
         end
     end
 end
+
+local sticker_should_apply_ref = SMODS.Sticker.should_apply
+SMODS.Sticker.should_apply = function(...)
+    if not G.GAME.mngy_suppress_sticker_rolls then
+        return sticker_should_apply_ref(...)
+    end
+    return false
+end
+
+local create_card_ref = create_card
+function create_card(_type, area, legendary, _rarity, skip_materialize, soulable, forced_key, key_append)
+    local mngy_hodge_roll
+    if G.GAME and G.GAME.mngy_hodgepodge and _type == 'Joker' then
+        local janky_weighted_choices = {
+            'edi',
+            'edi',
+            'edi',
+            'edi',
+            'sticker',
+            'sticker',
+            'sticker',
+            'sticker',
+            'both',
+            'both',
+        }
+        mngy_hodge_roll = pseudorandom_element(janky_weighted_choices)
+        if G.GAME.mngy_first_hodge then
+            mngy_hodge_roll = 'both'
+            G.GAME.mngy_first_hodge = nil
+        end
+        SMODS.bypass_create_card_edition = true
+        G.GAME.mngy_suppress_sticker_rolls = true
+    end
+    local card = create_card_ref(_type, area, legendary, _rarity, skip_materialize, soulable, forced_key, key_append)
+    if mngy_hodge_roll then
+        SMODS.bypass_create_card_edition = nil
+        G.GAME.mngy_suppress_sticker_rolls = nil
+        if mngy_hodge_roll == 'edi' or mngy_hodge_roll == 'both' then
+            card:set_edition(SMODS.poll_edition({guaranteed = true}))
+        end
+        if mngy_hodge_roll == 'sticker' or mngy_hodge_roll == 'both' then
+            card:add_sticker(Menagerie.hodgepodge_get_guaranteed_sticker(card))
+        end
+    end
+    return card
+end

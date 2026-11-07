@@ -63,6 +63,16 @@ return {
 				}
 			},
 
+			b_mngy_hodgepodge = {
+				name = 'Hodgepodge Deck',
+				text = {
+					'All Jokers are {C:attention}guaranteed',
+					'to have an {C:attention}editon{} or a {C:attention}sticker.',
+					'Start run with a',
+					'{C:blue}Common{} Joker with {C:attention}both{}'
+				}
+			},
+
 			b_mngy_padded = {
 				name = 'Padded Deck',
 				text = {

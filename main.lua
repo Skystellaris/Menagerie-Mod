@@ -80,7 +80,7 @@ local enabled_decks = {
 	'echo',
 	'loaned',
 	'white',
-	-- 'hodgepodge',
+	'hodgepodge',
 	'padded',
 	--'cloudy',
 	'battle',
