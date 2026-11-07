@@ -23,7 +23,17 @@ SMODS.Suit {
             local back = G.GAME.selected_back
             local back_config = back and back.effect.center
 
-            return back_config.include_shields
+            if back_config.include_shields then
+                if not args.perfection_loop then
+                    G.E_MANAGER:add_event(Event({
+                        func = function()
+                            G.GAME.mngy_spawn_shields = true
+                            return true;
+                        end
+                    }))
+                end
+                return true
+            end
         elseif G.GAME.mngy_spawn_shields then
             return true
         else

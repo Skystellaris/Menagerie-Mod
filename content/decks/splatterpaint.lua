@@ -4,15 +4,6 @@ SMODS.Back {
     pos = { x = 4, y = 1 },
     include_shields = true,
 
-    apply = function(self, back)
-        G.E_MANAGER:add_event(Event({
-            func = function()
-                G.GAME.mngy_spawn_shields = true
-                return true;
-            end
-        }))
-    end,
-
     calculate = function(self, back, context)
         if context.end_of_round and context.main_eval and context.beat_boss then
             local suits_in_deck = {}

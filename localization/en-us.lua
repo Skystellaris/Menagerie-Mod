@@ -67,8 +67,8 @@ return {
 				name = 'Padded Deck',
 				text = {
 					'Starting Deck includes {C:mngy_shields}Shields,',
-					'{C:attention}14{} random cards',
-					'gain random {C:attention}modifications{}'
+					'{C:attention}14{} random cards start',
+					'with one random {C:attention}modification{}'
 				}
 			},
 
