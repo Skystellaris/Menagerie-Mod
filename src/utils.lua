@@ -115,7 +115,7 @@ Menagerie.mod.calculate = function(self, context)
         end
     end
 
-    if context.individual and context.other_card.repetition_trigger and context.other_card.repetition_trigger >= 3 then
+    if context.individual and context.other_card:get_id() == 14 and context.other_card.repetition_trigger and context.other_card.repetition_trigger >= 3 then
         check_for_unlock({type = 'mngy_class'})
     end
 end
