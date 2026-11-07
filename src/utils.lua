@@ -34,6 +34,17 @@ function Menagerie.grapes_get_adjacent(card)
     return adjacent
 end
 
+function Menagerie.deck_has_shields()
+    if G.playing_cards then
+        for _, v in pairs(G.playing_cards) do
+            if v.base.suit == 'Shields' then
+                return true
+            end
+        end
+    end
+    return false
+end
+
 Menagerie.mod.calculate = function(self, context)
     if context.pseudorandom_result and not context.result then
         G.GAME.mngy_failed_prob_checks = (G.GAME.mngy_failed_prob_checks or 0) + 1

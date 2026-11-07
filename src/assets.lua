@@ -2,7 +2,9 @@
 Menagerie.C = {
 	MNGY_INSIDE  = HEX('F9E79F'), -- inner swirl
 	MNGY_MIDDLE  = HEX('FFABAB'), -- band blended between the other two
-	MNGY_OUTSIDE = HEX('FF6F91')  -- outer swirl
+	MNGY_OUTSIDE = HEX('FF6F91'), -- outer swirl
+
+	MNGY_SHIELDS_LC = HEX('804299')
 }
 
 SMODS.Gradient {
@@ -124,6 +126,20 @@ SMODS.Atlas {
 	path = 'pro_skater.png',
 	px = 73,
 	py = 73
+}
+
+SMODS.Atlas {
+	key = 'suits',
+	path = 'suits.png',
+	px = 71,
+	py = 95
+}
+
+SMODS.Atlas {
+	key = 'ui_assets',
+	path = 'ui_assets.png',
+	px = 18,
+	py = 18
 }
 
 SMODS.Atlas {

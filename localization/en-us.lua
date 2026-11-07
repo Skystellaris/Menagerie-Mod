@@ -27,7 +27,7 @@ return {
 					'{C:mngy_mod}Menagerie{} Joker held'
 				}
 			},
-			
+
 			b_mngy_seeded = {
 				name = 'Seeded Deck',
 				text = {
@@ -76,6 +76,16 @@ return {
 
 			b_mngy_stormy = {
 				name = 'Stormy Deck'
+			},
+
+			b_mngy_battle = {
+				name = 'Battle Deck',
+				text = {
+                    "{C:red}#1#{} discards",
+                    "every round",
+					"Deck contains only",
+					"{C:clubs}Clubs{} and {C:mngy_shields}Shields"
+				}
 			},
 
 			b_mngy_stranded = {
@@ -586,6 +596,12 @@ return {
 			b_mngy_custom_menu = 'Toggle Custom Menu',
 			b_mngy_disable_negative_score = 'Disable Negative Scoring'
 		},
-		v_text = {}
+		v_text = {},
+		suits_singular = {
+			mngy_Shields = 'Shield'
+		},
+		suits_plural = {
+			mngy_Shields = 'Shields'
+		}
 	}
 }

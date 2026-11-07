@@ -82,7 +82,7 @@ local enabled_decks = {
 	-- 'hodgepodge',
 	-- 'padded',
 	--'cloudy',
-	-- 'battle',
+	'battle',
 	'stranded',
 	'null',
 	'cookie',
@@ -93,5 +93,13 @@ local enabled_decks = {
 
 for i = 1, #enabled_decks do
     assert(SMODS.load_file('content/decks/' .. enabled_decks[i] .. '.lua'))()
+end
+
+local enabled_suits = {
+	'shields'
+}
+
+for i = 1, #enabled_suits do
+    assert(SMODS.load_file('content/suits/' .. enabled_suits[i] .. '.lua'))()
 end
 --#endregion
