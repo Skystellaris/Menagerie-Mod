@@ -64,12 +64,6 @@ SMODS.Back {
             end
         end
 
-        if context.individual and G.GAME.mngy_cloudy == false and context.other_card.facing == 'back' then
-            return {
-                xmult = self.config.xmult
-            }
-        end
-
         if context.destroying_card and G.GAME.mngy_cloudy == false and context.destroying_card.facing == 'back' then
             return {
                 remove = true
@@ -80,6 +74,15 @@ SMODS.Back {
             return {
                 any_rank = true
             }
+        end
+
+        if context.press_play and G.GAME.mngy_cloudy == false then
+            for _, v in pairs(G.hand.highlighted) do
+                if v.facing == 'back' then
+                    v.ability.bonus = (v.ability.bonus or 0) - v.base.nominal
+                    v.ability.x_mult = (v.ability.x_mult or 1) + (self.config.extra.xmult - 1)
+                end
+            end
         end
 
         if context.end_of_round and context.main_eval and context.beat_boss then
