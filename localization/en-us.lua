@@ -63,6 +63,15 @@ return {
 				}
 			},
 
+			b_mngy_padded = {
+				name = 'Padded Deck',
+				text = {
+					'Starting Deck includes {C:mngy_shields}Shields,',
+					'{C:attention}14{} random cards',
+					'gain random {C:attention}modifications{}'
+				}
+			},
+
 			b_mngy_white = {
 				name = 'White Deck',
 				text = {
@@ -109,6 +118,16 @@ return {
 				text = {
 					'All {C:attention}consumables{} give',
 					'{C:money}$#1#{} when used',
+				}
+			},
+
+			b_mngy_splatterpaint = {
+				name = 'Splatterpaint Deck',
+				text = {
+					'Starting Deck includes {C:mngy_shields}Shields.',
+					'When a {C:attention}Boss Blind{} is defeated,',
+					'a random Suit in your Deck',
+					'becomes {C:attention}another{} random suit'
 				}
 			},
 
@@ -618,6 +637,7 @@ return {
 			k_mngy_bang_ex = 'Bang!',
 			k_mngy_bounty_redeemed_ex = 'Bounty Redeemed!',
 			k_mngy_caution_ex = 'Caution!',
+			k_mngy_splattered_ex = 'Splattered!',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',

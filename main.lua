@@ -87,7 +87,7 @@ local enabled_decks = {
 	'stranded',
 	'null',
 	'cookie',
-	-- 'splatterpaint',
+	'splatterpaint',
 	'clown_car',
 	'perfection'
 }
