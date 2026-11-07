@@ -123,6 +123,16 @@ return {
 				}
 			},
 
+			b_mngy_perfection = {
+				name = 'Perfection Deck',
+				text = {
+					"{C:blue}#1#{} hands and {C:red}#2#{} discards",
+					"every round",
+					"Start with only",
+					"{C:attention}one{} random suit"
+				}
+			}
+
 		},
 
 		Joker = {

@@ -88,7 +88,7 @@ local enabled_decks = {
 	'cookie',
 	-- 'splatterpaint',
 	'clown_car',
-	-- 'perfection'
+	'perfection'
 }
 
 for i = 1, #enabled_decks do
