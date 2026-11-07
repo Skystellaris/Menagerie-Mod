@@ -8,7 +8,7 @@ SMODS.Joker {
     config = {
         extra = {
             hand = 'Three of a Kind',
-            consistent_hand = true,
+            hand_played = true,
             dollars = 9,
             prob = 1,
             odds = 3
@@ -21,14 +21,12 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.before and not next(context.poker_hands[card.ability.extra.hand]) and card.ability.extra.consistent_hand then
-            card.ability.extra.consistent_hand = false
+        if context.before and next(context.poker_hands[card.ability.extra.hand]) then
+            card.ability.extra.hand_played = true
+            local eval = function(_c) return (not _c.ability.hand_played) and not G.RESET_JIGGLES end
+            juice_card_until(card, eval, true)
             return {
-                message = localize('k_nope_ex'),
-                colour = G.C.SECONDARY_SET.Tarot,
-                sound = 'tarot2',
-                pitch = 0.76,
-                volume = 0.4
+                message = localize('k_active_ex')
             }
         end
 
@@ -52,12 +50,12 @@ SMODS.Joker {
     calc_dollar_bonus = function(self, card)
         G.E_MANAGER:add_event(Event({
             func = function()
-                card.ability.extra.consistent_hand = true
+                card.ability.extra.hand_played = false
                 return true;
             end
         }))
 
-        if card.ability.extra.consistent_hand then
+        if card.ability.extra.hand_played then
             return card.ability.extra.dollars
         end
     end
