@@ -293,6 +293,14 @@ return {
 				}
 			},
 
+			j_mngy_astral_projection = {
+				name = 'Astral Projection',
+				text = {
+					'See top {C:attention}#1#{} cards',
+					'in the Deck'
+				}
+			},
+
 			j_mngy_magician = {
 				name = 'Magician',
 				text = {

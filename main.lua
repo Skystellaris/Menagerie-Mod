@@ -28,6 +28,7 @@ local enabled_jokers = {
 	'punch_card',
 	-- 'jokitty',
 	'yield',
+	'astral_projection',
 
 	-- Uncommons
 	'magician',

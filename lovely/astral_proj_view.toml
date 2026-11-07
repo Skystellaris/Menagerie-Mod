@@ -2,73 +2,73 @@
 version  = "1.0.0"
 priority = -1
 
-# render 'scry' cards face-up
+# render 'astral_proj' cards face-up
 [[patches]]
 [patches.pattern]
 target   = "cardarea.lua"
 pattern  = "if self.config.type == 'hand' or self.config.type == 'play' or self.config.type == 'title' or self.config.type == 'voucher' then"
 position = "at"
-payload  = "if self.config.type == 'hand' or self.config.type == 'scry' or self.config.type == 'play' or self.config.type == 'title' or self.config.type == 'voucher' then"
+payload  = "if self.config.type == 'hand' or self.config.type == 'astral_proj' or self.config.type == 'play' or self.config.type == 'title' or self.config.type == 'voucher' then"
 match_indent = true
 overwrite    = true
 
-# allow scry cards to sort / align like hand cards
+# allow astral_proj cards to sort / align like hand cards
 [[patches]]
 [patches.pattern]
 target   = "cardarea.lua"
 pattern  = "if self.config.type == 'hand' and not (G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.SPECTRAL_PACK or G.STATE == G.STATES.PLANET_PACK or G.STATE == G.STATES.SMODS_BOOSTER_OPENED) then"
 position = "at"
-payload  = "if self.config.type == 'scry' or self.config.type == 'hand' and not (G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.SPECTRAL_PACK or G.STATE == G.STATES.PLANET_PACK or G.STATE == G.STATES.SMODS_BOOSTER_OPENED) then"
+payload  = "if self.config.type == 'astral_proj' or self.config.type == 'hand' and not (G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.SPECTRAL_PACK or G.STATE == G.STATES.PLANET_PACK or G.STATE == G.STATES.SMODS_BOOSTER_OPENED) then"
 match_indent = true
 overwrite    = true
 
-# create / update scry view each frame while selecting a hand
+# create / update astral_proj view each frame while selecting a hand
 [[patches]]
 [patches.pattern]
 target   = "game.lua"
 pattern  = "function Game:update_selecting_hand(dt)"
 position = "after"
 payload  = '''
-    if not self.scry_view and type(create_scry_cardarea) == "function" then
-        self.scry_view = create_scry_cardarea()
-    elseif self.scry_view then
-        update_scry_cardarea(self.scry_view)
+    if not self.astral_proj_view and type(create_astral_proj_cardarea) == "function" then
+        self.astral_proj_view = create_astral_proj_cardarea()
+    elseif self.astral_proj_view then
+        update_astral_proj_cardarea(self.astral_proj_view)
     end
 '''
 match_indent = true
 
-# hide scry view during round eval
+# hide astral_proj view during round eval
 [[patches]]
 [patches.pattern]
 target   = "game.lua"
 pattern  = "function Game:update_round_eval(dt)"
 position = "after"
 payload  = '''
-    if G.scry_view then hide_scry_cardarea() end
+    if G.astral_proj_view then hide_astral_proj_cardarea() end
 '''
 match_indent = true
 
-# include scry view in playing-card evaluation
+# include astral_proj view in playing-card evaluation
 [[patches]]
 [patches.pattern]
 target   = '=[SMODS _ "src/utils.lua"]'
 pattern  = "-- TARGET: add your own CardAreas for playing card evaluation"
 position = "after"
 payload  = '''
-if G.scry_view and G.scry_view.cards then
-    t[#t+1] = G.scry_view
+if G.astral_proj_view and G.astral_proj_view.cards then
+    t[#t+1] = G.astral_proj_view
 end
 '''
 match_indent = true
 
-# position scry cards above the deck
+# position astral_proj cards above the deck
 [[patches]]
 [patches.pattern]
 target   = "functions/common_events.lua"
 pattern  = "local config = {}"
 position = "before"
 payload  = '''
-if card.area == G.scry_view then
+if card.area == G.astral_proj_view then
     y_off = -0.05*G.CARD_H
     card_aligned = 'tm'
 end
