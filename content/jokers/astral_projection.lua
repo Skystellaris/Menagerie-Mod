@@ -1,7 +1,7 @@
 SMODS.Joker({
     key = 'astral_projection',
     atlas = 'jokers_common',
-    pos = { x = 0, y = 2 },
+    pos = { x = 8, y = 1 },
     rarity = 1,
     config = {
         extra = {
