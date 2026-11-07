@@ -74,14 +74,14 @@ end
 
 local enabled_decks = {
 	'stacked',
-	'sightseeing',
-	'seeded',
-	'accretion',
-	'echo',
 	'loaned',
 	'white',
 	'hodgepodge',
 	'padded',
+	'sightseeing',
+	'seeded',
+	'accretion',
+	'echo',
 	--'cloudy',
 	'battle',
 	'stranded',
