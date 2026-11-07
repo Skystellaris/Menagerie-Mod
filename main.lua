@@ -22,7 +22,7 @@ local enabled_jokers = {
 	'lemnia',
 	'bottled_water',
 	'pineapple',
-	-- 'envious',
+	'envious',
 	-- 'mad_hatter',
 	-- 'paint_by_numbers',
 	'punch_card',

@@ -263,6 +263,15 @@ return {
 				}
 			},
 
+			j_mngy_envious = {
+                name="Envious Joker",
+                text={
+                    "Played cards with",
+                    "{C:mngy_shields}#2#{} suit give",
+                    "{C:mult}+#1#{} Mult when scored",
+                },
+			},
+
 			j_mngy_punch_card = {
 				name = 'Punch Card',
 				text = {
