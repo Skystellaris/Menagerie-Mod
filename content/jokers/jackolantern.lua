@@ -19,14 +19,17 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.destroying_card and context.cardarea == G.play and context.destroying_card:get_id() == 11 and SMODS.pseudorandom_probability(card, 'jackolantern', card.ability.extra.prob, card.ability.extra.odds) then
+            return {
+                remove = true
+            }
+        end
+
+        if context.individual and context.cardarea == G.play and context.other_card:get_id() == 11 then
             SMODS.scale_card(card, {
                 ref_table = card.ability.extra,
                 ref_value = 'xmult',
                 scalar_value = 'gain',
             })
-            return {
-                remove = true
-            }
         end
 
         if context.joker_main then
