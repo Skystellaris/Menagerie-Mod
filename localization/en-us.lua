@@ -666,6 +666,15 @@ return {
 			ach_mngy_jacks = 'Jack O\' Panic',
 			ach_mngy_combo = 'C-C-Combo!',
 			ach_mngy_fruit = 'Forbidden Fruit',
+			ach_mngy_empty = 'No Jokers Here',
+			ach_mngy_locked_in = 'Locked In',
+			ach_mngy_rainbow = 'Under the Rainbow',
+			ach_mngy_perfection = 'Perfection Perfected',
+			ach_mngy_sinful = 'The Sinful 5',
+			ach_mngy_rocks = 'Colourful Rocks',
+			ach_mngy_ten_triggers = '10 Triggers Down',
+			ach_mngy_expensive = 'Expensive Tastes',
+			ach_mngy_loan_shark = 'Loan Shark'
 		},
 		achievement_descriptions = {
 			ach_mngy_nope = 'Use a Wheel of Fortune with a 0 in 4 chance to hit',
@@ -673,6 +682,15 @@ return {
 			ach_mngy_jacks = 'Destroy 4 Jacks at the once',
 			ach_mngy_combo = 'Destroy a Straight Flush with Tetrominoker',
 			ach_mngy_fruit = 'Have Lemnia or Concord give a Negative Edition',
+			ach_mngy_empty = 'Have 5 Jokers with the Empty modifier',
+			ach_mngy_locked_in = 'Win a Gold Stake run with 5 Eternal Jokers',
+			ach_mngy_rainbow = 'Have 7 different Seals in the Deck at once',
+			ach_mngy_perfection = 'Win a run on the Perfection Deck while never having more than 1 Joker',
+			ach_mngy_sinful = 'Havy Greedy, Lusty, Wrathful, Gluttonous, and Envious Joker all at once',
+			ach_mngy_rocks = 'Havy Arrowhead, Rough Gem, Bloodstone, Onyx Agate, and Bright Geode all at once',
+			ach_mngy_ten_triggers = 'Retrigger a single card 10 times in the same hand',
+			ach_mngy_expensive = 'Sell an Egg worth $50 or more',
+			ach_mngy_loan_shark = 'Win a run while never having more than $10'
 		}
 	}
 }

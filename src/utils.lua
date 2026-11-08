@@ -115,8 +115,16 @@ Menagerie.mod.calculate = function(self, context)
         end
     end
 
-    if context.individual and context.other_card:get_id() == 14 and context.other_card.repetition_trigger and context.other_card.repetition_trigger >= 3 then
-        check_for_unlock({type = 'mngy_class'})
+    if context.individual and context.other_card.repetition_trigger then
+        check_for_unlock({type = 'mngy_retriggers', retriggers = context.other_card.repetition_trigger, card = context.other_card})
+    end
+
+    if context.selling_card and context.card.config.center_key == 'j_egg' and context.card.sell_cost >= 50 then
+        check_for_unlock({type = 'mngy_expensive'})
+    end
+
+    if context.money_altered and context.amount > 0 and G.GAME.dollars > 10 then
+        G.GAME.mngy_failed_loan_shark = true
     end
 end
 
