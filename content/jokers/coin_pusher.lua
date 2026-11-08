@@ -3,6 +3,7 @@ SMODS.Joker {
     atlas = 'jokers_uncommon',
     pos = { x = 6, y = 1 },
     rarity = 2,
+    discovered = false,
     unlocked = false,
     enhancement_gate = 'm_gold',
     config = {
