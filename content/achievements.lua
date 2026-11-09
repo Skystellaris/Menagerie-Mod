@@ -112,14 +112,12 @@ SMODS.Achievement {
     hidden_text = true,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
-        if G.GAME.selected_back_key.key == 'b_mngy_perfection' then
-            if args.type == "win" then
-                return not G.GAME.mngy_perfection_failed
-            end
+        if args.type == "win" and G.GAME.selected_back_key.key == 'b_mngy_perfection' then
+            return not G.GAME.mngy_perfection_failed
+        end
 
-            if args.type == 'modify_jokers' and #G.jokers.cards > 1 then
-                G.GAME.mngy_perfection_failed = true
-            end
+        if args.type == 'modify_jokers' and #G.jokers.cards > 1 and G.GAME.selected_back_key.key == 'b_mngy_perfection' then
+            G.GAME.mngy_perfection_failed = true
         end
     end
 }
@@ -131,7 +129,9 @@ SMODS.Achievement {
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "modify_jokers" then
-            return next(SMODS.find_joker('j_greedy_joker')) and next(SMODS.find_joker('j_lusty_joker')) and next(SMODS.find_joker('j_wrathful_joker')) and next(SMODS.find_joker('j_gluttenous_joker')) and next(SMODS.find_joker('j_mngy_envious'))
+            return next(SMODS.find_joker('j_greedy_joker')) and next(SMODS.find_joker('j_lusty_joker')) and
+            next(SMODS.find_joker('j_wrathful_joker')) and next(SMODS.find_joker('j_gluttenous_joker')) and
+            next(SMODS.find_joker('j_mngy_envious'))
         end
     end
 }
