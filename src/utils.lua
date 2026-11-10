@@ -99,7 +99,7 @@ Menagerie.mod.calculate = function(self, context)
     end
 
     if context.pseudorandom_result and context.identifier == 'wheel_of_fortune' and context.numerator == 0 then
-        check_for_unlock({type = 'mngy_nope'})
+        check_for_unlock({ type = 'mngy_nope' })
     end
 
     if context.remove_playing_cards then
@@ -109,7 +109,7 @@ Menagerie.mod.calculate = function(self, context)
                 jack_tally = jack_tally + 1
             end
             if jack_tally >= 4 then
-                check_for_unlock({type = 'mngy_jacks'})
+                check_for_unlock({ type = 'mngy_jacks' })
                 break
             end
         end
@@ -120,11 +120,37 @@ Menagerie.mod.calculate = function(self, context)
     end
 
     if context.selling_card and context.card.config.center_key == 'j_egg' and context.card.sell_cost >= 50 then
-        check_for_unlock({type = 'mngy_expensive'})
+        check_for_unlock({ type = 'mngy_expensive' })
     end
 
     if context.money_altered and context.amount > 0 and G.GAME.dollars > 10 then
         G.GAME.mngy_failed_loan_shark = true
+    end
+
+    if context.repetition and context.other_card then
+        for i, v in ipairs(context.other_card.area.cards) do
+            if v == context.other_card then
+                if not SMODS.has_enhancement(context.other_card, 'm_mngy_doodle') then
+                    local reps_triggers = {}
+                    if context.other_card.area.cards[i - 1] and SMODS.has_enhancement(context.other_card.area.cards[i - 1], 'm_mngy_doodle') then
+                        local doodle = context.other_card.area.cards[i - 1]
+                        if SMODS.pseudorandom_probability(doodle, 'mngy_doodle', doodle.ability.extra.prob, doodle.ability.extra.odds) then
+                            reps_triggers[#reps_triggers+1] = {repetitions = doodle.ability.extra.retriggers, message_card = doodle}
+                        end
+                    end
+                    if context.other_card.area.cards[i + 1] and SMODS.has_enhancement(context.other_card.area.cards[i + 1], 'm_mngy_doodle') then
+                        local doodle = context.other_card.area.cards[i + 1]
+                        if SMODS.pseudorandom_probability(doodle, 'mngy_doodle', doodle.ability.extra.prob, doodle.ability.extra.odds) then
+                            reps_triggers[#reps_triggers+1] = {repetitions = doodle.ability.extra.retriggers, message_card = doodle}
+                        end
+                    end
+                    if #reps_triggers > 0 then
+                        return SMODS.merge_effects(reps_triggers)
+                    end
+                end
+                break
+            end
+        end
     end
 end
 

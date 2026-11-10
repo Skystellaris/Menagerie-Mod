@@ -199,6 +199,18 @@ return {
 
 		},
 
+		Enhanced = {
+			m_mngy_doodle = {
+				name = 'Doodle Card',
+				text = {
+					'Never scores.',
+					'{C:green}#1# in #2#{} chance to {C:attention}retrigger{}',
+					'each adjacent card {C:attention}#3#{} time',
+					'{s:0.8,C:inactive}(Cannot retrigger other doodle cards)'
+				}
+			}
+		},
+
 		Joker = {
 			j_mngy_jollibee = {
 				name = 'Jollibee',
