@@ -82,7 +82,7 @@ return {
 						'{C:attention}any rank{} when played'
 					},
 					{
-						'Switches to {T:[key=b_mngy_stormy;set=Back;1=1;2=4;3=2],C:attention}Stormy Deck',
+						'Switches to {C:attention,T:b_mngy_stormy,T_set:Back,T_vars=1;4;2}Stormy Deck',
 						'when {C:attention}Boss{} is defeated'
 					}
 				}
@@ -100,7 +100,7 @@ return {
 						'and are {C:red}destroyed{} after scoring'
 					},
 					{
-						'Switches to {T:[key=b_mngy_cloudy;set=Back;1=1;2=4],C:attention}Cloudy Deck',
+						'Switches to {C:attention,T:b_mngy_cloudy,T_set:Back,T_vars=1;4}Cloudy Deck',
 						'when {C:attention}Boss{} is defeated'
 					}
 				}

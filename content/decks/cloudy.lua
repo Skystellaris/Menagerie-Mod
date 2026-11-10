@@ -32,10 +32,8 @@ SMODS.Back {
         local num, den = SMODS.get_probability_vars(back, self.config.extra.prob, self.config.extra.odds)
 
         if G.GAME.mngy_cloudy == false then
-            info_queue[#info_queue+1] =  { key = 'b_mngy_cloudy', set = 'Back', vars = {num, den} }
             return { key = 'b_mngy_stormy', vars = { num, den, self.config.xmult } }
         else
-            info_queue[#info_queue+1] =  { key = 'b_mngy_stormy', set = 'Back', vars = {num, den, self.config.extra.xmult} }
             return { vars = { num, den } }
         end
     end,
