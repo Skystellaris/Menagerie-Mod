@@ -90,7 +90,7 @@ local enabled_decks = {
 	'splatterpaint',
 	'clown_car',
 	'perfection',
-	-- 'hopscotch',
+	'hopscotch',
 	-- 'mechanical',
 	-- 'sunken',
 	'hollow',

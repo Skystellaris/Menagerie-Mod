@@ -165,7 +165,9 @@ return {
 			b_mngy_hopscotch = {
 				name = 'Hopscotch Deck',
 				text = {
-
+					'{C:red}#1#{} Shop Slots.',
+					'Creates {C:attention}+#2#{} extra',
+					'Skip Tags when skipping'
 				}
 			},
 

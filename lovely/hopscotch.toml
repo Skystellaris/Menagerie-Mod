@@ -1,0 +1,14 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "functions/button_callbacks.lua"
+pattern = "SMODS.calculate_context({skip_blind = true, skipped_blind = G.GAME.round_resets.blind_choices[skipped], skip_to = G.GAME.round_resets.blind_choices[skip_to]})"
+position = "at"
+match_indent = true
+payload = '''
+SMODS.calculate_context({skip_blind = true, skipped_blind = G.GAME.round_resets.blind_choices[skipped], skip_to = G.GAME.round_resets.blind_choices[skip_to], skip_tag = _tag.config.ref_table})
+'''
