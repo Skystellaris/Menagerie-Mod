@@ -183,7 +183,9 @@ return {
 			b_mngy_sunken = {
 				name = 'Sunken Deck',
 				text = {
-					
+					'All played cards are {C:attention}scored{}.',
+					'{C:red}Discarded{} cards are sent to',
+					'the bottom of the {C:attention}Deck'
 				}
 			},
 

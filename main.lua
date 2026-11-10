@@ -92,7 +92,7 @@ local enabled_decks = {
 	'perfection',
 	'hopscotch',
 	'mechanical',
-	-- 'sunken',
+	'sunken',
 	'hollow',
 }
 
