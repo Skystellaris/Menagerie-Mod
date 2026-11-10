@@ -16,4 +16,11 @@ payload = '''
         _pool_size = _pool_size + 1
       end
     end
+
+    if G.GAME.mngy_hollow and v.mngy_empty then
+      for i = 1, G.GAME.mngy_hollow do
+        _pool[#_pool + 1] = v.key
+        _pool_size = _pool_size + 1
+      end
+    end
 '''

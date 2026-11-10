@@ -160,7 +160,36 @@ return {
 					"Start with only",
 					"{C:attention}one{} random suit"
 				}
-			}
+			},
+
+			b_mngy_hopscotch = {
+				name = 'Hopscotch Deck',
+				text = {
+
+				}
+			},
+
+			b_mngy_mechanical = {
+				name = 'Mechanical Deck',
+				text = {
+					
+				}
+			},
+
+			b_mngy_sunken = {
+				name = 'Sunken Deck',
+				text = {
+					
+				}
+			},
+
+			b_mngy_hollow = {
+				name = 'Hollow Earth Deck',
+				text = {
+					'{C:attention,T:mngy_empty,T_set:Other}Empty Jokers{} are {X:attention,C:white}#1#X{}',
+					'more likely to appear',
+				}
+			},
 
 		},
 
