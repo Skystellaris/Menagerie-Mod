@@ -91,7 +91,7 @@ local enabled_decks = {
 	'clown_car',
 	'perfection',
 	'hopscotch',
-	-- 'mechanical',
+	'mechanical',
 	-- 'sunken',
 	'hollow',
 }

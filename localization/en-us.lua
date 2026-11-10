@@ -174,7 +174,9 @@ return {
 			b_mngy_mechanical = {
 				name = 'Mechanical Deck',
 				text = {
-					
+					'{C:attention}+#1#{} Consumable Slots.',
+					'{C:attention}Jokers{} cannot appear',
+					'in the shop'
 				}
 			},
 
