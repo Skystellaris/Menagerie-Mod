@@ -129,9 +129,9 @@ SMODS.Achievement {
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "modify_jokers" then
-            return next(SMODS.find_joker('j_greedy_joker')) and next(SMODS.find_joker('j_lusty_joker')) and
-            next(SMODS.find_joker('j_wrathful_joker')) and next(SMODS.find_joker('j_gluttenous_joker')) and
-            next(SMODS.find_joker('j_mngy_envious'))
+            return next(SMODS.find_card('j_greedy_joker')) and next(SMODS.find_card('j_lusty_joker')) and
+            next(SMODS.find_card('j_wrathful_joker')) and next(SMODS.find_card('j_gluttenous_joker')) and
+            next(SMODS.find_card('j_mngy_envious'))
         end
     end
 }
@@ -143,7 +143,7 @@ SMODS.Achievement {
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "modify_jokers" then
-            return next(SMODS.find_joker('j_rough_gem')) and next(SMODS.find_joker('j_bloodstone')) and next(SMODS.find_joker('j_arrowhead')) and next(SMODS.find_joker('j_onyx_agate')) and next(SMODS.find_joker('j_mngy_bright_geode'))
+            return next(SMODS.find_card('j_rough_gem')) and next(SMODS.find_card('j_bloodstone')) and next(SMODS.find_card('j_arrowhead')) and next(SMODS.find_card('j_onyx_agate')) and next(SMODS.find_card('j_mngy_bright_geode'))
         end
     end
 } ]]
