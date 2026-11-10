@@ -208,6 +208,16 @@ return {
 					'each adjacent card {C:attention}#3#{} time',
 					'{s:0.8,C:inactive}(Cannot retrigger other doodle cards)'
 				}
+			},
+
+			m_mngy_aurora = {
+				name = 'Aurora Card',
+				text = {
+					'{X:mult,C:white}X1.0{} Mult, gains',
+					'{X:mult,C:white}X0.1{} Mult per previously',
+					'scored {C:attention}Aurora Card{} this hand',
+					'{C:inactive,s:0.8}(Counts itself)'
+				}
 			}
 		},
 

@@ -110,7 +110,7 @@ end
 
 local enabled_enhancements = {
 	'doodle',
-	-- 'aurora',
+	'aurora',
 }
 
 for i = 1, #enabled_enhancements do
