@@ -40,6 +40,7 @@ SMODS.Joker {
                                     func = function()
                                         SMODS.destroy_cards(this_suit_hands[card.ability.extra.hand][1], {immediate = true})
                                         card:juice_up(0.8, 0.8)
+                                        G.GAME.mngy_tetrominoker_hits = (G.GAME.mngy_tetrominoker_hits or 0) + 1
                                         check_for_unlock({type = 'mngy_combo'})
                                         return true;
                                     end

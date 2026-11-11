@@ -98,6 +98,9 @@ SMODS.Joker {
             G.E_MANAGER:add_event(Event({
                 func = function()
                     SMODS.add_card({set = 'Joker', rarity = card.ability.extra.rarity})
+                    if card.ability.extra.rarity == 'Legendary' then
+                        check_for_unlock({type = 'mngy_legendary_seeds'})
+                    end
                     return true;
                 end
             }))

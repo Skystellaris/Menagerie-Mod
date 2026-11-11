@@ -731,13 +731,15 @@ return {
 			ach_mngy_rocks = 'Colourful Rocks',
 			ach_mngy_ten_triggers = '10 Triggers Down',
 			ach_mngy_expensive = 'Expensive Tastes',
-			ach_mngy_loan_shark = 'Loan Shark'
+			ach_mngy_loan_shark = 'Loan Shark',
+			ach_mngy_harvest = 'Patient Harvest'
 		},
 		achievement_descriptions = {
+			-- Unlocked
 			ach_mngy_nope = 'Use a Wheel of Fortune with a 0 in 4 chance to hit',
 			ach_mngy_class = 'Retrigger a single Ace three times',
 			ach_mngy_jacks = 'Destroy 4 Jacks at the once',
-			ach_mngy_combo = 'Destroy a Straight Flush with Tetrominoker',
+			ach_mngy_combo = 'Destroy 3 Straight Flushes with Tetrominoker in one run',
 			ach_mngy_fruit = 'Have Lemnia or Concord give a Negative Edition',
 			ach_mngy_empty = 'Have 5 Jokers with the Empty modifier',
 			ach_mngy_locked_in = 'Win a Gold Stake run with 5 Eternal Jokers',
@@ -747,7 +749,25 @@ return {
 			ach_mngy_rocks = 'Havy Arrowhead, Rough Gem, Bloodstone, Onyx Agate, and Bright Geode all at once',
 			ach_mngy_ten_triggers = 'Retrigger a single card 10 times in the same hand',
 			ach_mngy_expensive = 'Sell an Egg worth $50 or more',
-			ach_mngy_loan_shark = 'Win a run while never having more than $10'
+			ach_mngy_loan_shark = 'Win a run while never having more than $10',
+			ach_mngy_harvest = 'Create a Legendary Joker from Sowing Seeds',
+
+			-- Hidden
+			ach_mngy_nope_hidden = 'Wheel always hits',
+			ach_mngy_class_hidden = 'A+++',
+			ach_mngy_jacks_hidden = 'Quad Pumpkin Carvin\'',
+			ach_mngy_combo_hidden = 'Triple Tetrominoes',
+			ach_mngy_fruit_hidden = 'Nothing could be sweeter',
+			ach_mngy_empty_hidden = 'Not quite Empty',
+			ach_mngy_locked_in_hidden = 'Lock it in',
+			ach_mngy_rainbow_hidden = '7 {st:black}Souls{} Seals',
+			ach_mngy_perfection_hidden = 'The Perfect Solo Run',
+			ach_mngy_sinful_hidden = 'Such common sins...',
+			ach_mngy_rocks_hidden = 'Suit-based Excavation',
+			ach_mngy_ten_triggers_hidden = 'Retrigger Mania',
+			ach_mngy_expensive_hidden = 'Shaken, not Scrambled',
+			ach_mngy_loan_shark_hidden = 'On the run with Vagabond',
+			ach_mngy_harvest_hidden = 'Planted from Spring to Winter',
 		}
 	}
 }
