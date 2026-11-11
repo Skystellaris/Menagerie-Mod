@@ -218,6 +218,17 @@ return {
 					'scored {C:attention}Aurora Card{} this hand',
 					'{C:inactive,s:0.8}(Counts itself)'
 				}
+			},
+
+			m_mngy_confetti = {
+				name = 'Confetti Card',
+				text = {
+					'Gives {X:red,C:white}X#1#{} per card',
+					'held in hand when scored.',
+					'{C:green}1 in X{} chance to not give {C:mult}Xmult{}',
+					'where {C:green}denominator{} is equal to',
+					'amount of played cards'
+				}
 			}
 		},
 

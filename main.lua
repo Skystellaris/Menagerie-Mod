@@ -111,6 +111,7 @@ end
 local enabled_enhancements = {
 	'doodle',
 	'aurora',
+	'confetti',
 }
 
 for i = 1, #enabled_enhancements do
