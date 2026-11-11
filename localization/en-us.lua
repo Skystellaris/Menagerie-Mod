@@ -225,7 +225,7 @@ return {
 				text = {
 					'Gives {X:red,C:white}X#1#{} per card',
 					'held in hand when scored.',
-					'{C:green}1 in X{} chance to not give {C:mult}Xmult{}',
+					'{C:green}#2# in #3#{} chance to not give {C:mult}Xmult{}',
 					'where {C:green}denominator{} is equal to',
 					'amount of played cards'
 				}
