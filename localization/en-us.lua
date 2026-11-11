@@ -96,7 +96,7 @@ return {
 						'are drawn {C:attention}face-down'
 					},
 					{
-						'Face-down cards give {X:mult,C:white}X2{} Mult',
+						'Face-down cards give {X:mult,C:white}X#3#{} Mult',
 						'and are {C:red}destroyed{} after scoring'
 					},
 					{
