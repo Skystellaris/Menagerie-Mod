@@ -597,6 +597,15 @@ return {
 				}
 			},
 
+			j_mngy_nuclear_option = {
+				name = 'Nuclear Option',
+				text = {
+                    "When {C:attention}Blind{} is selected,",
+                    "set {C:red}discards{} to {C:attention}1{}.",
+                    "{C:red}Destroy{} all discarded cards",
+				}
+			},
+
             j_mngy_blind_justice = {
                 name = 'Blind Justice',
                 text = {
@@ -716,6 +725,7 @@ return {
 			k_mngy_bounty_redeemed_ex = 'Bounty Redeemed!',
 			k_mngy_caution_ex = 'Caution!',
 			k_mngy_splattered_ex = 'Splattered!',
+			k_mngy_kaboom = 'Kaboom',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',

@@ -59,7 +59,7 @@ local enabled_jokers = {
 	'stained_glass',
 	'3d_glasses',
 	-- 'tic_tac_toe',
-	-- 'nuclear_option',
+	'nuclear_option',
 	-- 'soul_food',
 	'lucky_clover',
 	'pro_skater',
