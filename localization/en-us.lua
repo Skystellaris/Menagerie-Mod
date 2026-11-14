@@ -699,6 +699,16 @@ return {
 				}
 			},
 
+			j_mngy_ringleader = {
+				name = 'Ringleader',
+				text = {
+					'{X:mult,C:white}X#1#{} Mult for each',
+					'{C:attention}unique{} Joker rarity held',
+					'{C:inactive,s:0.8}(Does not count this card)',
+					'{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)'
+				}
+			},
+
 			j_mngy_stargazing = {
 				name = 'Stargazing Joker',
 				text = {
