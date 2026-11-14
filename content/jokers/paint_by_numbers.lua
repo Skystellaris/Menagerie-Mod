@@ -8,8 +8,8 @@ end
 
 SMODS.Joker {
     key = 'paint_by_numbers',
-    atlas = 'placeholders',
-    pos = { x = 0, y = 0 },
+    atlas = 'jokers_common',
+    pos = { x = 5, y = 1 },
     rarity = 1,
     config = {
         extra = {
