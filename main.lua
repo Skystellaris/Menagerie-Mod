@@ -24,7 +24,7 @@ local enabled_jokers = {
 	'pineapple',
 	'envious',
 	-- 'mad_hatter',
-	-- 'paint_by_numbers',
+	'paint_by_numbers',
 	'punch_card',
 	-- 'jokitty',
 	'yield',

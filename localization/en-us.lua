@@ -233,6 +233,7 @@ return {
 		},
 
 		Joker = {
+			-- Common
 			j_mngy_jollibee = {
 				name = 'Jollibee',
 				text = {
@@ -369,6 +370,15 @@ return {
                 },
 			},
 
+			j_mngy_paint_by_numbers = {
+				name = 'Paint By Numbers',
+				text = {
+					'Each scoring {C:attention}Numbered card{}',
+					'gives {C:chips}+#1#{} Chips for each',
+					'unique scoring {C:attention}Suit'
+				}
+			},
+
 			j_mngy_punch_card = {
 				name = 'Punch Card',
 				text = {
@@ -398,6 +408,7 @@ return {
 				}
 			},
 
+			-- Uncommon
 			j_mngy_magician = {
 				name = 'Magician',
 				text = {
@@ -606,6 +617,7 @@ return {
 				}
 			},
 
+			-- Rare
             j_mngy_blind_justice = {
                 name = 'Blind Justice',
                 text = {
@@ -709,6 +721,7 @@ return {
 				}
 			},
 
+			-- Uncategorized
 			j_mngy_stargazing = {
 				name = 'Stargazing Joker',
 				text = {
