@@ -10,8 +10,6 @@ SMODS.Joker {
     end,
     
     calculate = function(self, card, context)
-        local stg = card.ability.extra
-    
         if context.end_of_round and context.main_eval then
             local flip = SMODS.pseudorandom_probability(card, 'mngy_moon_rabbit', 1, 2, nil, true)
 

@@ -18,8 +18,6 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        local stg = card.ability.extra
-    
         if context.joker_main then
             return {
                 chips = card.ability.extra.chips

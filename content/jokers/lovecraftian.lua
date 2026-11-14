@@ -11,8 +11,6 @@ SMODS.Joker {
     },
 
     calculate = function(self, card, context)
-        local stg = card.ability.extra
-    
         if context.setting_blind then
             if not context.blueprint then
                 local valid_cards = {}

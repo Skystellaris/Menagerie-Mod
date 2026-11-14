@@ -697,7 +697,15 @@ return {
 					'scoring {C:attention}Jack{} to be {C:red}destroyed{},',
 					'{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive})',
 				}
-			}
+			},
+
+			j_mngy_stargazing = {
+				name = 'Stargazing Joker',
+				text = {
+					'{C:attention}Aurora Cards{} will also',
+					'trigger while {C:attention}held in hand'
+				}
+			},
 
 		},
 		Other = {

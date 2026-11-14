@@ -15,8 +15,6 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        local stg = card.ability.extra
-    
         if context.end_of_round and context.main_eval and context.beat_boss then
             SMODS.smart_level_up_hand(card, G.GAME.last_hand_played, nil, card.ability.extra.levels)
             if not context.blueprint then

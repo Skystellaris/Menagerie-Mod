@@ -15,8 +15,6 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        local stg = card.ability.extra
-    
         if context.retrigger_joker_check and card.ability.extra.retriggers > 0 then
             for i = 1, #G.jokers.cards do
                 if G.jokers.cards[i] == card then

@@ -40,8 +40,6 @@ SMODS.Joker {
     end,
 
     remove_from_deck = function(self, card, from_debuff)
-        local stg = card.ability.extra
-    
         if not next(SMODS.find_card('j_mngy_swiss_cheese')) then
             
             for i, v in ipairs(G.deck.cards) do

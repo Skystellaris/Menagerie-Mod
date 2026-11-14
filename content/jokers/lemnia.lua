@@ -17,8 +17,6 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        local stg = card.ability.extra
-
         if context.before then
             local adjacent_jokers = Menagerie.grapes_get_adjacent(card)
             

@@ -66,6 +66,9 @@ local enabled_jokers = {
 	-- 'spinning',
 	'secret',
 	'jackolantern',
+
+	-- Uncategorized
+	'stargazing',
 }
 
 for i = 1, #enabled_jokers do
