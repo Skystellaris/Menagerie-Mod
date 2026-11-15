@@ -1,7 +1,7 @@
 SMODS.Enhancement {
     key = 'doodle',
-    atlas = 'placeholders',
-    pos = { x = 3, y = 1 },
+    atlas = 'enhancements',
+    pos = { x = 4, y = 0 },
     never_scores = true,
     config = {
         extra = {

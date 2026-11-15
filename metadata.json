@@ -1,14 +1,14 @@
 {
 	"id": "Menagerie",
 	"name": "Menagerie",
-	"author": ["SkyStellar"],
+	"author": ["SkyStellar", "theAstra"],
 	"description": "Vanilla+ Balatro Mod aiming to add over 100 Jokers, 20 Decks, and much, much more!",
 	"prefix": "mngy",
 	"main_file": "main.lua",
 	"priority": 0,
 	"badge_colour": "7A9E9F",
 	"badge_text_colour": "FFFFFF",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"dependencies": [
 		"Steamodded (>=26.1002.0)",
 		"Lovely (>=0.9.0)"

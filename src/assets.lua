@@ -136,6 +136,13 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
+	key = 'enhancements',
+	path = 'enhancements.png',
+	px = 71,
+	py = 95
+}
+
+SMODS.Atlas {
 	key = 'ui_assets',
 	path = 'ui_assets.png',
 	px = 18,
