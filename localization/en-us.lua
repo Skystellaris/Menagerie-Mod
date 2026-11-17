@@ -803,6 +803,15 @@ return {
 					'Cards with {C:mngy_shields}Shields{} suit',
 					'cannot be {C:red}destroyed{} or {C:red}debuffed'
 				}
+			},
+
+			j_mngy_ante_beats = {
+				name = {'Ante Beats to','Play/Win to'},
+				text = {
+                    "{C:mult}+#1#{} Mult per discard",
+                    "{C:mult}-#2#{} Mult per hand played",
+                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
+				}
 			}
 		},
 		Other = {
