@@ -812,6 +812,26 @@ return {
                     "{C:mult}-#2#{} Mult per hand played",
                     "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
 				}
+			},
+
+			j_mngy_keeping_beat = {
+				name = 'Keeping Beat',
+				text = {
+					'When an {C:attention}Ace{}, {C:attention}2{}, {C:attention}3{}, and {C:attention}4{}',
+					'are scoring {C:attention}in that order{},',
+					'this card cards {X:mult,C:white}X#1#{} Mult.',
+					'{X:mult,C:white}Xmult{} resets when one of the',
+					'specified ranks are played out of order',
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+				}
+			},
+
+			j_mngy_balancing_act = {
+				name = 'Balancing Act',
+				text = {
+					'If played hand is a {C:attention}Two Pair,',
+					'balance {C:chips}Chips{} and {C:mult}Mult'
+				}
 			}
 		},
 		Other = {
