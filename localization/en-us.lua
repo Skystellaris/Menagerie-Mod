@@ -731,6 +731,14 @@ return {
 				}
 			},
 
+			j_mngy_emergency_evac = {
+				name = 'Emergency Evacuation',
+				text = {
+					'Rerolling the Shop {C:red}destroys',
+					'a {C:green}random{} card in your Deck'
+				}
+			},
+
 			-- Uncategorized
 			j_mngy_stargazing = {
 				name = 'Stargazing Joker',

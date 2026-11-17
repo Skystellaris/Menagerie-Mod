@@ -68,6 +68,7 @@ local enabled_jokers = {
 	'jackolantern',
 	'ringleader',
 	'back_to_the_past',
+	'emergency_evac',
 
 	-- Uncategorized
 	'stargazing',
