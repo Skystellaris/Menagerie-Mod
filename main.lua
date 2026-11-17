@@ -81,6 +81,7 @@ local enabled_jokers = {
 	-- 'shield_bearing',
 	'ante_beats',
 	'balancing_act',
+	'left_mitten',
 }
 
 for i = 1, #enabled_jokers do

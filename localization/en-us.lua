@@ -832,7 +832,7 @@ return {
 					'this card cards {X:mult,C:white}X#1#{} Mult.',
 					'{X:mult,C:white}Xmult{} resets when one of the',
 					'specified ranks are played out of order',
-                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+                    '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
 				}
 			},
 
@@ -843,6 +843,17 @@ return {
 					'balance {C:chips}Chips{} and {C:mult}Mult'
 				}
 			},
+
+			j_mngy_left_mitten = {
+				name = 'Left Mitten',
+				text = {
+					'If the {C:attention}leftmost{} scoring card',
+					'is the {C:attention}lowest{} scoring rank,',
+					'it and this Joker',
+					'permanently gain {C:mult}+#1#{} Mult',
+                    '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)',
+				}
+			}
 		},
 		Other = {
 			mngy_empty = {
