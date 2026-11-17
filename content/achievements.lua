@@ -1,6 +1,7 @@
 SMODS.Achievement {
     key = 'nope',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "mngy_nope" then
@@ -12,6 +13,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'class',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "mngy_retriggers" then
@@ -23,6 +25,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'jacks',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "mngy_jacks" then
@@ -34,6 +37,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'combo',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "mngy_combo" then
@@ -45,6 +49,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'fruit',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "mngy_fruit" then
@@ -56,6 +61,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'empty',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "modify_jokers" then
@@ -73,6 +79,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'locked_in',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "win" and G.GAME.stake == 8 then
@@ -90,6 +97,7 @@ SMODS.Achievement {
 --[[ SMODS.Achievement {
     key = 'rainbow',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "modify_deck" then
@@ -101,6 +109,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'perfection',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "win" and G.GAME.selected_back_key.key == 'b_mngy_perfection' then
@@ -116,6 +125,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'sinful',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "modify_jokers" then
@@ -129,6 +139,7 @@ SMODS.Achievement {
 --[[ SMODS.Achievement {
     key = 'rocks',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "modify_jokers" then
@@ -140,6 +151,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'ten_triggers',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "mngy_retriggers" then
@@ -151,6 +163,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'expensive',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "mngy_expensive" then
@@ -162,6 +175,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'loan_shark',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "win" then
@@ -173,6 +187,7 @@ SMODS.Achievement {
 SMODS.Achievement {
     key = 'harvest',
     hidden_text = true,
+    hidden_name = false,
     bypass_all_unlocked = true,
     unlock_condition = function(self, args)
         if args.type == "mngy_legendary_seeds" then
