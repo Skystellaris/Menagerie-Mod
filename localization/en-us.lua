@@ -721,6 +721,16 @@ return {
 				}
 			},
 
+			j_mngy_back_to_the_past = {
+				name = 'Back to the Past',
+				text = {
+					'{C:chips}+#1#{} Chips.',
+					'If score {C:attention}Catches Fire{},',
+					'{C:red}destroy{} this card and',
+					'go back {C:attention}#2#{} Ante'
+				}
+			},
+
 			-- Uncategorized
 			j_mngy_stargazing = {
 				name = 'Stargazing Joker',
@@ -757,6 +767,7 @@ return {
 			k_mngy_caution_ex = 'Caution!',
 			k_mngy_splattered_ex = 'Splattered!',
 			k_mngy_kaboom = 'Kaboom',
+			k_mngy_going_back_ex = 'Going Back!',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',
