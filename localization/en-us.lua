@@ -76,7 +76,7 @@ return {
 			b_mngy_padded = {
 				name = 'Padded Deck',
 				text = {
-					'Starting Deck includes {C:mngy_shields}Shields,',
+					'Starting Deck includes {C:mngy_shields}Shields{},',
 					'{C:attention}14{} random cards start',
 					'with one random {C:attention}modification{}'
 				}
@@ -617,6 +617,16 @@ return {
 				}
 			},
 
+			j_mngy_bright_geode = {
+				name = 'Bright Geode',
+				text = {
+					'{C:green}#2# in #3#{} chance for',
+					'cards held in hand with',
+					'{C:mngy_shields}Shields{} suit to',
+					'give {X:chips,C:white}X#1#{} Chips'
+				}
+			},
+
 			-- Rare
             j_mngy_blind_justice = {
                 name = 'Blind Justice',
@@ -787,6 +797,13 @@ return {
 				}
 			},
 
+			j_mngy_shield_bearing = {
+				name = 'Shield-Bearing Joker',
+				text = {
+					'Cards with {C:mngy_shields}Shields{} suit',
+					'cannot be {C:red}destroyed{} or {C:red}debuffed'
+				}
+			}
 		},
 		Other = {
 			mngy_empty = {

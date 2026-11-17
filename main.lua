@@ -49,6 +49,7 @@ local enabled_jokers = {
 	-- 'trapdoor',
 	'coin_pusher',
 	'desire_path',
+	'bright_geode',
 
 	-- Rares
 	'blind_justice',
@@ -76,6 +77,8 @@ local enabled_jokers = {
 	'russian_roulette',
 	'polymelia',
 	'blank_check',
+	-- 'battersby',
+	-- 'shield_bearing',
 }
 
 for i = 1, #enabled_jokers do
