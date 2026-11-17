@@ -756,6 +756,7 @@ return {
 					'and contains an {C:attention}Ace'
 				}
 			},
+
 			j_mngy_russian_roulette = {
 				name = 'Russian Roulette',
 				text = {
@@ -768,6 +769,13 @@ return {
 						'to {C:red}self-destruct{} and create',
 						'a {C:tarot}Death{} when {C:attention}Blind{} is selected'
 					}
+				}
+			},
+
+			j_mngy_polymelia = {
+				name = 'Polymelia',
+				text = {
+					'{C:attention}+#1#{} card selection limit'
 				}
 			}
 

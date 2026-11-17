@@ -74,6 +74,7 @@ local enabled_jokers = {
 	'stargazing',
 	'ace_up_the_sleeve',
 	'russian_roulette',
+	'polymelia',
 }
 
 for i = 1, #enabled_jokers do
