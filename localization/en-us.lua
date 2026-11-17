@@ -865,6 +865,20 @@ return {
                     '{C:red}Self destructs{} on trigger'
                 }
             },
+
+			j_mngy_bonus_tickets = {
+				name = 'Bonus Tickets',
+				text = {
+					{
+						'{C:attention}Bonus Cards{} have a {C:green}#1# in #2#',
+						'chance to be retriggered {C:attention}#3#{} time'
+					},
+					{
+						'{C:attention}Bonus Cards{} have a {C:green}#4# in #5#',
+						'chance to give {C:money}$#6#{}'
+					}
+				}
+			}
 		},
 		Other = {
 			mngy_empty = {
