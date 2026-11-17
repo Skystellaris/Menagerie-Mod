@@ -878,6 +878,15 @@ return {
 						'chance to give {C:money}$#6#{}'
 					}
 				}
+			},
+
+			j_mngy_poodle = {
+				name = 'Poodle',
+				text = {
+					'{C:chips}+#1#{} Chips.',
+					'{C:red}Pops{} if score',
+					'{C:attention}catches fire'
+				}
 			}
 		},
 		Other = {
@@ -907,6 +916,7 @@ return {
 			k_mngy_splattered_ex = 'Splattered!',
 			k_mngy_kaboom = 'Kaboom',
 			k_mngy_going_back_ex = 'Going Back!',
+			k_mngy_popped_ex = 'Popped!',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',

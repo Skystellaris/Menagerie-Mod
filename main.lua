@@ -83,7 +83,8 @@ local enabled_jokers = {
 	'balancing_act',
 	'left_mitten',
 	'cardboard',
-	'bonus_tickets'
+	'bonus_tickets',
+	'poodle',
 }
 
 for i = 1, #enabled_jokers do
