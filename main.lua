@@ -29,6 +29,7 @@ local enabled_jokers = {
 	-- 'jokitty',
 	'yield',
 	'astral_projection',
+	'battersby',
 
 	-- Uncommons
 	'magician',
@@ -77,7 +78,6 @@ local enabled_jokers = {
 	'russian_roulette',
 	'polymelia',
 	'blank_check',
-	-- 'battersby',
 	-- 'shield_bearing',
 	'ante_beats',
 	'balancing_act',

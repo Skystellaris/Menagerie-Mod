@@ -408,6 +408,16 @@ return {
 				}
 			},
 
+			j_mngy_battersby = {
+				name = 'Big Battersby',
+				text = {
+                    "{X:mult,C:white}X#1#{} Mult for",
+                    "each {C:attention}Joker{} card",
+					"excluding itself",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+				}
+			},
+
 			-- Uncommon
 			j_mngy_magician = {
 				name = 'Magician',
@@ -832,7 +842,7 @@ return {
 					'If played hand is a {C:attention}Two Pair,',
 					'balance {C:chips}Chips{} and {C:mult}Mult'
 				}
-			}
+			},
 		},
 		Other = {
 			mngy_empty = {
