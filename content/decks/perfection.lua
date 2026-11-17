@@ -15,7 +15,7 @@ SMODS.Back {
     apply = function(self, back)
         local available_suits = {}
         for _, v in pairs(SMODS.Suits) do
-            if SMODS.add_to_pool(v, {initial_deck = true, suit = v.key, perfection_loop = true}) then
+            if SMODS.add_to_pool(v, {initial_deck = true, suit = v.key}) then
                 table.insert(available_suits, v.key)
             end
         end
