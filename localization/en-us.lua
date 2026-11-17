@@ -853,7 +853,18 @@ return {
 					'permanently gain {C:mult}+#1#{} Mult',
                     '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)',
 				}
-			}
+			},
+
+			
+            j_mngy_cardboard = {
+                name = 'Cardboard Joker',
+                text = {
+                    'Gives {X:mult,C:white}X#1#{} Mult at the',
+                    'end of {C:attention}final hand{} of round if',
+                    'total score will not beat blind.',
+                    '{C:red}Self destructs{} on trigger'
+                }
+            },
 		},
 		Other = {
 			mngy_empty = {

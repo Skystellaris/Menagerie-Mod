@@ -82,6 +82,7 @@ local enabled_jokers = {
 	'ante_beats',
 	'balancing_act',
 	'left_mitten',
+	'cardboard',
 }
 
 for i = 1, #enabled_jokers do

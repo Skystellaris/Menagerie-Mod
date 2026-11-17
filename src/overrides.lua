@@ -271,3 +271,7 @@ function create_card(_type, area, legendary, _rarity, skip_materialize, soulable
     end
     return card
 end
+
+to_big = to_big or function(num)
+    return num
+end
