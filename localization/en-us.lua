@@ -777,7 +777,15 @@ return {
 				text = {
 					'{C:attention}+#1#{} card selection limit'
 				}
-			}
+			},
+
+			j_mngy_blank_check = {
+				name = 'Blank Check',
+				text = {
+					'Gives {C:money}$#1#{} to {C:money}$#2#',
+					'at end of round'
+				}
+			},
 
 		},
 		Other = {
