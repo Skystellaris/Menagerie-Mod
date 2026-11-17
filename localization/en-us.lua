@@ -755,6 +755,20 @@ return {
 					'when played hand is {C:dark_edition}secret',
 					'and contains an {C:attention}Ace'
 				}
+			},
+			j_mngy_russian_roulette = {
+				name = 'Russian Roulette',
+				text = {
+					{
+						'Scored cards have a',
+						'{C:green}#1# in #2#{} chance to be {C:red}destroyed'
+					},
+					{
+						'This Joker has a {C:green}#1# in #2#{} chance',
+						'to {C:red}self-destruct{} and create',
+						'a {C:tarot}Death{} when {C:attention}Blind{} is selected'
+					}
+				}
 			}
 
 		},
