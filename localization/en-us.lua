@@ -748,6 +748,15 @@ return {
 				}
 			},
 
+			j_mngy_ace_up_the_sleeve = {
+				name = 'Ace Up The Sleeve',
+				text = {
+					'Creates a random {C:attention}Tag',
+					'when played hand is {C:dark_edition}secret',
+					'and contains an {C:attention}Ace'
+				}
+			}
+
 		},
 		Other = {
 			mngy_empty = {

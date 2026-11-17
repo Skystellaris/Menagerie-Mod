@@ -72,6 +72,7 @@ local enabled_jokers = {
 
 	-- Uncategorized
 	'stargazing',
+	'ace_up_the_sleeve',
 }
 
 for i = 1, #enabled_jokers do
