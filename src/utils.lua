@@ -81,21 +81,11 @@ Menagerie.mod.calculate = function(self, context)
         G.GAME.mngy_yield_this_round = nil
     end
 
-    if context.before and not SMODS.PokerHands[context.scoring_name].visible then
-        G.GAME.pool_flags.mngy_secret_hand_played = true
-    end
-
-    if context.playing_card_added and not G.GAME.mngy_spawn_shields then
-        for _, v in pairs(context.cards) do
-            if v.base.suit == 'mngy_Shields' then
-                G.GAME.mngy_spawn_shields = true
-                break
-            end
+    if context.before then
+        G.GAME.mngy_hands_this_ante[context.scoring_name] = true
+        if not SMODS.PokerHands[context.scoring_name].visible then
+            G.GAME.pool_flags.mngy_secret_hand_played = true
         end
-    end
-
-    if context.change_suit and context.new_suit == 'mngy_Shields' and not G.GAME.mngy_spawn_shields then
-        G.GAME.mngy_spawn_shields = true
     end
 
     if context.pseudorandom_result and context.identifier == 'wheel_of_fortune' and context.numerator == 0 then
@@ -151,6 +141,11 @@ Menagerie.mod.calculate = function(self, context)
                 break
             end
         end
+    end
+
+    if context.ante_change and context.ante_end then
+        G.GAME.mngy_hands_last_ante = copy_table(G.GAME.mngy_hands_this_ante)
+        G.GAME.mngy_hands_this_ante = {}
     end
 end
 

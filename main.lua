@@ -71,6 +71,7 @@ local enabled_jokers = {
 	'ringleader',
 	'back_to_the_past',
 	'emergency_evac',
+	'webcore',
 
 	-- Uncategorized
 	'stargazing',

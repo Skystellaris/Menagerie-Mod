@@ -275,3 +275,13 @@ end
 to_big = to_big or function(num)
     return num
 end
+
+-- Classic init_game_object hook
+local igo = Game.init_game_object
+Game.init_game_object = function(self)
+    local ret = igo(self)
+
+    ret.mngy_hands_this_ante = {}
+
+    return ret
+end

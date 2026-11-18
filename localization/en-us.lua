@@ -759,6 +759,16 @@ return {
 				}
 			},
 
+			j_mngy_webcore = {
+				name = 'Webcore Joker',
+				text = {
+					'Gives {X:mult,C:white}X#1#{} Mult for',
+					'each {C:attention}unique{} Poker Hand played',
+					'in the previous ante',
+                    '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
+				}
+			},
+
 			-- Uncategorized
 			j_mngy_stargazing = {
 				name = 'Stargazing Joker',
@@ -917,6 +927,7 @@ return {
 			k_mngy_kaboom = 'Kaboom',
 			k_mngy_going_back_ex = 'Going Back!',
 			k_mngy_popped_ex = 'Popped!',
+			k_mngy_nostalgic = 'Nostalgic',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',
