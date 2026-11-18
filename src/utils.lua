@@ -146,6 +146,20 @@ Menagerie.mod.calculate = function(self, context)
     if context.ante_change and context.ante_end then
         G.GAME.mngy_hands_last_ante = copy_table(G.GAME.mngy_hands_this_ante)
         G.GAME.mngy_hands_this_ante = {}
+
+        if G.GAME.mngy_postcard_sold_this_ante then
+            G.GAME.mngy_postcard_sold_this_ante = nil
+            G.GAME.mngy_postcard_primed = true
+        end
+    end
+
+    if context.create_shop_card and G.GAME.mngy_postcard_primed then
+        G.GAME.mngy_postcard_primed = nil
+        return {
+            shop_create_flags = {
+                key = 'j_mngy_postcard'
+            }
+        }
     end
 end
 

@@ -87,6 +87,7 @@ local enabled_jokers = {
 	'bonus_tickets',
 	'poodle',
 	'whos_that',
+	'postcard',
 }
 
 for i = 1, #enabled_jokers do

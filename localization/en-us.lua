@@ -907,6 +907,17 @@ return {
 					'has not yet been seen',
 					'during this run'
 				}
+			},
+
+			j_mngy_postcard = {
+				name = 'Postcard',
+				text = {
+					'When {C:money}sold{}, this Joker will appear',
+					'in the {C:attention}next Ante\'s Shop{} and gain',
+					'{C:chips}+20{} Chips for the rest',
+					'of the run',
+                    '{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)',
+				}
 			}
 		},
 		Other = {

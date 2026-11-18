@@ -285,6 +285,7 @@ Game.init_game_object = function(self)
     local ret = igo(self)
 
     ret.mngy_hands_this_ante = {}
+    ret.mngy_postcards_sold = 0
     ret.mngy_seen_jokers = {}
 
     return ret
