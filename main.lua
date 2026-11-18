@@ -90,6 +90,7 @@ local enabled_jokers = {
 	'postcard',
 	'sun_temple',
 	'silver_wind',
+	'collectable',
 }
 
 for i = 1, #enabled_jokers do

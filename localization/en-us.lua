@@ -937,6 +937,20 @@ return {
 					'{C:dark_edition}Spectral Card',
                     "{C:inactive,s:0.8}(Must have room)",
 				}
+			},
+
+			j_mngy_collectable = {
+				name = 'Collectable Joker',
+				text = {
+					'Gains {C:mult}+#1#{} Mult for each unique',
+					'poker hand played this Ante.',
+					'When {C:attention}#2#{} unique poker hands',
+					'are played in an Ante, this card',
+					'{C:attention}permanently{} gains {C:mult}+#3#{} Mult,',
+					'and a random Joker gains',
+					'a random {C:dark_edition}Edition',
+                    '{C:inactive}(Currently {C:mult}+#4#{C:inactive} Mult)',
+				}
 			}
 		},
 		Other = {
