@@ -943,7 +943,7 @@ return {
 				name = 'Collectable Joker',
 				text = {
 					'Gains {C:mult}+#1#{} Mult for each unique',
-					'poker hand played this Ante.',
+					'poker hand played this Ante while held.',
 					'When {C:attention}#2#{} unique poker hands',
 					'are played in an Ante, this card',
 					'{C:attention}permanently{} gains {C:mult}+#3#{} Mult,',
