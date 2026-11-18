@@ -269,6 +269,9 @@ function create_card(_type, area, legendary, _rarity, skip_materialize, soulable
             card:add_sticker(Menagerie.hodgepodge_get_guaranteed_sticker(card))
         end
     end
+    if G.STAGE == G.STAGES.RUN and card.ability.set == 'Joker' then
+        G.GAME.mngy_seen_jokers[card.config.center_key] = true
+    end
     return card
 end
 
@@ -282,6 +285,7 @@ Game.init_game_object = function(self)
     local ret = igo(self)
 
     ret.mngy_hands_this_ante = {}
+    ret.mngy_seen_jokers = {}
 
     return ret
 end

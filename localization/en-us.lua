@@ -897,6 +897,16 @@ return {
 					'{C:red}Pops{} if score',
 					'{C:attention}catches fire'
 				}
+			},
+
+			j_mngy_whos_that = {
+				name = 'Who\'s That Joker?',
+				text = {
+					'Sell this card to create',
+					'a {C:green}random{} Joker that',
+					'has not yet been seen',
+					'during this run'
+				}
 			}
 		},
 		Other = {
