@@ -834,18 +834,6 @@ return {
 				}
 			},
 
-			j_mngy_keeping_beat = {
-				name = 'Keeping Beat',
-				text = {
-					'When an {C:attention}Ace{}, {C:attention}2{}, {C:attention}3{}, and {C:attention}4{}',
-					'are scoring {C:attention}in that order{},',
-					'this card cards {X:mult,C:white}X#1#{} Mult.',
-					'{X:mult,C:white}Xmult{} resets when one of the',
-					'specified ranks are played out of order',
-                    '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
-				}
-			},
-
 			j_mngy_balancing_act = {
 				name = 'Balancing Act',
 				text = {
@@ -951,7 +939,20 @@ return {
 					'a random {C:dark_edition}Edition',
                     '{C:inactive}(Currently {C:mult}+#4#{C:inactive} Mult)',
 				}
-			}
+			},
+
+			j_mngy_keeping_beat = {
+				name = 'Keeping Beat',
+				text = {
+					'When an {C:attention}Ace{}, {C:attention}2{}, {C:attention}3{}, and {C:attention}4{}',
+					'are scored {C:attention}in that order{},',
+					'this card cards {X:mult,C:white}X#1#{} Mult.',
+					'{X:mult,C:white}Xmult{} resets when one of the',
+					'specified ranks are played',
+					'out of order',
+                    '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
+				}
+			},
 		},
 		Other = {
 			mngy_empty = {
@@ -982,6 +983,10 @@ return {
 			k_mngy_going_back_ex = 'Going Back!',
 			k_mngy_popped_ex = 'Popped!',
 			k_mngy_nostalgic = 'Nostalgic',
+			k_mngy_one_ex = "One!",
+			k_mngy_two_ex = "Two!",
+			k_mngy_three_ex = "Three!",
+			k_mngy_four_ex = "Four!",
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',

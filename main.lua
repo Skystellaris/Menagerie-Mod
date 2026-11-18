@@ -91,6 +91,7 @@ local enabled_jokers = {
 	'sun_temple',
 	'silver_wind',
 	'collectable',
+	'keeping_beat',
 }
 
 for i = 1, #enabled_jokers do
