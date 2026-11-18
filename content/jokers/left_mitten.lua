@@ -18,7 +18,7 @@ SMODS.Joker {
         if context.before then
             local lowest = true
             for _, v in pairs(context.scoring_hand) do
-                if v ~= context.scoring_hand[1] and v:get_id() < context.scoring_hand[1]:get_id() then
+                if v ~= context.scoring_hand[1] and v:get_id() < context.scoring_hand[1]:get_id() and not SMODS.has_no_rank(v) then
                     lowest = false
                 end
             end
