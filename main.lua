@@ -88,6 +88,7 @@ local enabled_jokers = {
 	'poodle',
 	'whos_that',
 	'postcard',
+	'sun_temple',
 }
 
 for i = 1, #enabled_jokers do

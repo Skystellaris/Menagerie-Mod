@@ -13,6 +13,29 @@ function SMODS.has_any_suit(card)
     return ret
 end
 
+local is_suit_ref = Card.is_suit
+function Card:is_suit(suit, bypass_debuff, flush_calc)
+    local ret = is_suit_ref(self, suit, bypass_debuff, flush_calc)
+    if next(SMODS.find_card('j_mngy_sun_temple')) and SMODS.has_enhancement(self, 'm_stone') then
+        if flush_calc then
+            ret = suit == 'Hearts' or suit == 'Diamonds'
+        else
+            if self.debuff and not bypass_debuff then return end
+            ret = suit == 'Hearts' or suit == 'Diamonds'
+        end
+    end
+    return ret
+end
+
+local get_id_ref = Card.get_id
+function Card:get_id()
+    local ret = get_id_ref(self)
+    if next(SMODS.find_card('j_mngy_sun_temple')) and SMODS.has_enhancement(self, 'm_stone') then
+        ret = 14
+    end
+    return ret
+end
+
 local emplace_ref = CardArea.emplace
 function CardArea:emplace(card, location, stay_flipped)
     emplace_ref(self, card, location, stay_flipped)

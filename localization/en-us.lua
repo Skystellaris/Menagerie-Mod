@@ -918,6 +918,14 @@ return {
 					'of the run',
                     '{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)',
 				}
+			},
+
+			j_mngy_sun_temple = {
+				name = 'Sun Temple',
+				text = {
+					'{C:attention}Stone Cards{} are treated as',
+					'{C:hearts}Hearts{}, {C:diamonds}Diamonds{}, and {C:attention}Aces'
+				}
 			}
 		},
 		Other = {
