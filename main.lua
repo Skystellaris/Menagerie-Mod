@@ -89,6 +89,7 @@ local enabled_jokers = {
 	'whos_that',
 	'postcard',
 	'sun_temple',
+	'silver_wind',
 }
 
 for i = 1, #enabled_jokers do
