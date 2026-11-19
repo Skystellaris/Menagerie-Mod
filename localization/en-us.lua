@@ -1006,6 +1006,19 @@ return {
 					'When score {C:attention}catches fire{},',
 					'reduce next Blind\'s size by {C:attention}#1#%'
 				}
+			},
+
+			j_mngy_treasure_map = {
+				name = 'Treasure Map',
+				text = {
+					{'When a {C:attention}#1#{} is',
+					'obtained, {C:red}destroy{} this card and',
+					'gain {C:money}$#2#{}, a {C:attention}Golden Joker{},',
+					'and a {C:attention}Negative Tag{}'},
+					{'{C:attention}#1#{} becomes {C:attention}#3#%{} more common',
+					'for each {C:attention}Boss Blind{} defeated',
+					'{C:inactive}(Currently {C:attention}#4#%{C:inactive})'}
+				}
 			}
 		},
 
@@ -1043,6 +1056,8 @@ return {
 			k_mngy_three_ex = "Three!",
 			k_mngy_four_ex = "Four!",
 			k_mngy_loaded = "Locked and Loaded",
+			k_mngy_treasure = "Thar be treasure!",
+			k_mngy_yarr_ex = 'Yarr!',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',
