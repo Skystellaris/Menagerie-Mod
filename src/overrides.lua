@@ -114,6 +114,10 @@ function Card:get_chip_bonus()
     if next(SMODS.find_card('j_mngy_ancestral')) and SMODS.has_enhancement(self, 'm_stone') then
         ret = ret - self.ability.bonus
     end
+    local clownfish = SMODS.find_card('j_mngy_clownfish')
+    if next(clownfish) then
+        ret = ret * (2 * #clownfish)
+    end
     return ret
 end
 

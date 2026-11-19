@@ -1019,6 +1019,14 @@ return {
 					'for each {C:attention}Boss Blind{} defeated',
 					'{C:inactive}(Currently {C:attention}#4#%{C:inactive})'}
 				}
+			},
+
+			j_mngy_clownfish = {
+				name = 'Clownfish',
+				text = {
+					'{C:attention}Doubles{} the {C:chips}Chip{} values',
+					'of played cards'
+				}
 			}
 		},
 
