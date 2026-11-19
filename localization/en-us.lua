@@ -1048,6 +1048,18 @@ return {
                     'and {C:money}$#3#{} respectively'
                 }
             },
+
+			j_mngy_egg_registry = {
+				name = 'Egg Registry',
+				text = {
+					'When a Joker would gain',
+					'{C:attention}sell value{}, this Joker',
+					'gains {C:attention}sell value{} instead.',
+					'Gives {X:mult,C:white}X#1#{} Mult for',
+					'each {C:money}${} of {C:attention}sell value',
+					'{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
+				}
+			},
 		},
 
 		Other = {

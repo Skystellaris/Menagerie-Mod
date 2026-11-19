@@ -335,3 +335,15 @@ Game.init_game_object = function(self)
 
     return ret
 end
+
+local set_sell_val_ref = Card.set_sell_value
+function Card:set_sell_value()
+    set_sell_val_ref(self)
+    if next(SMODS.find_card('j_mngy_egg_registry')) and self.ability.set == 'Joker' then
+        if self.config.center_key ~= 'j_mngy_egg_registry' and (self.ability.extra_value or 0) > (self.ability.mngy_egg_reg_track or 0) then
+            local added_value = self.ability.extra_value - (self.ability.mngy_egg_reg_track or 0)
+            self.sell_cost = self.sell_cost - added_value
+            SMODS.calculate_context({ mngy_gain_sell_val = true, added_value = added_value, card = self })
+        end
+    end
+end
