@@ -144,5 +144,16 @@ for i = 1, #enabled_enhancements do
     assert(SMODS.load_file('content/enhancements/' .. enabled_enhancements[i] .. '.lua'))()
 end
 
+local enabled_consumables = {
+	'comet',
+	'daydream',
+	'celebration',
+	'night'
+}
+
+for i = 1, #enabled_consumables do
+    assert(SMODS.load_file('content/consumables/' .. enabled_consumables[i] .. '.lua'))()
+end
+
 assert(SMODS.load_file('content/achievements.lua'))()
 --#endregion

@@ -57,9 +57,9 @@ return {
 			b_mngy_loaned = {
 				name = 'Loaned Deck',
 				text = {
-                    "Go up to {C:red}-$#1#{} in debt",
-                    "Set {C:money}money{} to {C:red}$0",
-                    "when selecting {C:attention}Boss Blind{}"
+					"Go up to {C:red}-$#1#{} in debt",
+					"Set {C:money}money{} to {C:red}$0",
+					"when selecting {C:attention}Boss Blind{}"
 				}
 			},
 
@@ -100,8 +100,8 @@ return {
 			b_mngy_battle = {
 				name = 'Battle Deck',
 				text = {
-                    "{C:red}#1#{} discards",
-                    "every round",
+					"{C:red}#1#{} discards",
+					"every round",
 					"Deck contains only",
 					"{C:clubs}Clubs{} and {C:mngy_shields}Shields"
 				}
@@ -232,6 +232,44 @@ return {
 			}
 		},
 
+		Tarot = {
+			c_mngy_comet = {
+				name = "The Comet",
+				text = {
+					"Converts up to",
+					"{C:attention}#1#{} selected cards",
+					"to {V:1}#2#{}",
+				},
+			},
+
+			c_mngy_daydream = {
+				name = "The Daydream",
+				text = {
+					"Enhances {C:attention}#1#{}",
+					"selected card to",
+					"{C:attention}#2#s",
+				},
+			},
+
+			c_mngy_celebration = {
+				name = "The Celebration",
+				text = {
+					"Enhances {C:attention}#1#{}",
+					"selected cards to",
+					"{C:attention}#2#s",
+				},
+			},
+
+			c_mngy_night = {
+				name = "The Night",
+				text = {
+					"Enhances {C:attention}#1#{}",
+					"selected cards to",
+					"{C:attention}#2#s",
+				},
+			},
+		},
+
 		Joker = {
 			-- Common
 			j_mngy_jollibee = {
@@ -278,13 +316,13 @@ return {
 
 			j_mngy_twin_pop = {
 				name = 'Twin Pop',
-				text = {{
+				text = { {
 					'Levels up {C:attention}#1#{} by',
 					'{C:attention}#2#{} level when #1#',
 					'is played for',
-					'the next {C:attention}#3#{} round(s)',},
-					{'{C:red}Melts{} into {C:attention}two halves{}',
-					'when depleted'}
+					'the next {C:attention}#3#{} round(s)', },
+					{ '{C:red}Melts{} into {C:attention}two halves{}',
+						'when depleted' }
 				}
 			},
 
@@ -362,12 +400,12 @@ return {
 			},
 
 			j_mngy_envious = {
-                name="Envious Joker",
-                text={
-                    "Played cards with",
-                    "{C:mngy_shields}#2#{} suit give",
-                    "{C:mult}+#1#{} Mult when scored",
-                },
+				name = "Envious Joker",
+				text = {
+					"Played cards with",
+					"{C:mngy_shields}#2#{} suit give",
+					"{C:mult}+#1#{} Mult when scored",
+				},
 			},
 
 			j_mngy_paint_by_numbers = {
@@ -411,10 +449,10 @@ return {
 			j_mngy_battersby = {
 				name = 'Big Battersby',
 				text = {
-                    "{X:mult,C:white}X#1#{} Mult for",
-                    "each {C:attention}Joker{} card",
+					"{X:mult,C:white}X#1#{} Mult for",
+					"each {C:attention}Joker{} card",
 					"excluding itself",
-                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
 				}
 			},
 
@@ -572,14 +610,14 @@ return {
 				}
 			},
 
-            j_mngy_aerial_ace = {
-                name = 'Aerial Ace',
-                text = {
-                    '{C:attention}Aces{} are retriggered, and give',
-                    '{C:money}$#1#{} when scored on the',
-                    '{C:attention}first hand{} of a round',
-                }
-            },
+			j_mngy_aerial_ace = {
+				name = 'Aerial Ace',
+				text = {
+					'{C:attention}Aces{} are retriggered, and give',
+					'{C:money}$#1#{} when scored on the',
+					'{C:attention}first hand{} of a round',
+				}
+			},
 
 			j_mngy_coin_pusher = {
 				name = 'Coin Pusher',
@@ -621,9 +659,9 @@ return {
 			j_mngy_nuclear_option = {
 				name = 'Nuclear Option',
 				text = {
-                    "When {C:attention}Blind{} is selected,",
-                    "set {C:red}discards{} to {C:attention}1{}.",
-                    "{C:red}Destroy{} all discarded cards",
+					"When {C:attention}Blind{} is selected,",
+					"set {C:red}discards{} to {C:attention}1{}.",
+					"{C:red}Destroy{} all discarded cards",
 				}
 			},
 
@@ -638,13 +676,13 @@ return {
 			},
 
 			-- Rare
-            j_mngy_blind_justice = {
-                name = 'Blind Justice',
-                text = {
-                    'Each played and unscoring',
-                    '{C:attention}Face{} card gives {X:mult,C:white}X#1#{} Mult'
-                }
-            },
+			j_mngy_blind_justice = {
+				name = 'Blind Justice',
+				text = {
+					'Each played and unscoring',
+					'{C:attention}Face{} card gives {X:mult,C:white}X#1#{} Mult'
+				}
+			},
 
 			j_mngy_black_cat = {
 				name = 'Black Cat',
@@ -658,16 +696,16 @@ return {
 				}
 			},
 
-            j_mngy_tetrominoker = {
-                name = 'Tetrominoker',
-                text = {
-                    'Draw {C:attention}#1#{} extra cards',
+			j_mngy_tetrominoker = {
+				name = 'Tetrominoker',
+				text = {
+					'Draw {C:attention}#1#{} extra cards',
 					'at start of round',
-                    'If a {C:attention}#2#{} is drawn',
+					'If a {C:attention}#2#{} is drawn',
 					'into first hand, {C:red}destroy{} all',
 					'cards in the {C:attention}#2#'
-                }
-            },
+				}
+			},
 
 			j_mngy_lovecraftian = {
 				name = 'Lovecraftian Joker',
@@ -765,7 +803,7 @@ return {
 					'Gives {X:mult,C:white}X#1#{} Mult for',
 					'each {C:attention}unique{} Poker Hand played',
 					'in the previous ante',
-                    '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
+					'{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
 				}
 			},
 
@@ -826,11 +864,11 @@ return {
 			},
 
 			j_mngy_ante_beats = {
-				name = {'Ante Beats to','Play/Win to'},
+				name = { 'Ante Beats to', 'Play/Win to' },
 				text = {
-                    "{C:mult}+#1#{} Mult per discard",
-                    "{C:mult}-#2#{} Mult per hand played",
-                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
+					"{C:mult}+#1#{} Mult per discard",
+					"{C:mult}-#2#{} Mult per hand played",
+					"{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
 				}
 			},
 
@@ -849,20 +887,20 @@ return {
 					'is the {C:attention}lowest{} scoring rank,',
 					'it and this Joker',
 					'permanently gain {C:mult}+#1#{} Mult',
-                    '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)',
+					'{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)',
 				}
 			},
 
-			
-            j_mngy_cardboard = {
-                name = 'Cardboard Joker',
-                text = {
-                    'Gives {X:mult,C:white}X#1#{} Mult at the',
-                    'end of {C:attention}final hand{} of round if',
-                    'total score will not beat blind.',
-                    '{C:red}Self destructs{} on trigger'
-                }
-            },
+
+			j_mngy_cardboard = {
+				name = 'Cardboard Joker',
+				text = {
+					'Gives {X:mult,C:white}X#1#{} Mult at the',
+					'end of {C:attention}final hand{} of round if',
+					'total score will not beat blind.',
+					'{C:red}Self destructs{} on trigger'
+				}
+			},
 
 			j_mngy_bonus_tickets = {
 				name = 'Bonus Tickets',
@@ -904,7 +942,7 @@ return {
 					'in the {C:attention}next Ante\'s Shop{} and gain',
 					'{C:chips}+20{} Chips for the rest',
 					'of the run',
-                    '{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)',
+					'{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)',
 				}
 			},
 
@@ -923,7 +961,7 @@ return {
 					'{C:green}#1# in #2#{} chance to give {C:money}$#3#{} and',
 					'a {C:green}#1# in #4#{} chance to create a',
 					'{C:dark_edition}Spectral Card',
-                    "{C:inactive,s:0.8}(Must have room)",
+					"{C:inactive,s:0.8}(Must have room)",
 				}
 			},
 
@@ -937,7 +975,7 @@ return {
 					'{C:attention}permanently{} gains {C:mult}+#3#{} Mult,',
 					'and a random Joker gains',
 					'a random {C:dark_edition}Edition',
-                    '{C:inactive}(Currently {C:mult}+#4#{C:inactive} Mult)',
+					'{C:inactive}(Currently {C:mult}+#4#{C:inactive} Mult)',
 				}
 			},
 
@@ -950,10 +988,11 @@ return {
 					'{X:mult,C:white}Xmult{} resets when one of the',
 					'specified ranks are played',
 					'out of order',
-                    '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
+					'{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
 				}
 			},
 		},
+
 		Other = {
 			mngy_empty = {
 				name = 'Empty Slot',
@@ -963,7 +1002,7 @@ return {
 					'Joker Stencil-like effects'
 				}
 			}
-		}
+		},
 	},
 	misc = {
 		dictionary = {
