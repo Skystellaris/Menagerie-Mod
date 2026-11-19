@@ -97,6 +97,7 @@ local enabled_jokers = {
 	'treasure_map',
 	'clownfish',
 	'acceleration',
+	'jeanie',
 }
 
 for i = 1, #enabled_jokers do

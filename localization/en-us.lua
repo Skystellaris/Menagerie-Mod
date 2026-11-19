@@ -1038,7 +1038,16 @@ return {
 					'Chance increases by {C:green}1{} for',
 					'each previously retriggered {C:attention}Ace'
 				}
-			}
+			},
+			
+            j_mngy_jeanie = {
+                name = 'Jeanie',
+                text = {
+                    'Every {C:attention}3{} hands,',
+                    'give {C:chips}+#1#{} Chips, {C:mult}+#2#{} Mult,',
+                    'and {C:money}$#3#{} respectively'
+                }
+            },
 		},
 
 		Other = {
