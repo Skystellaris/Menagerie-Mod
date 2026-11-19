@@ -96,6 +96,7 @@ local enabled_jokers = {
 	'intl_saboteur',
 	'treasure_map',
 	'clownfish',
+	'acceleration',
 }
 
 for i = 1, #enabled_jokers do

@@ -1027,6 +1027,17 @@ return {
 					'{C:attention}Doubles{} the {C:chips}Chip{} values',
 					'of played cards'
 				}
+			},
+
+			j_mngy_acceleration = {
+				name = 'Acceleration',
+				text = {
+					'{C:attention}Aces{} are retriggered {C:attention}once',
+					'and have a {C:green}#1# in #2#{} chance to be',
+					'retriggered {C:attention}again.{}',
+					'Chance increases by {C:green}1{} for',
+					'each previously retriggered {C:attention}Ace'
+				}
 			}
 		},
 
