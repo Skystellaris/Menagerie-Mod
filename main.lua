@@ -93,6 +93,7 @@ local enabled_jokers = {
 	'collectable',
 	'keeping_beat',
 	'ancestral',
+	'intl_saboteur',
 }
 
 for i = 1, #enabled_jokers do

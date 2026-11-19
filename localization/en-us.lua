@@ -999,6 +999,14 @@ return {
 					'instead of {C:chips}+#1#{} Chips'
 				}
 			},
+
+			j_mngy_intl_saboteur = {
+				name = 'International Saboteur',
+				text = {
+					'When score {C:attention}catches fire{},',
+					'reduce next Blind\'s size by {C:attention}#1#%'
+				}
+			}
 		},
 
 		Other = {
@@ -1034,6 +1042,7 @@ return {
 			k_mngy_two_ex = "Two!",
 			k_mngy_three_ex = "Three!",
 			k_mngy_four_ex = "Four!",
+			k_mngy_loaded = "Locked and Loaded",
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',

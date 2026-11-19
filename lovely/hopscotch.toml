@@ -10,5 +10,5 @@ pattern = "SMODS.calculate_context({skip_blind = true, skipped_blind = G.GAME.ro
 position = "at"
 match_indent = true
 payload = '''
-SMODS.calculate_context({skip_blind = true, skipped_blind = G.GAME.round_resets.blind_choices[skipped], skip_to = G.GAME.round_resets.blind_choices[skip_to], skip_tag = _tag.config.ref_table})
+SMODS.calculate_context({skip_blind = true, skipped_blind = G.GAME.round_resets.blind_choices[skipped], skip_to = G.GAME.round_resets.blind_choices[skip_to], mngy_skip_tag = _tag.config.ref_table, mngy_skipped_round = skipped})
 '''
