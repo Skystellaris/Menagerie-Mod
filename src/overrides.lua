@@ -108,10 +108,28 @@ function SMODS.wrap_around_straight()
     return ret
 end
 
+local chip_bonus_ref = Card.get_chip_bonus
+function Card:get_chip_bonus()
+    local ret = chip_bonus_ref(self)
+    if next(SMODS.find_card('j_mngy_ancestral')) and SMODS.has_enhancement(self, 'm_stone') then
+        ret = ret - self.ability.bonus
+    end
+    return ret
+end
+
+local chip_x_bonus_ref = Card.get_chip_x_bonus
+function Card:get_chip_x_bonus()
+    local ret = chip_x_bonus_ref(self)
+    if next(SMODS.find_card('j_mngy_ancestral')) and SMODS.has_enhancement(self, 'm_stone') then
+        ret = ret + 2
+    end
+    return ret
+end
+
 local chip_xmult_ref = Card.get_chip_x_mult
 function Card:get_chip_x_mult(context)
     local ret = chip_xmult_ref(self, context)
-    if next(SMODS.find_card('j_mngy_lucky_clover')) and self.ability.effect == "Lucky Card" then
+    if next(SMODS.find_card('j_mngy_lucky_clover')) and SMODS.has_enhancement(self, 'm_lucky') then
         for _, v in pairs(SMODS.find_card('j_mngy_lucky_clover')) do
             if SMODS.pseudorandom_probability(self, 'mngy_clover_xmult', v.ability.extra.xmult_prob, v.ability.extra.xmult_odds) then
                 self.lucky_trigger = true

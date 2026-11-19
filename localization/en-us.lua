@@ -991,6 +991,14 @@ return {
 					'{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
 				}
 			},
+
+			j_mngy_ancestral = {
+				name = 'Ancestral Joker',
+				text = {
+					'{C:attention}Stone Cards{} give {X:chips,C:white}X2{} Chips',
+					'instead of {C:chips}+#1#{} Chips'
+				}
+			},
 		},
 
 		Other = {
