@@ -101,6 +101,7 @@ local enabled_jokers = {
 	'egg_registry',
 	'chameleon',
 	'inspiration',
+	'skipping_stone',
 }
 
 for i = 1, #enabled_jokers do

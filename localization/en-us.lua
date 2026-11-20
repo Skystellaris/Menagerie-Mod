@@ -1084,6 +1084,17 @@ return {
 					'this card becomes {C:attention}Brainstorm{}',
 					'until the {C:attention}next{} Shop'
 				}
+			},
+
+			j_mngy_skipping_stone = {
+				name = 'Skipping Stone',
+				text = {
+					'This Joker creates a random',
+					'{C:attention}Tag{} when skipping a {C:attention}Blind{},',
+					'and {C:attention}doubles{} the random Tag',
+					'if the {C:attention}previous Blind{}',
+					'was skipped'
+				}
 			}
 		},
 
