@@ -1082,7 +1082,7 @@ return {
 					'the first Joker in each {C:attention}Shop{}.',
 					'If the Shop has no Jokers,',
 					'this card becomes {C:attention}Brainstorm{}',
-					'until the {C:attention}next{} shop'
+					'until the {C:attention}next{} Shop'
 				}
 			}
 		},
