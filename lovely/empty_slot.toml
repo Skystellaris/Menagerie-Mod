@@ -23,4 +23,8 @@ payload = '''
 if not hide_desc and card and card.config and card.config.center and card.config.center.mngy_empty then
     info_queue[#info_queue + 1] = {set = 'Other', key = 'mngy_empty'}
 end
+if not hide_desc and card and card.ability and card.ability.mngy_inspired then
+    info_queue[#info_queue + 1] = {set = 'Other', key = 'mngy_inspired'}
+    info_queue[#info_queue + 1] = G.P_CENTERS.j_mngy_inspiration
+end
 '''

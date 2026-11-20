@@ -1073,6 +1073,17 @@ return {
 					'{C:attention}already owned{} Joker',
 					'{C:inactive,s:0.8}(Currently: #1#)',
 				}
+			},
+
+			j_mngy_inspiration = {
+				name = 'Inspiration',
+				text = {
+					'{C:attention}Copies{} the ability of',
+					'the first Joker in each {C:attention}Shop{}.',
+					'If the Shop has no Jokers,',
+					'this card becomes {C:attention}Brainstorm{}',
+					'until the {C:attention}next{} shop'
+				}
 			}
 		},
 
@@ -1083,6 +1094,15 @@ return {
 					'This card counts as an',
 					'Empty Slot for',
 					'Joker Stencil-like effects'
+				}
+			},
+
+			mngy_inspired = {
+				name = 'Inspired',
+				text = {
+					'This card will turn',
+					'back into {C:attention}Inspiration',
+					'just before the next shop'
 				}
 			}
 		},
@@ -1112,6 +1132,8 @@ return {
 			k_mngy_loaded = "Locked and Loaded",
 			k_mngy_treasure = "Thar be treasure!",
 			k_mngy_yarr_ex = 'Yarr!',
+			k_mngy_inspired = 'Inspired',
+			k_mngy_crash = 'Crash...',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',
