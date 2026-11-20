@@ -73,7 +73,7 @@ end
 local change_size_ref = CardArea.change_size
 function CardArea:change_size(delta)
     local yields = SMODS.find_card('j_mngy_yield')
-    if not next(yields) or not G.GAME.mngy_yield_bypass or delta > 0 then
+    if not next(yields) or not G.GAME.mngy_yield_bypass or delta ~= nil then
         change_size_ref(self, delta)
         if G.GAME.mngy_seeded and self == G.jokers then
             G.hand:change_size(delta)

@@ -1,0 +1,29 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# Fake Copy tooltip
+[[patches]]
+[patches.pattern]
+target = 'functions/common_events.lua'
+pattern = '''elseif _c.set == 'Joker' then'''
+position = 'before'
+match_indent = true
+payload = '''
+elseif _c.mngy_fake_copy then
+    localize{type = 'descriptions', set = 'Joker', key = _c.key, nodes = desc_nodes, vars = specific_vars or _c.vars, specific_vars = {is_info_queue = true}, AUT = full_UI_table}
+'''
+
+# Fake Copy calc_dollar_bonus implementation
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+match_indent = true
+position = 'at'
+pattern = '''
+if not self:can_calculate() then return end
+'''
+payload = '''
+if self.can_calculate and not self:can_calculate() then return end
+'''

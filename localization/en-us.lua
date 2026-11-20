@@ -452,7 +452,7 @@ return {
 					"{X:mult,C:white}X#1#{} Mult for",
 					"each {C:attention}Joker{} card",
 					"excluding itself",
-					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+					"{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)",
 				}
 			},
 
@@ -803,7 +803,7 @@ return {
 					'Gives {X:mult,C:white}X#1#{} Mult for',
 					'each {C:attention}unique{} Poker Hand played',
 					'in the previous ante',
-					'{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
+					'{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)',
 				}
 			},
 
@@ -868,7 +868,7 @@ return {
 				text = {
 					"{C:mult}+#1#{} Mult per discard",
 					"{C:mult}-#2#{} Mult per hand played",
-					"{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
+					"{C:inactive}(Currently: {C:mult}+#3#{C:inactive} Mult)",
 				}
 			},
 
@@ -887,7 +887,7 @@ return {
 					'is the {C:attention}lowest{} scoring rank,',
 					'it and this Joker',
 					'permanently gain {C:mult}+#1#{} Mult',
-					'{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)',
+					'{C:inactive}(Currently: {C:mult}+#2#{C:inactive} Mult)',
 				}
 			},
 
@@ -942,7 +942,7 @@ return {
 					'in the {C:attention}next Ante\'s Shop{} and gain',
 					'{C:chips}+20{} Chips for the rest',
 					'of the run',
-					'{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)',
+					'{C:inactive}(Currently: {C:chips}+#1#{C:inactive} Chips)',
 				}
 			},
 
@@ -975,7 +975,7 @@ return {
 					'{C:attention}permanently{} gains {C:mult}+#3#{} Mult,',
 					'and a random Joker gains',
 					'a random {C:dark_edition}Edition',
-					'{C:inactive}(Currently {C:mult}+#4#{C:inactive} Mult)',
+					'{C:inactive}(Currently: {C:mult}+#4#{C:inactive} Mult)',
 				}
 			},
 
@@ -988,7 +988,7 @@ return {
 					'{X:mult,C:white}Xmult{} resets when one of the',
 					'specified ranks are played',
 					'out of order',
-					'{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
+					'{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)',
 				}
 			},
 
@@ -1017,7 +1017,7 @@ return {
 					'and a {C:attention}Negative Tag{}'},
 					{'{C:attention}#1#{} becomes {C:attention}#3#%{} more common',
 					'for each {C:attention}Boss Blind{} defeated',
-					'{C:inactive}(Currently {C:attention}#4#%{C:inactive})'}
+					'{C:inactive}(Currently: {C:attention}#4#%{C:inactive})'}
 				}
 			},
 
@@ -1057,9 +1057,23 @@ return {
 					'gains {C:attention}sell value{} instead.',
 					'Gives {X:mult,C:white}X#1#{} Mult for',
 					'each {C:money}${} of {C:attention}sell value',
-					'{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)',
+					'{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)',
 				}
 			},
+
+			j_mngy_chameleon = {
+				name = 'Chameleon Joker',
+				text = {
+					'When {C:attention}Blind{} is selected,',
+					'this Joker {C:attention}transforms{} into',
+					'another random Joker.',
+					'{C:attention}Adjacent{} Joker rarities',
+					'are prioritized. {C:green}50%{} chance',
+					'to transform into an',
+					'{C:attention}already owned{} Joker',
+					'{C:inactive,s:0.8}(Currently: #1#)',
+				}
+			}
 		},
 
 		Other = {
