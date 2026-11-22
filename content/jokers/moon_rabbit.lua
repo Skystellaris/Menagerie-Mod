@@ -3,6 +3,7 @@ SMODS.Joker {
     atlas = 'jokers_rare',
     pos = { x = 4, y = 0 },
     rarity = 3,
+    cost = 8,
 
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue+1] = G.P_CENTERS.c_moon

@@ -11,6 +11,7 @@ SMODS.Joker {
     atlas = 'jokers_common',
     pos = { x = 5, y = 1 },
     rarity = 1,
+    cost = 4,
     config = {
         extra = {
             chips = 5

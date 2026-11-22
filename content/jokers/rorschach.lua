@@ -4,4 +4,5 @@ SMODS.Joker {
     pos = { x = 2, y = 0},
     rarity = 1,
     blueprint_compat = false,
+    cost = 4,
 }

@@ -3,6 +3,7 @@ SMODS.Joker {
     atlas = 'jokers_uncommon',
     pos = { x = 4, y = 1 },
     rarity = 2,
+    cost = 6,
 
     calculate = function(self, card, context)
         if context.end_of_round and context.main_eval and not context.blueprint then

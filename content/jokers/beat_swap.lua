@@ -18,6 +18,7 @@ SMODS.Joker {
         }
     },
     rarity = 2,
+    cost = 7,
     config = {
         extra = {
             state = 'even',

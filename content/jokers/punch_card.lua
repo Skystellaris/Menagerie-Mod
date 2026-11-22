@@ -4,6 +4,7 @@ SMODS.Joker {
     display_size = { w = 69, h = 93 },
     pixel_size = { w = 69, h = 93 },
     rarity = 1,
+    cost = 6,
     mngy_empty = true,
     config = {
         extra = {
