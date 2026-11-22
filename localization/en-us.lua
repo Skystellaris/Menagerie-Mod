@@ -961,7 +961,6 @@ return {
 					'{C:green}#1# in #2#{} chance to give {C:money}$#3#{} and',
 					'a {C:green}#1# in #4#{} chance to create a',
 					'{C:dark_edition}Spectral Card',
-					"{C:inactive,s:0.8}(Must have room)",
 				}
 			},
 

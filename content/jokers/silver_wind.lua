@@ -28,7 +28,7 @@ SMODS.Joker {
                 end
             end
             if all_clubs then
-                if SMODS.pseudorandom_probability(card, 'mngy_silver_wind_spec', card.ability.extra.prob, card.ability.extra.card_odds) and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+                if SMODS.pseudorandom_probability(card, 'mngy_silver_wind_spec', card.ability.extra.prob, card.ability.extra.card_odds) then
                     G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
                     G.E_MANAGER:add_event(Event({
                         func = function()
