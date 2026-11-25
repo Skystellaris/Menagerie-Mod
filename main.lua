@@ -38,10 +38,8 @@ local enabled_jokers = {
 	'sowing_seeds',
 	'earthrise',
 	'wanted',
-	-- 'feature_film',
 	'swiss_cheese',
 	'missing',
-	-- 'duality',
 	'hang_10',
 	'magnetism',
 	'beat_swap',
@@ -102,6 +100,7 @@ local enabled_jokers = {
 	'chameleon',
 	'inspiration',
 	'skipping_stone',
+	'detective'
 }
 
 for i = 1, #enabled_jokers do

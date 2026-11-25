@@ -1094,6 +1094,18 @@ return {
 					'if the {C:attention}previous Blind{}',
 					'was skipped'
 				}
+			},
+
+			j_mngy_detective = {
+				name = 'Detective',
+				text = {
+					"After every {C:red}discard{},",
+					'one {C:green}random{} card will be',
+					'drawn {C:attention}face-down{}.',
+					'If a scored card was {C:attention}face-down{},',
+					'that card gives {X:mult,C:white}X#1#{} Mult',
+					'for every scoring card'
+				}
 			}
 		},
 
