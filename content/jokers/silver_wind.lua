@@ -1,8 +1,9 @@
 SMODS.Joker {
     key = 'silver_wind',
     atlas = 'placeholders',
-    pos = { x = 3, y = 1},
+    pos = { x = 1, y = 0},
     rarity = 2,
+    cost = 7,
     config = {
         extra = {
             prob = 1,

@@ -1,8 +1,9 @@
 SMODS.Joker {
     key = 'ace_up_the_sleeve',
     atlas = 'placeholders',
-    pos = { x = 3, y = 1},
+    pos = { x = 1, y = 0},
     rarity = 2,
+    cost = 5,
     
     calculate = function(self, card, context)
         if context.before and context.scoring_name and not SMODS.PokerHands[context.scoring_name].visible then

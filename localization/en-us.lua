@@ -971,10 +971,8 @@ return {
 					'poker hand played this Ante while held.',
 					'When {C:attention}#2#{} unique poker hands',
 					'are played in an Ante, this card',
-					'{C:attention}permanently{} gains {C:mult}+#3#{} Mult,',
-					'and a random Joker gains',
-					'a random {C:dark_edition}Edition',
-					'{C:inactive}(Currently: {C:mult}+#4#{C:inactive} Mult)',
+					'gains a random {C:dark_edition}Edition',
+					'{C:inactive}(Currently: {C:mult}+#3#{C:inactive} Mult)',
 				}
 			},
 

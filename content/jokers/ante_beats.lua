@@ -1,8 +1,9 @@
 SMODS.Joker {
     key = 'ante_beats',
     atlas = 'placeholders',
-    pos = { x = 3, y = 1 },
+    pos = { x = 1, y = 0},
     rarity = 2,
+    cost = 5,
     config = {
         extra = {
             mult = 0,

@@ -20,8 +20,9 @@ end
 SMODS.Joker {
     key = 'keeping_beat',
     atlas = 'placeholders',
-    pos = { x = 3, y = 1 },
-    rarity = 2,
+    pos = { x = 2, y = 0},
+    rarity = 3,
+    cost = 8,
     config = {
         extra = {
             xmult = 1,

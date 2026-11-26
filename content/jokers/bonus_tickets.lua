@@ -1,8 +1,9 @@
 SMODS.Joker {
     key = 'bonus_tickets',
     atlas = 'placeholders',
-    pos = { x = 2, y = 0 },
-    rarity = 3,
+    pos = { x = 1, y = 0},
+    rarity = 2,
+    cost = 6,
     config = {
         extra = {
             prob = 1,

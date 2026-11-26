@@ -1,8 +1,9 @@
 SMODS.Joker {
     key = 'chameleon',
     atlas = 'placeholders',
-    pos = { x = 3, y = 1},
+    pos = { x = 1, y = 0},
     rarity = 2,
+    cost = 10,
 
     loc_vars = function(self, info_queue, card)
         if card.ability.mngy_fake_copy then

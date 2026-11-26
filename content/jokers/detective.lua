@@ -3,6 +3,7 @@ SMODS.Joker {
     atlas = 'placeholders',
     pos = { x = 1, y = 0},
     rarity = 2,
+    cost = 8,
     config = {
         extra = {
             xmult = 0.75,

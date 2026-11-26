@@ -1,8 +1,9 @@
 SMODS.Joker {
     key = 'bright_geode',
     atlas = 'placeholders',
-    pos = { x = 1, y = 0 },
+    pos = { x = 1, y = 0},
     rarity = 2,
+    cost = 7,
     config = {
         extra = {
             xchips = 1.33,

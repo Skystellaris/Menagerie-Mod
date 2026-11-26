@@ -1,8 +1,9 @@
 SMODS.Joker {
     key = 'jeanie',
     atlas = 'placeholders',
-    pos = { x = 3, y = 1},
-    rarity = 2,
+    pos = { x = 0, y = 0},
+    rarity = 1,
+    cost = 5,
     config = {
         extra = {
             hands_played = 0,

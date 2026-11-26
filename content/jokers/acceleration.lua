@@ -1,8 +1,9 @@
 SMODS.Joker {
     key = 'acceleration',
     atlas = 'placeholders',
-    pos = { x = 3, y = 1},
+    pos = { x = 1, y = 0},
     rarity = 2,
+    cost = 6,
     config = {
         extra = {
             repetitions = 1,

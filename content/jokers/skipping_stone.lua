@@ -1,8 +1,9 @@
 SMODS.Joker {
     key = 'skipping_stone',
     atlas = 'placeholders',
-    pos = { x = 3, y = 1},
+    pos = { x = 1, y = 0},
     rarity = 2,
+    cost = 8,
 
     calculate = function(self, card, context)
         if context.skip_blind then
