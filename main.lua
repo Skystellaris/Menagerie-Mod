@@ -41,7 +41,7 @@ local enabled_jokers = {
 	'poodle',
 	'postcard',
 	-- 'cuckoo_egg',
-	-- 'robins_eff',
+	-- 'robins_egg',
 
 	-- Uncommons
 	'magician',
@@ -149,6 +149,9 @@ local enabled_decks = {
 	'mechanical',
 	'sunken',
 	'hollow',
+
+	-- Scrapped
+	-- 'hopscotch',
 }
 
 for i = 1, #enabled_decks do
