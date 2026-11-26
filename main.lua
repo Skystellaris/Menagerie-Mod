@@ -119,8 +119,8 @@ local enabled_jokers = {
 	-- 'malware',
 	-- 'shooting_gallery',
 
-	-- Uncategorized
-	'whos_that',
+	-- Scrapped
+	-- 'whos_that',
 }
 
 for i = 1, #enabled_jokers do
