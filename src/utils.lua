@@ -21,13 +21,13 @@ end
 
 function Menagerie.get_adjacent(card, func)
     local adjacent = {}
-    for i = 1, #G.jokers.cards do
-        if G.jokers.cards[i] == card then
-            if G.jokers.cards[i - 1] and (not func or func and func(G.jokers.cards[i - 1])) then
+    for i = 1, #card.area.cards do
+        if card.area.cards[i] == card then
+            if card.area.cards[i - 1] and (not func or func and func(card.area.cards[i - 1])) then
                 table.insert(adjacent, G.jokers.cards[i - 1])
             end
-            if G.jokers.cards[i + 1] and (not func or func and func(G.jokers.cards[i - 1])) then
-                table.insert(adjacent, G.jokers.cards[i + 1])
+            if card.area.cards[i + 1] and (not func or func and func(card.area.cards[i - 1])) then
+                table.insert(adjacent, card.area.cards[i + 1])
             end
             break
         end
