@@ -473,7 +473,10 @@ return {
 
 			j_mngy_earthworm = {
 				name = 'Earthworm',
-				text = {}
+				text = {
+					'{X:chips,C:white}X#1#{} Chips on {C:attention}first',
+					'{C:attention}hand{} of round'
+				}
 			},
 
 			j_mngy_collectable = {

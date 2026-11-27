@@ -32,7 +32,7 @@ local enabled_jokers = {
 	-- 'dart_monkey',
 	'battersby',
 	'blank_check',
-	-- 'earthworm',
+	'earthworm',
 	'collectable',
 	'cardboard',
 	'left_mitten',
