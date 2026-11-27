@@ -28,7 +28,7 @@ SMODS.Joker {
         if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
             if SMODS.pseudorandom_probability(card, 'mngy_concord', card.ability.extra.prob, card.ability.extra.odds) then
                 
-                local adjacent_jokers = Menagerie.grapes_get_adjacent(card)
+                local adjacent_jokers = Menagerie.get_adjacent(card, function(_c) return not _c.edition end)
 
                 local new_edition
                 if next(adjacent_jokers) then

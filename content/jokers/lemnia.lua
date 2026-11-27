@@ -19,7 +19,7 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.before then
-            local adjacent_jokers = Menagerie.grapes_get_adjacent(card)
+            local adjacent_jokers = Menagerie.get_adjacent(card, function(_c) return not _c.edition end)
             
             if next(adjacent_jokers) then
                 local joker_to_affect = pseudorandom_element(adjacent_jokers)

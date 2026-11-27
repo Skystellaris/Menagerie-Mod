@@ -35,18 +35,13 @@ SMODS.Joker {
                 end
                 new_key = pseudorandom_element(owned_jokers)
             else
+                local adjacent_cards = Menagerie.get_adjacent(card)
+
                 local adjacent_rarities = {}
-                for i = 1, #G.jokers.cards do
-                    if G.jokers.cards[i] == card then
-                        if G.jokers.cards[i - 1] then
-                            table.insert(adjacent_rarities, G.jokers.cards[i - 1].config.center.rarity)
-                        end
-                        if G.jokers.cards[i + 1] then
-                            table.insert(adjacent_rarities, G.jokers.cards[i + 1].config.center.rarity)
-                        end
-                        break
-                    end
+                for _, v in pairs(adjacent_cards) do
+                    table.insert(adjacent_rarities, v.config.center.rarity)
                 end
+                
                 local cham_filter = function(pool)
                         local all_unavailable = true
                         for _, v in ipairs(pool) do
