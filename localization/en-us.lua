@@ -967,12 +967,12 @@ return {
 			j_mngy_collectable = {
 				name = 'Collectable Joker',
 				text = {
-					'Gains {C:mult}+#1#{} Mult for each unique',
+					{'Gains {C:mult}+#1#{} Mult for each unique',
 					'poker hand played this Ante while held.',
-					'When {C:attention}#2#{} unique poker hands',
-					'are played in an Ante, this card',
-					'gains a random {C:dark_edition}Edition',
-					'{C:inactive}(Currently: {C:mult}+#3#{C:inactive} Mult)',
+					'{C:inactive}(Currently: {C:mult}+#3#{C:inactive} Mult)',},
+					{'When {C:attention}#2#{} unique poker hands',
+					'are played, this card gains a',
+					'random {C:dark_edition}Edition',}
 				}
 			},
 

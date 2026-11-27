@@ -8,7 +8,8 @@ SMODS.Joker {
         extra = {
             hand_mult = 2,
             goal = 7,
-            hands = {}
+            hands = {},
+            perma_hands = {}
         }
     },
 
@@ -20,7 +21,8 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.before and not context.blueprint then
             card.ability.extra.hands[context.scoring_name] = context.scoring_name
-            if SMODS.table_size(card.ability.extra.hands) >= card.ability.extra.goal and not card.edition then
+            card.ability.extra.perma_hands[context.scoring_name] = context.scoring_name
+            if not card.edition and SMODS.table_size(card.ability.extra.perma_hands) >= card.ability.extra.goal then
                 local new_edition = SMODS.poll_edition({ key = 'mngy_collectable_edi', guaranteed = true })
                 card:set_edition(new_edition)
                 G.E_MANAGER:add_event(Event({
