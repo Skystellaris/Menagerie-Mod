@@ -955,11 +955,11 @@ return {
 			},
 
 			j_mngy_silver_wind = {
-				name = 'Silver Wind',
+				name = 'Silver Winds',
 				text = {
 					'Playing a {C:clubs}Club {C:attention}Flush{} has a',
 					'{C:green}#1# in #2#{} chance to give {C:money}$#3#{} and',
-					'a {C:green}#1# in #4#{} chance to create a',
+					'a {C:green}#4# in #5#{} chance to create a',
 					'{C:dark_edition}Spectral Card',
 				}
 			},
