@@ -1198,7 +1198,13 @@ return {
 
 			j_mngy_calculator = {
 				name = 'Calculator',
-				text = {}
+				text = {
+					'Numbered cards held in hand',
+					'have a {C:green}#2# in X{} chance',
+					'to give {X:mult,C:white}#1#{} Mult,',
+					'where the denominator is',
+					'the card\'s {C:attention}Rank'
+				}
 			},
 
 			j_mngy_keeping_beat = {

@@ -114,7 +114,7 @@ local enabled_jokers = {
 	'emergency_evac',
 	-- 'shining_star',
 	'egg_registry',
-	-- 'calculator',
+	'calculator',
 	'keeping_beat',
 	-- 'malware',
 	-- 'shooting_gallery',
