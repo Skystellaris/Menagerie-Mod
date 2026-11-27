@@ -176,7 +176,9 @@ return {
 				text = {
 					'{C:attention}+#1#{} Consumable Slots.',
 					'{C:attention}Jokers{} cannot appear',
-					'in the shop'
+					'in the shop.',
+					'An extra {C:attention,T:p_buffoon_normal_1}Buffoon Pack{}',
+					'is guaranteed in the shop'
 				}
 			},
 
