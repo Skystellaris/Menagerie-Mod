@@ -72,16 +72,20 @@ end
 
 local change_size_ref = CardArea.change_size
 function CardArea:change_size(delta)
-    local yields = SMODS.find_card('j_mngy_yield')
-    if not next(yields) or not G.GAME.mngy_yield_bypass or delta ~= nil then
+    if self == G.hand then
+        local yields = SMODS.find_card('j_mngy_yield')
+        if next(yields) and not G.GAME.mngy_yield_bypass and delta < 0 then
+            for _, v in pairs(yields) do
+                SMODS.calculate_effect({ message = localize('k_mngy_caution_ex'), colour = G.C.ATTENTION }, v)
+            end
+        else
+            change_size_ref(self, delta)
+        end
+    elseif G.GAME.mngy_seeded and self == G.jokers then
         change_size_ref(self, delta)
-        if G.GAME.mngy_seeded and self == G.jokers then
-            G.hand:change_size(delta)
-        end
+        G.hand:change_size(delta)
     else
-        for _, v in pairs(yields) do
-            SMODS.calculate_effect({ message = localize('k_mngy_caution_ex'), colour = G.C.ATTENTION }, v)
-        end
+        change_size_ref(self, delta)
     end
 end
 
