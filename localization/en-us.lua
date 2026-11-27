@@ -448,6 +448,11 @@ return {
 				}
 			},
 
+			j_mngy_dart_monkey = {
+				name = 'Dart Monkey',
+				text = {}
+			},
+
 			j_mngy_battersby = {
 				name = 'Big Battersby',
 				text = {
@@ -455,6 +460,109 @@ return {
 					"each {C:attention}Joker{} card",
 					"excluding itself",
 					"{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)",
+				}
+			},
+
+			j_mngy_blank_check = {
+				name = 'Blank Check',
+				text = {
+					'Gives {C:money}$#1#{} to {C:money}$#2#',
+					'at end of round'
+				}
+			},
+
+			j_mngy_earthworm = {
+				name = 'Earthworm',
+				text = {}
+			},
+
+			j_mngy_collectable = {
+				name = 'Collectable Joker',
+				text = {
+					{'Gains {C:mult}+#1#{} Mult for each',
+					'unique poker hand played',
+					'this Ante while held',
+					'{C:inactive}(Currently: {C:mult}+#3#{C:inactive} Mult)',},
+					{'When {C:attention}#2#{} unique poker hands',
+					'are played, this card gains',
+					'a random {C:dark_edition}Edition',}
+				}
+			},
+
+			j_mngy_cardboard = {
+				name = 'Cardboard Joker',
+				text = {
+					'Gives {X:mult,C:white}X#1#{} Mult at the',
+					'end of {C:attention}final hand{} of round if',
+					'total score will not beat blind.',
+					'{C:red}Self destructs{} on trigger'
+				}
+			},
+
+			j_mngy_left_mitten = {
+				name = 'Left Mitten',
+				text = {
+					'If the {C:attention}leftmost{} scoring card',
+					'is the {C:attention}lowest{} scoring rank,',
+					'it and this Joker',
+					'permanently gain {C:mult}+#1#{} Mult',
+					'{C:inactive}(Currently: {C:mult}+#2#{C:inactive} Mult)',
+				}
+			},
+
+			j_mngy_clownfish = {
+				name = 'Clownfish',
+				text = {
+					'{C:attention}Doubles{} the {C:chips}Chip{} values',
+					'of played cards'
+				}
+			},
+
+            j_mngy_jeanie = {
+                name = 'Jeanie',
+                text = {
+                    'Every {C:attention}3{} hands,',
+                    'give {C:chips}+#1#{} Chips, {C:mult}+#2#{} Mult,',
+                    'and {C:money}$#3#{} respectively'
+                }
+            },
+
+			j_mngy_poodle = {
+				name = 'Poodle',
+				text = {
+					'{C:chips}+#1#{} Chips.',
+					'{C:red}Pops{} if score',
+					'{C:attention}catches fire'
+				}
+			},
+
+			j_mngy_postcard = {
+				name = 'Postcard',
+				text = {
+					'When {C:money}sold{}, this Joker will appear',
+					'in the {C:attention}next Ante\'s Shop{} and gain',
+					'{C:chips}+20{} Chips for the rest',
+					'of the run',
+					'{C:inactive}(Currently: {C:chips}+#1#{C:inactive} Chips)',
+				}
+			},
+
+			j_mngy_cuckoo_egg = {
+				name = 'Cuckoo Egg',
+				text = {}
+			},
+
+			j_mngy_robins_nest = {
+				name = 'Robin\'s Nest',
+				text = {}
+			},
+
+			j_mngy_ante_beats = {
+				name = { 'Ante Beats to', 'Play/Win to' },
+				text = {
+					"{C:mult}+#1#{} Mult per discard",
+					"{C:mult}-#2#{} Mult per hand played",
+					"{C:inactive}(Currently: {C:mult}+#3#{C:inactive} Mult)",
 				}
 			},
 
@@ -667,6 +775,103 @@ return {
 				}
 			},
 
+			j_mngy_crypto = {
+				name = 'Crypto Joker',
+				text = {}
+			},
+
+			j_mngy_stargazing = {
+				name = 'Stargazing Joker',
+				text = {
+					'{C:attention}Aurora Cards{} will also',
+					'trigger while {C:attention}held in hand'
+				}
+			},
+
+			j_mngy_balloon_boy = {
+				name = 'Balloon Boy',
+				text = {}
+			},
+
+			j_mngy_acceleration = {
+				name = 'Ace-celeration',
+				text = {
+					'{C:attention}Aces{} are retriggered {C:attention}once',
+					'and have a {C:green}#1# in #2#{} chance to be',
+					'retriggered {C:attention}again.{}',
+					'Chance increases by {C:green}1{} for',
+					'each previously retriggered {C:attention}Ace'
+				}
+			},
+
+			j_mngy_ofuda = {
+				name = 'Ofuda',
+				text = {}
+			},
+
+			j_mngy_ace_up_the_sleeve = {
+				name = 'Ace Up The Sleeve',
+				text = {
+					'Creates a random {C:attention}Tag',
+					'when played hand is {C:dark_edition}secret',
+					'and contains an {C:attention}Ace'
+				}
+			},
+
+			j_mngy_chameleon = {
+				name = 'Chameleon Joker',
+				text = {
+					'When {C:attention}Blind{} is selected,',
+					'this Joker {C:attention}transforms{} into',
+					'another random Joker.',
+					'{C:attention}Adjacent{} Joker rarities',
+					'are prioritized. {C:green}50%{} chance',
+					'to transform into an',
+					'{C:attention}already owned{} Joker',
+					'{C:inactive,s:0.8}(Currently: #1#)',
+				}
+			},
+
+			j_mngy_russian_roulette = {
+				name = 'Russian Roulette',
+				text = {
+					{
+						'Scored cards have a',
+						'{C:green}#1# in #2#{} chance to be {C:red}destroyed'
+					},
+					{
+						'This Joker has a {C:green}#1# in #2#{} chance',
+						'to {C:red}self-destruct{} and create',
+						'a {C:tarot}Death{} when {C:attention}Blind{} is selected'
+					}
+				}
+			},
+
+			j_mngy_curiosity = {
+				name = 'Curiosity',
+				text = {}
+			},
+
+			j_mngy_polymelia = {
+				name = 'Polymelia',
+				text = {
+					'{C:attention}+#1#{} card selection limit'
+				}
+			},
+
+			j_mngy_paleontologist = {
+				name = 'Paleontologist',
+				text = {}
+			},
+
+			j_mngy_shield_bearing = {
+				name = 'Shield-Bearing Joker',
+				text = {
+					'Cards with {C:mngy_shields}Shields{} suit',
+					'cannot be {C:red}destroyed{} or {C:red}debuffed'
+				}
+			},
+
 			j_mngy_bright_geode = {
 				name = 'Bright Geode',
 				text = {
@@ -674,6 +879,139 @@ return {
 					'cards held in hand with',
 					'{C:mngy_shields}Shields{} suit to',
 					'give {X:chips,C:white}X#1#{} Chips'
+				}
+			},
+
+			j_mngy_stardust = {
+				name = 'Stardust',
+				text = {}
+			},
+
+			j_mngy_ancestral = {
+				name = 'Ancestral Joker',
+				text = {
+					'{C:attention}Stone Cards{} give {X:chips,C:white}X2{} Chips',
+					'instead of {C:chips}+#1#{} Chips'
+				}
+			},
+
+			j_mngy_skipping_stone = {
+				name = 'Skipping Stone',
+				text = {
+					'This Joker creates a random',
+					'{C:attention}Tag{} when skipping a {C:attention}Blind{},',
+					'and {C:attention}doubles{} the random Tag',
+					'if the {C:attention}previous Blind{}',
+					'was skipped'
+				}
+			},
+
+			j_mngy_balancing_act = {
+				name = 'Balancing Act',
+				text = {
+					'If played hand is a {C:attention}Two Pair,',
+					'balance {C:chips}Chips{} and {C:mult}Mult'
+				}
+			},
+
+			j_mngy_dpost_it = {
+				name = 'Post-It Joker',
+				text = {}
+			},
+
+			j_mngy_bonus_tickets = {
+				name = 'Bonus Tickets',
+				text = {
+					{
+						'{C:attention}Bonus Cards{} have a {C:green}#1# in #2#',
+						'chance to be retriggered {C:attention}#3#{} time'
+					},
+					{
+						'{C:attention}Bonus Cards{} have a {C:green}#4# in #5#',
+						'chance to give {C:money}$#6#{}'
+					}
+				}
+			},
+
+			j_mngy_truck_driver = {
+				name = 'Truck Driver',
+				text = {}
+			},
+
+			j_mngy_package_delivery = {
+				name = 'Package Delivery',
+				text = {}
+			},
+
+			j_mngy_fashionista = {
+				name = 'Fashionista',
+				text = {}
+			},
+
+			j_mngy_sun_temple = {
+				name = 'Sun Temple',
+				text = {
+					'{C:attention}Stone Cards{} are treated as',
+					'{C:hearts}Hearts{}, {C:diamonds}Diamonds{}, and {C:attention}Aces'
+				}
+			},
+
+			j_mngy_silver_wind = {
+				name = 'Silver Winds',
+				text = {
+					'Playing a {C:clubs}Club {C:attention}Flush{} has a',
+					'{C:green}#1# in #2#{} chance to give {C:money}$#3#{} and',
+					'a {C:green}#4# in #5#{} chance to create a',
+					'{C:dark_edition}Spectral Card',
+				}
+			},
+
+			j_mngy_intl_saboteur = {
+				name = 'International Saboteur',
+				text = {
+					'When score {C:attention}catches fire{},',
+					'reduce next Blind\'s size by {C:attention}#1#%'
+				}
+			},
+
+			j_mngy_detective = {
+				name = 'Detective',
+				text = {
+					"After every {C:red}discard{},",
+					'one {C:green}random{} card will be',
+					'drawn {C:attention}face-down{}.',
+					'If a scored card was {C:attention}face-down{},',
+					'that card gives {X:mult,C:white}X#1#{} Mult',
+					'for every scoring card'
+				}
+			},
+
+			j_mngy_flashlight = {
+				name = 'Flashlight',
+				text = {}
+			},
+
+			j_mngy_treasure_map = {
+				name = 'Treasure Map',
+				text = {
+					{'When a {C:attention}#1#{} is',
+					'obtained, {C:red}destroy{} this card and',
+					'gain {C:money}$#2#{}, a {C:attention}Golden Joker{},',
+					'and a {C:attention}Negative Tag{}'},
+					{'{C:attention}#1#{} becomes {C:attention}#3#%{} more common',
+					'for each {C:attention}Boss Blind{} defeated',
+					'{C:inactive}(Currently: {C:attention}#4#%{C:inactive})'}
+				}
+			},
+
+			j_mngy_inspiration = {
+				name = 'Inspiration',
+				text = {
+					'{C:attention}Copies{} the ability of',
+					'the first Joker in each {C:attention}Shop{}.',
+					'If the Shop has no Jokers,',
+					'this card becomes {C:attention}Brainstorm{}',
+					'until the {C:attention}next{} Shop'
 				}
 			},
 
@@ -809,174 +1147,31 @@ return {
 				}
 			},
 
-			-- Uncategorized
-			j_mngy_stargazing = {
-				name = 'Stargazing Joker',
+			j_mngy_pot_of_gold = {
+				name = 'Pot of Gold',
+				text = {}
+			},
+
+			j_mngy_shining_star = {
+				name = 'Shining Star',
+				text = {}
+			},
+
+			j_mngy_egg_registry = {
+				name = 'Egg Registry',
 				text = {
-					'{C:attention}Aurora Cards{} will also',
-					'trigger while {C:attention}held in hand'
+					'When a Joker would gain',
+					'{C:attention}sell value{}, this Joker',
+					'gains {C:attention}sell value{} instead.',
+					'Gives {X:mult,C:white}X#1#{} Mult for',
+					'each {C:money}${} of {C:attention}sell value',
+					'{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)',
 				}
 			},
 
-			j_mngy_ace_up_the_sleeve = {
-				name = 'Ace Up The Sleeve',
-				text = {
-					'Creates a random {C:attention}Tag',
-					'when played hand is {C:dark_edition}secret',
-					'and contains an {C:attention}Ace'
-				}
-			},
-
-			j_mngy_russian_roulette = {
-				name = 'Russian Roulette',
-				text = {
-					{
-						'Scored cards have a',
-						'{C:green}#1# in #2#{} chance to be {C:red}destroyed'
-					},
-					{
-						'This Joker has a {C:green}#1# in #2#{} chance',
-						'to {C:red}self-destruct{} and create',
-						'a {C:tarot}Death{} when {C:attention}Blind{} is selected'
-					}
-				}
-			},
-
-			j_mngy_polymelia = {
-				name = 'Polymelia',
-				text = {
-					'{C:attention}+#1#{} card selection limit'
-				}
-			},
-
-			j_mngy_blank_check = {
-				name = 'Blank Check',
-				text = {
-					'Gives {C:money}$#1#{} to {C:money}$#2#',
-					'at end of round'
-				}
-			},
-
-			j_mngy_shield_bearing = {
-				name = 'Shield-Bearing Joker',
-				text = {
-					'Cards with {C:mngy_shields}Shields{} suit',
-					'cannot be {C:red}destroyed{} or {C:red}debuffed'
-				}
-			},
-
-			j_mngy_ante_beats = {
-				name = { 'Ante Beats to', 'Play/Win to' },
-				text = {
-					"{C:mult}+#1#{} Mult per discard",
-					"{C:mult}-#2#{} Mult per hand played",
-					"{C:inactive}(Currently: {C:mult}+#3#{C:inactive} Mult)",
-				}
-			},
-
-			j_mngy_balancing_act = {
-				name = 'Balancing Act',
-				text = {
-					'If played hand is a {C:attention}Two Pair,',
-					'balance {C:chips}Chips{} and {C:mult}Mult'
-				}
-			},
-
-			j_mngy_left_mitten = {
-				name = 'Left Mitten',
-				text = {
-					'If the {C:attention}leftmost{} scoring card',
-					'is the {C:attention}lowest{} scoring rank,',
-					'it and this Joker',
-					'permanently gain {C:mult}+#1#{} Mult',
-					'{C:inactive}(Currently: {C:mult}+#2#{C:inactive} Mult)',
-				}
-			},
-
-
-			j_mngy_cardboard = {
-				name = 'Cardboard Joker',
-				text = {
-					'Gives {X:mult,C:white}X#1#{} Mult at the',
-					'end of {C:attention}final hand{} of round if',
-					'total score will not beat blind.',
-					'{C:red}Self destructs{} on trigger'
-				}
-			},
-
-			j_mngy_bonus_tickets = {
-				name = 'Bonus Tickets',
-				text = {
-					{
-						'{C:attention}Bonus Cards{} have a {C:green}#1# in #2#',
-						'chance to be retriggered {C:attention}#3#{} time'
-					},
-					{
-						'{C:attention}Bonus Cards{} have a {C:green}#4# in #5#',
-						'chance to give {C:money}$#6#{}'
-					}
-				}
-			},
-
-			j_mngy_poodle = {
-				name = 'Poodle',
-				text = {
-					'{C:chips}+#1#{} Chips.',
-					'{C:red}Pops{} if score',
-					'{C:attention}catches fire'
-				}
-			},
-
-			j_mngy_whos_that = {
-				name = 'Who\'s That Joker?',
-				text = {
-					'Sell this card to create',
-					'a {C:green}random{} Joker that',
-					'has not yet been seen',
-					'during this run'
-				}
-			},
-
-			j_mngy_postcard = {
-				name = 'Postcard',
-				text = {
-					'When {C:money}sold{}, this Joker will appear',
-					'in the {C:attention}next Ante\'s Shop{} and gain',
-					'{C:chips}+20{} Chips for the rest',
-					'of the run',
-					'{C:inactive}(Currently: {C:chips}+#1#{C:inactive} Chips)',
-				}
-			},
-
-			j_mngy_sun_temple = {
-				name = 'Sun Temple',
-				text = {
-					'{C:attention}Stone Cards{} are treated as',
-					'{C:hearts}Hearts{}, {C:diamonds}Diamonds{}, and {C:attention}Aces'
-				}
-			},
-
-			j_mngy_silver_wind = {
-				name = 'Silver Winds',
-				text = {
-					'Playing a {C:clubs}Club {C:attention}Flush{} has a',
-					'{C:green}#1# in #2#{} chance to give {C:money}$#3#{} and',
-					'a {C:green}#4# in #5#{} chance to create a',
-					'{C:dark_edition}Spectral Card',
-				}
-			},
-
-			j_mngy_collectable = {
-				name = 'Collectable Joker',
-				text = {
-					{'Gains {C:mult}+#1#{} Mult for each',
-					'unique poker hand played',
-					'this Ante while held',
-					'{C:inactive}(Currently: {C:mult}+#3#{C:inactive} Mult)',},
-					{'When {C:attention}#2#{} unique poker hands',
-					'are played, this card gains',
-					'a random {C:dark_edition}Edition',}
-				}
+			j_mngy_calculator = {
+				name = 'Calculator',
+				text = {}
 			},
 
 			j_mngy_keeping_beat = {
@@ -992,122 +1187,26 @@ return {
 				}
 			},
 
-			j_mngy_ancestral = {
-				name = 'Ancestral Joker',
-				text = {
-					'{C:attention}Stone Cards{} give {X:chips,C:white}X2{} Chips',
-					'instead of {C:chips}+#1#{} Chips'
-				}
+			j_mngy_malware = {
+				name = 'Malware',
+				text = {}
 			},
 
-			j_mngy_intl_saboteur = {
-				name = 'International Saboteur',
-				text = {
-					'When score {C:attention}catches fire{},',
-					'reduce next Blind\'s size by {C:attention}#1#%'
-				}
+			j_mngy_shooting_gallery = {
+				name = 'Shooting Gallery',
+				text = {}
 			},
 
-			j_mngy_treasure_map = {
-				name = 'Treasure Map',
+			-- Scrapped
+			j_mngy_whos_that = {
+				name = 'Who\'s That Joker?',
 				text = {
-					{'When a {C:attention}#1#{} is',
-					'obtained, {C:red}destroy{} this card and',
-					'gain {C:money}$#2#{}, a {C:attention}Golden Joker{},',
-					'and a {C:attention}Negative Tag{}'},
-					{'{C:attention}#1#{} becomes {C:attention}#3#%{} more common',
-					'for each {C:attention}Boss Blind{} defeated',
-					'{C:inactive}(Currently: {C:attention}#4#%{C:inactive})'}
+					'Sell this card to create',
+					'a {C:green}random{} Joker that',
+					'has not yet been seen',
+					'during this run'
 				}
 			},
-
-			j_mngy_clownfish = {
-				name = 'Clownfish',
-				text = {
-					'{C:attention}Doubles{} the {C:chips}Chip{} values',
-					'of played cards'
-				}
-			},
-
-			j_mngy_acceleration = {
-				name = 'Acceleration',
-				text = {
-					'{C:attention}Aces{} are retriggered {C:attention}once',
-					'and have a {C:green}#1# in #2#{} chance to be',
-					'retriggered {C:attention}again.{}',
-					'Chance increases by {C:green}1{} for',
-					'each previously retriggered {C:attention}Ace'
-				}
-			},
-			
-            j_mngy_jeanie = {
-                name = 'Jeanie',
-                text = {
-                    'Every {C:attention}3{} hands,',
-                    'give {C:chips}+#1#{} Chips, {C:mult}+#2#{} Mult,',
-                    'and {C:money}$#3#{} respectively'
-                }
-            },
-
-			j_mngy_egg_registry = {
-				name = 'Egg Registry',
-				text = {
-					'When a Joker would gain',
-					'{C:attention}sell value{}, this Joker',
-					'gains {C:attention}sell value{} instead.',
-					'Gives {X:mult,C:white}X#1#{} Mult for',
-					'each {C:money}${} of {C:attention}sell value',
-					'{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)',
-				}
-			},
-
-			j_mngy_chameleon = {
-				name = 'Chameleon Joker',
-				text = {
-					'When {C:attention}Blind{} is selected,',
-					'this Joker {C:attention}transforms{} into',
-					'another random Joker.',
-					'{C:attention}Adjacent{} Joker rarities',
-					'are prioritized. {C:green}50%{} chance',
-					'to transform into an',
-					'{C:attention}already owned{} Joker',
-					'{C:inactive,s:0.8}(Currently: #1#)',
-				}
-			},
-
-			j_mngy_inspiration = {
-				name = 'Inspiration',
-				text = {
-					'{C:attention}Copies{} the ability of',
-					'the first Joker in each {C:attention}Shop{}.',
-					'If the Shop has no Jokers,',
-					'this card becomes {C:attention}Brainstorm{}',
-					'until the {C:attention}next{} Shop'
-				}
-			},
-
-			j_mngy_skipping_stone = {
-				name = 'Skipping Stone',
-				text = {
-					'This Joker creates a random',
-					'{C:attention}Tag{} when skipping a {C:attention}Blind{},',
-					'and {C:attention}doubles{} the random Tag',
-					'if the {C:attention}previous Blind{}',
-					'was skipped'
-				}
-			},
-
-			j_mngy_detective = {
-				name = 'Detective',
-				text = {
-					"After every {C:red}discard{},",
-					'one {C:green}random{} card will be',
-					'drawn {C:attention}face-down{}.',
-					'If a scored card was {C:attention}face-down{},',
-					'that card gives {X:mult,C:white}X#1#{} Mult',
-					'for every scoring card'
-				}
-			}
 		},
 
 		Other = {
