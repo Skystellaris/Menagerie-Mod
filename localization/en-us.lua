@@ -651,8 +651,8 @@ return {
 			j_mngy_3d_glasses = {
 				name = 'Joker with 3D Glasses',
 				text = {
-					'{C:attention}Retrigger{} all cards and Jokers',
-					'with {C:dark_edition}Foil{} or {C:dark_edition}Holographic{} {C:attention}#1#{} time',
+					'{C:attention}Retrigger{} all playing cards with',
+					'{C:dark_edition}Foil{} or {C:dark_edition}Holographic{} {C:attention}#1#{} time',
 				}
 			},
 
@@ -967,12 +967,13 @@ return {
 			j_mngy_collectable = {
 				name = 'Collectable Joker',
 				text = {
-					{'Gains {C:mult}+#1#{} Mult for each unique',
-					'poker hand played this Ante while held.',
+					{'Gains {C:mult}+#1#{} Mult for each',
+					'unique poker hand played',
+					'this Ante while held',
 					'{C:inactive}(Currently: {C:mult}+#3#{C:inactive} Mult)',},
 					{'When {C:attention}#2#{} unique poker hands',
-					'are played, this card gains a',
-					'random {C:dark_edition}Edition',}
+					'are played, this card gains',
+					'a random {C:dark_edition}Edition',}
 				}
 			},
 

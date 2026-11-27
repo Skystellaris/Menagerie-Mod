@@ -24,11 +24,5 @@ SMODS.Joker {
                 }
             end
         end
-
-        if context.retrigger_joker_check and context.other_card.edition and (context.other_card.edition.holo or context.other_card.edition.foil) then
-            return {
-                repetitions = card.ability.extra.repetitions
-            }
-        end
     end,
 }
