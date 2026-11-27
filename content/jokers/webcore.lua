@@ -6,7 +6,7 @@ SMODS.Joker {
     cost = 8,
     config = {
         extra = {
-            xmult = 0.3,
+            xmult = 0.4,
         }
     },
 
