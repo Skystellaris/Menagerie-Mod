@@ -20,7 +20,7 @@ SMODS.Joker {
         end
 
         if context.drawing_cards and card.ability.extra.primed then
-            card.ability.primed = nil
+            card.ability.extra.primed = nil
             local cards_to_draw = {}
             for i = #G.deck.cards, #G.deck.cards - context.amount, -1 do
                 table.insert(cards_to_draw, G.deck.cards[i])
