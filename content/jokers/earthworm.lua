@@ -21,8 +21,8 @@ SMODS.Joker {
             }
         end
 
-        if context.modify_weights and context.pool_types['Joker'] and context.args and context.args.append == 'sho' then
-            -- context.pool['j_mngy_robins_nest'].weight = context.pool['j_mngy_robins_nest'].weight * 10
+        if context.modify_weights and context.pool_types['Joker'] and context.pool['j_mngy_robins_nest'] and context.args and context.args.append == 'sho' then
+            context.pool['j_mngy_robins_nest'].weight = context.pool['j_mngy_robins_nest'].weight * 10
         end
     end,
 }

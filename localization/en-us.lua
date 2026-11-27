@@ -552,12 +552,20 @@ return {
 
 			j_mngy_cuckoo_egg = {
 				name = 'Cuckoo Egg',
-				text = {}
+				text = {
+					'{C:attention}Egg{} cannot increase',
+					'its {C:attention}sell value{} when held.',
+					'Gains {C:red}#1#${} of {C:attention}sell value{}',
+					'at end of round'
+				}
 			},
 
 			j_mngy_robins_nest = {
 				name = 'Robin\'s Nest',
-				text = {}
+				text = {
+					'Creates an {C:attention}Egg{} when',
+					'a {C:attention}Boss Blind{} is defeated'
+				}
 			},
 
 			j_mngy_ante_beats = {
@@ -1259,6 +1267,8 @@ return {
 			k_mngy_yarr_ex = 'Yarr!',
 			k_mngy_inspired = 'Inspired',
 			k_mngy_crash = 'Crash...',
+			k_mngy_val_down = 'Value Down!',
+			k_mngy_blocked_ex = 'Blocked!',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',

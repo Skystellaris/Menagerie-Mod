@@ -40,8 +40,8 @@ local enabled_jokers = {
 	'jeanie',
 	'poodle',
 	'postcard',
-	-- 'cuckoo_egg',
-	-- 'robins_nest',
+	'cuckoo_egg',
+	'robins_nest',
 	'ante_beats',
 
 	-- Uncommons
