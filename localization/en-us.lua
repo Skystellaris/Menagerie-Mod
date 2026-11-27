@@ -1008,7 +1008,14 @@ return {
 
 			j_mngy_flashlight = {
 				name = 'Flashlight',
-				text = {}
+				text = {
+					'Dragging this Joker over',
+					'a {C:attention}face-down{} card',
+					'{C:attention}reveals{} it.',
+					'If a scored card was',
+					'{C:attention}face-down{}, that card',
+					'gives {C:chips}+#1#{} Chips',
+				}
 			},
 
 			j_mngy_treasure_map = {

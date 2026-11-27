@@ -87,7 +87,7 @@ local enabled_jokers = {
 	'silver_wind',
 	'intl_saboteur',
 	'detective',
-	-- 'flashlight',
+	'flashlight',
 	'treasure_map',
 	'inspiration',
 

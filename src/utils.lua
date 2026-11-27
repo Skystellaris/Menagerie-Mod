@@ -226,3 +226,10 @@ Menagerie.mod.config_tab = function()
         }
     }
 end
+
+function Menagerie.are_cards_colliding(card1_T, card2_T)
+    return card1_T.x < card2_T.x + card2_T.w and
+           card2_T.x < card1_T.x + card1_T.w and
+           card1_T.y < card2_T.y + card2_T.h and
+           card2_T.y < card1_T.y + card1_T.h
+end
