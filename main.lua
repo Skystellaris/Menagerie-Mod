@@ -81,7 +81,7 @@ local enabled_jokers = {
 	-- 'post_it',
 	'bonus_tickets',
 	-- 'truck_driver',
-	-- 'package_delivery',
+	'package_delivery',
 	-- 'fashionista',
 	'sun_temple',
 	'silver_wind',

@@ -931,7 +931,7 @@ return {
 				}
 			},
 
-			j_mngy_dpost_it = {
+			j_mngy_post_it = {
 				name = 'Post-It Joker',
 				text = {}
 			},
@@ -957,7 +957,10 @@ return {
 
 			j_mngy_package_delivery = {
 				name = 'Package Delivery',
-				text = {}
+				text = {
+					'At end of round,',
+					'creates a random {C:attention}Consumable'
+				}
 			},
 
 			j_mngy_fashionista = {
@@ -1275,6 +1278,7 @@ return {
 			k_mngy_crash = 'Crash...',
 			k_mngy_val_down = 'Value Down!',
 			k_mngy_blocked_ex = 'Blocked!',
+			k_mngy_delivery_ex = 'Special Delivery!',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',
