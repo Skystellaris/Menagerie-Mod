@@ -18,7 +18,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.hand and not context.end_of_round and context.other_card:is_suit("mngy_Shields") then
+        if context.individual and context.cardarea == G.hand and not context.end_of_round and context.other_card:is_suit("mngy_Shields") and SMODS.pseudorandom_probability(card, 'mngy_geode', card.ability.extra.prob, card.ability.extra.odds) then
             return {
                 xchips = card.ability.extra.xchips
             }
