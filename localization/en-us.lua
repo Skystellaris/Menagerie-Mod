@@ -895,7 +895,13 @@ return {
 
 			j_mngy_stardust = {
 				name = 'Stardust',
-				text = {}
+				text = {
+					'Converts {C:attention}#1#%{} of total',
+					'{C:chips}Chips{} to {C:mult}Mult{} if current {C:chips}Chips{}',
+					'is greater than current {C:mult}Mult{}.',
+					'If {C:mult}Mult{} is greater than {C:chips}Chips{},',
+					'this Joker gives {C:chips}+#2#{} instead'
+				}
 			},
 
 			j_mngy_ancestral = {

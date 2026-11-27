@@ -74,7 +74,7 @@ local enabled_jokers = {
 	-- 'paleontologist',
 	-- 'shield_bearing',
 	'bright_geode',
-	-- 'stardust',
+	'stardust',
 	'ancestral',
 	'skipping_stone',
 	'balancing_act',
