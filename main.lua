@@ -42,6 +42,7 @@ local enabled_jokers = {
 	'postcard',
 	-- 'cuckoo_egg',
 	-- 'robins_egg',
+	'ante_beats',
 
 	-- Uncommons
 	'magician',
@@ -69,7 +70,6 @@ local enabled_jokers = {
 	'chameleon',
 	'russian_roulette',
 	-- 'curiosity',
-	'ante_beats',
 	'polymelia',
 	-- 'paleontologist',
 	-- 'shield_bearing',
