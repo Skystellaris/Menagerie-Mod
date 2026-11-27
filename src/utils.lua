@@ -24,7 +24,7 @@ function Menagerie.get_adjacent(card, func)
     for i = 1, #card.area.cards do
         if card.area.cards[i] == card then
             if card.area.cards[i - 1] and (not func or func and func(card.area.cards[i - 1])) then
-                table.insert(adjacent, G.jokers.cards[i - 1])
+                table.insert(adjacent, card.area.cards[i - 1])
             end
             if card.area.cards[i + 1] and (not func or func and func(card.area.cards[i - 1])) then
                 table.insert(adjacent, card.area.cards[i + 1])
