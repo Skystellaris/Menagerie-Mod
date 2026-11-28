@@ -959,7 +959,8 @@ return {
 				name = 'Package Delivery',
 				text = {
 					'At end of round,',
-					'creates a random {C:attention}Consumable'
+					'creates a random {C:attention}Consumable',
+					'{C:inactive}(Must have room)'
 				}
 			},
 
