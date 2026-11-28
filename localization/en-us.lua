@@ -1223,7 +1223,11 @@ return {
 
 			j_mngy_malware = {
 				name = 'Malware',
-				text = {}
+				text = {
+					'{C:red}Destroyed{} playing cards with',
+					'modifiers {C:attention}spread{} their modifiers',
+					'to {C:attention}adjacent{} playing cards'
+				}
 			},
 
 			j_mngy_shooting_gallery = {
@@ -1294,6 +1298,7 @@ return {
 			k_mngy_blocked_ex = 'Blocked!',
 			k_mngy_delivery_ex = 'Special Delivery!',
 			k_mngy_posted_ex = 'Posted!',
+			k_mngy_infected_ex = 'Infected!',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',

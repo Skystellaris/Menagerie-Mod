@@ -23,7 +23,7 @@ SMODS.DrawStep { -- Derived from Ortalab
         if SMODS.has_enhancement(self, 'm_mngy_aurora') then
             if not Menagerie.aurora_sprite then
                 Menagerie.aurora_sprite = Sprite(0, 0, G.CARD_W, G.CARD_H, G.ASSET_ATLAS['mngy_enhancements'],
-                    { x = 2, y = 0 })
+                    { x = 1, y = 1 })
             end
             Menagerie.aurora_sprite.role.draw_major = self
             if self.edition and not self.delay_edition then
