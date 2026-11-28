@@ -1292,6 +1292,7 @@ return {
 			k_mngy_val_down = 'Value Down!',
 			k_mngy_blocked_ex = 'Blocked!',
 			k_mngy_delivery_ex = 'Special Delivery!',
+			k_mngy_posted_ex = 'Posted!',
 
 			-- Config labels
 			b_mngy_custom_menu = 'Toggle Custom Menu',

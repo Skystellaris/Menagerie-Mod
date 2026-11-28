@@ -20,7 +20,7 @@ SMODS.Joker {
             G.GAME.mngy_postcard_sold_this_ante = true
             G.GAME.mngy_postcards_sold = G.GAME.mngy_postcards_sold + 1
             return {
-                message = localize('k_upgrade_ex')
+                message = localize('k_mngy_posted_ex')
             }
         end
 
